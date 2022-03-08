@@ -1,0 +1,141 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <title>Fire Reloaded</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" type="text/css" href="../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../menu.css">
+
+  <script type="text/javascript" src="../../menu.js"></script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <h1>Fire Reloaded</h1>
+
+  <div class=content>
+    <img class=centered alt="Fire images." src="fire2strip.jpg">
+
+    <p>
+      <a href="http://dhanyu.com/">Dhanyu Amarasinghe</a>
+      and
+      <a href="/">Ian Parberry</a>,
+      "Fast, Believable Real-time Rendering of Burning Low-Polygon Objects in
+      Video Games",
+      Proceedings of the 6th International North American Conference on Intelligent Games and Simulation (GAMEON-NA),
+      pp. 21-26, EUROSIS, Troy, NY, 2011.
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      Deformation of the
+      low-polygon models used in in video games
+      is challenging since it is hard to maintain realism.
+      We show how real-time mesh refinement can be used for modeling the deformation and
+      consumption of low-polygon models under combustion while
+      generating procedural fire.
+      Our focus is on trading realism for computation speed so that processing power is still
+      available for other computational tasks.
+      Our method also allows for quick and easy LOD (level-of-detail) rendering of burning objects.
+      We have implemented and tested our method on a relatively modest GPU using CUDA.
+      Our experiments suggest that our method gives a believable rendering of the effects of fire while using only
+      a small fraction of CPU and GPU resources.
+    </p>
+  </div>
+
+  <h2>Best Paper Award</h2>
+
+  <div class=content>
+    <img class=centered alt="Best Paper image." src="dhanyubestpaper640.jpg">
+    <p></p>
+  </div>
+
+  <h2>More Information</h2>
+
+  <div class=content>
+    <ul>
+      <li>
+        <a href="http://larc.unt.edu/ian/pubs/GAMEON-NA_GRAPH_01.pdf">GAMEON-NA Conference Proceedings Version</a>
+      <li>
+        <a href="/techreports/LARC-2011-04.pdf">Technical Report Version</a>
+      <li>
+        <a href="burning2.txt">BibTeX</a>
+      <li>
+        <a href="/talks/gameon-nafire2011/">Video of Presentation</a>
+      <li>
+        See also
+        <a href="http://dhanyu.com/">Amarasinghe</a> and <a href="/">Parberry</a>,
+        "<a href="../fire">Towards Fast, Believable Real-time Rendering of Burning Objects in Video Games</a>",
+        Proceedings of the 6th International Conference on the Foundations
+        of Digital Games, pp. 256-258, Bordeaux, France, 2011.
+    </ul>
+  </div>
+
+  <h2>Animation and Video</h2>
+
+  <div class=content>
+    <h3>Under the Hood</h3>
+
+    <p></p>
+    <img class=centered alt="Fire images." src="doorframes.gif">
+    <p></p>
+
+    <h3>Burning Door</h3>
+
+    <p></p>
+    <img class=centered alt="Fire images." src="door.gif">
+    <p></p>
+
+    <h3>Video of Burning Door Textured and in Wireframe</h3>
+
+    <p></p>
+    <div style="text-align: center;">
+      <iframe width="600" height="492" src="http://www.youtube.com/embed/iqtUku1NFFw" frameborder="0"></iframe>
+    </div>
+    <p></p>
+  </div>
+
+  <h2>Images From the Paper</h2>
+
+  <div class=content>
+    <h3>Figure 1: Consumption by Fire</h3>
+    <p></p>
+    <img class=centered alt="Fire images." src="fig1.jpg">
+    <p></p>
+
+    <h3>Figure 2: Adaptive Refinement Pattern</h3>
+    <p></p>
+    <img class=centered alt="Fire images." src="fig2.jpg">
+    <p></p>
+
+    <h3>Figure 3: Heat Boundary Areas and Barycentric Point Sets</h3>
+    <p></p>
+    <img class=centered alt="Fire images." src="fig3.jpg">
+    <p></p>
+
+    <h3>Figure 4: Refinement Hierarchy &amp; Deformation of 12-triangle Box</h3>
+    <p></p>
+    <img class=centered alt="Fire images." src="fig4.jpg">
+    <p></p>
+
+    <h3>Figure 5: Real-time Computation of LOD for Burning Box</h3>
+    <p></p>
+    <img class=centered alt="Fire images." src="fig5.jpg">
+    <p></p>
+  </div>
+
+  <div class=updateinfo>
+    <p>
+      Created June 1, 2011.
+      Last updated August 2, 2019.
+    </p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+@techreport{AmarasingheParberry2011TRFire,
+  author = {Amarasinghe, Dhanyu and Parberry, Ian},
+  title = {Real-time Rendering of Melting Objects in Video Games},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2013--01},
+  year = {2013},
+  month = {March}
+ }
+
+@inproceedings{AmarasingheParberry2011Fire,
+  author = {Amarasinghe, Dhanyu and Parberry, Ian},
+  title = {Real-time Rendering of Melting Objects in Video Games},
+  booktitle = {Proceedings of the 18th International Conference on Computer Games},
+  location = {Louisville, KY},
+  pages = {154--158},
+  year = 2013
+}
+ 
+ @misc{AmarasingheParberry2013FireWebsite,
+    author = {Amarasinghe, Dhanyu and Parberry, Ian},
+    title = {Fire 4},
+    url = {http://larc.unt.edu/ian/research/fire4/},
+    year = {2013}
+  }

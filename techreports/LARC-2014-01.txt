@@ -1,0 +1,10 @@
+@techreport{Parberry2014TR1,
+  author = {Parberry, Ian},
+  title = {Solving the $(n^2-1)$-Puzzle in Real Time with $\frac{8}{3}n^3$ Expected Moves},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2014--01},
+  year = {2014},
+  month={April},
+ }
+

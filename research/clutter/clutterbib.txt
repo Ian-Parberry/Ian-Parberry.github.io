@@ -1,0 +1,26 @@
+@techreport{TaylorParberry2010TR,
+  author = {Taylor, Joshua and Parberry, Ian},
+  title = {Computerized Clutter: How to Make a Virtual Room Look Lived-in},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2010--01},
+  year = {2010},
+  month={April},
+ }
+ 
+ @misc{TaylorParberry2010ClutterWebsite,
+  author = {Taylor, Joshua and Parberry, Ian},
+  title = {\texttt{http://larc.unt.edu/ian/research/clutter/}},
+  year = {2010}
+  }
+
+@inproceedings{TaylorParberry2011Clutter,
+  author = {Taylor, Joshua and Parberry, Ian}, 
+  title = {Randomness + Structure = Clutter:
+{A} Procedural Object Placement Generator Using Petri Nets},
+  booktitle = {Proceedings of the 10th International Conference on Entertainment Computing},
+  pages = {424--427},
+  city = {Vancouver, Canada},
+  year = 2011,
+  month={October}
+}

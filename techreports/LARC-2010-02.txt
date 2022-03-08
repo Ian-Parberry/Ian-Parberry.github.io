@@ -1,0 +1,9 @@
+@techreport{DoranParberry2010TR,
+  author = {Doran, Jonathon and Parberry, Ian},
+  title = {Towards Procedural Quest Generation: A Structural Analysis of {RPG} Quests},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2010--02},
+  year = {2010},
+  month={May},
+ }

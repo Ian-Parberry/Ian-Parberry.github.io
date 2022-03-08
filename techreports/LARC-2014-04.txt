@@ -1,0 +1,13 @@
+@techreport{Parberry2014TR4,
+  author = {Ian Parberry},
+  title = {Tobler's First Law of Geography, Self Similarity,
+and Perlin Noise: A Large Scale Analysis of Gradient
+Distribution in Southern Utah with
+Application to Procedural Terrain Generation},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2014--04},
+  year = {2014},
+  month={June},
+ }
+

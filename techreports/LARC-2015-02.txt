@@ -1,0 +1,10 @@
+@techreport{TaylorParsonsParberry2015SkoStroop,
+  author = {Joshua Taylor and Thomas D. Parsons and Ian Parberry},
+  title = {Comparing Player Attention on Procedurally Generated vs.Hand Crafted Sokoban Levels with an Auditory Stroop Test},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2015--02},
+  year = {2015},
+  month={February},
+ }
+

@@ -1,0 +1,206 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <title>Sorting Networks</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" type="text/css" href="../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../menu.css">
+
+  <script type="text/javascript" src="../../menu.js"></script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    "HTML-CSS": {scale: 90}
+    });
+  </script>
+
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript">
+  </script>
+
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <h1>Sorting Networks</h1>
+
+  <div class=content>
+    <p>
+      Sorting networks fascinate me.
+      They even got me mentioned in Knuth Vol. 3,
+      <a href="images/knuth666.jpg">p. 666</a> of the second edition.
+      My coauthor in this work is my Penn State
+      <a href="/phd.html">PhD student</a>
+      Bruce Parker.
+    </p>
+  </div>
+
+  <h2>The Pairwise Sorting Network (1992)</h2>
+
+  <div class=content>
+    <img class=centered alt="Sorting network images." src="images/pairwisestrip.jpg">
+
+    <p>
+      <a href="/">Ian Parberry</a>,
+      "The Pairwise Sorting Network".
+      <I>Parallel Processing Letters</I>, Vol. 2, No. 2,3, pp. 205-211, 1992.
+      [<a href="../../pubs/pairwise.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      A new sorting network with exactly the same size and depth as the odd-even sorting
+      network is presented. This sorting network is designed using the zero-one principle,
+      and proceeds by first sorting pairs of bits and sorting the pairs
+      into lexicographic order.
+    </p>
+
+    <h3>Author's Comment</h3>
+
+    <p>
+      A <a href="http://www.cs.bgu.ac.il/~mcodish/Papers/Pages/lpar16.html">2010
+      paper by Michael Codish and Moshe Zazon-Ivry</a>
+      quotes my paper as saying:
+      "It is the first sorting network to be competitive with the odd-even sort
+      for all values of n. The value of the pairwise sorting network is not that
+      it is superior to the odd-even sorting network in any sense, but that it
+      is the first serious rival to appear in over 20 years",
+      and they go on to say:
+      "In this paper, almost 20 years after the introduction of pairwise sorting networks, we are in the position to state that pairwise
+      sorting networks are significantly superior to odd-even sorting networks, at least for encoding cardinality
+      constraints."
+      Very cool.
+    </p>
+  </div>
+
+  <h2>Sorting Network Verification Reloaded (1991)</h2>
+
+  <div class=content>
+    <img class=centered alt="Diagrams." src="images/verifystrip.jpg">
+
+    <p>
+      <a href="http://larc.unt.edu/ian">Ian Parberry</a>,
+      "On the Computational Complexity of Optimal
+      Sorting Network Verification".
+      Proceedings of The Conference on
+      Parallel Architectures and Languages Europe,
+      Springer-Verlag Lecture Notes in Computer Science,
+      Vol. 506, pp. 252-269, June 1991.
+      [<a href="../../pubs/snverify.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      A sorting network is a combinational circuit for sorting, constructed from comparison-swap units.
+      The depth of such a circuit is a measure of its running time. It is reasonable to hypothesize that only
+      the fastest (that is, the shallowest) networks are likely to be fabricated. It is shown that the problem
+      of verifying that a given sorting network actually sorts is Co-NP complete even for sorting networks of
+      depth only $4 \log n + O(1)$ greater than optimal. This is shallower than previous depth bounds by a
+      factor of two.
+    </p>
+  </div>
+
+  <h2>Sorting Network Verification (1990)</h2>
+
+  <div class=content>
+    <p>
+      <a href="http://larc.unt.edu/ian">Ian Parberry</a>,
+      "Single-Exception Sorting Networks and the Computational Complexity of
+      Optimal Sorting Network Verification".
+      <I>Mathematical Systems Theory</I>, Vol. 23, pp. 81-93, 1990.
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      A <em>sorting network</em> is a combinational circuit for sorting constructed from comparison-swap units.
+      The <em>depth</em> of such a circuit is a measure of its running time. It is known that
+      sorting-network verification is computationally intractable. However, it is reasonable to hypothesize
+      that only the fastest (that is, the shallowest) networks are likely to be fabricated. It is shown
+      that the verification of shallow sorting networks is also computationally intractable. Firstly, a method
+      for constructing asymptotically optimal single-exception sorting networks is demonstrated.
+      These are networks which sort all zero-one inputs except one. More specifically, their depth
+      is $D(n-1)+2\log (n-1)+2$, where $D(n)$ is the minimum depth of an $n$-input sorting network. It
+      follows that the verification problem for sorting networks of depth
+      $2D(n) + 6 \log n + O(1)$ is Co-NP complete. Given the current state of knowledge about $D(n)$ for large
+      $n$, this indicates that the complexity of verification for shallow sorting networks
+      is as great as for deep networks
+    </p>
+  </div>
+
+  <h2>9-Input Sorting Networks (1989, 1991)</h2>
+  
+  <div class=content>
+    <p>
+      <a href="/">Ian Parberry</a>,
+      "A Computer Assisted Optimal Depth Lower Bound for
+      Nine-Input Sorting Networks".
+      <I>Mathematical Systems Theory</I>, Vol. 24, pp. 101-116, 1991.
+      A preliminary version of this paper appeared in the
+      Proceedings of Supercomputing '89, pp. 152-161, Reno, Nevada, Nov. 1989.
+      [<a href="../../pubs/9-input.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      It is demonstrated, using a combination of theoretical and experimental computer
+      science, that there is no nine-input sorting network of depth six. If a nine-input sorting
+      network of depth six exists, then there exists one with very special structure. There is
+      an efficient algorithm for constructing and testing comparator networks of this form.
+      This algorithm was implemented and executed on a supercomputer.
+    </p>
+
+    <h3>Author's Comment</h3>
+
+    <p>
+      This paper had the good fortune to be mentioned on
+      <a href="images/knuth666.jpg">p. 666</a> of the second edition of
+      Donald Knuth's <em>The Art of Computer Programming</em>,
+      Vol. 3, <em>Sorting and Searching</em>.
+    </p>
+  </div>
+
+  <h2><em>k</em>-sorters (1989)</h2>
+
+  <div class=content>
+    <img class=centered alt="k-sorter images." src="images/ksorterstrip.jpg">
+
+    <p>
+      Bruce Parker and
+      <a href="/">Ian Parberry</a>,
+      "Constructing Sorting Networks from $k$-sorters",
+      <I>Information Processing Letters</I>, Vol. 33, No. 3, pp. 157-162, 1989.
+      [<a href="../../pubs/ksorters.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      We study the problem of using sorters of $k$ values to form large sorting and
+      merging networks. For $n$ an integral power of
+      $k$, we show how to merge $k$ sorted vectors of length $n/k$ each using $4 \log_k n - 3$ layers
+      of $k$-sorters and $4 \log_k n - 5$ layers of
+      k-input binary mergers. As a result, we show how to sort n values
+      using $2 \log_k^2 n - \log_k n$ layers of $k$-sorters and
+      $2 \log_k^2 n - 3 \log_k n + 1$ layers of $k$-input binary mergers.
+    </p>
+  </div>
+
+  <div class=updateinfo>
+    <p>
+      Created April 21, 2010.
+      Last updated August 23, 2019.
+    </p>
+  </div>
+</body>
+</html>
+

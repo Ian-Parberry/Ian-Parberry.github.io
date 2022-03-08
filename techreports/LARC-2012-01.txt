@@ -1,0 +1,9 @@
+@techreport{AmarasingheParberry2012TRBurningSolids,
+  author = {Amarasinghe, Dhanyu and Parberry, Ian},
+  title = {Real-time Rendering of Burning Solid Objects in Video Games},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2012--01},
+  year = {2012},
+  month={May},
+ }

@@ -1,0 +1,9 @@
+@inproceedings{rodenparberry2005,
+  author = {T. Roden and I. Parberry}, 
+  title = {Clouds and Stars: Efficient Real-Time Procedural Sky Rendering Using {3D} Hardware},
+  booktitle = {Proceedings of the 2005 ACM SIGCHI International Conference on Advances in
+     Computer Entertainment Technology},
+  city = {Valencia, Spain}, 
+  pages = {434--437}, 
+  year = 2005,
+}

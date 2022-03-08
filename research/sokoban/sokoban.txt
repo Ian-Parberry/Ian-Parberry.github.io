@@ -1,0 +1,34 @@
+@techreport{TaylorParberry2011TRSokoban,
+  author = {Taylor, Joshua and Parberry, Ian},
+  title = {Procedural Generation of {S}okoban Levels},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2011--01},
+  year = {2011},
+  month={February},
+ }
+ 
+ @inproceedings{TaylorParberry2011SokobanGameOn,
+  author = {Taylor, Joshua and Parberry, Ian},
+  title = {Procedural Generation of {S}okoban Levels},
+  booktitle = {Proceedings of the 6th International North American Conference on Intelligent Games and Simulation ({GAMEON-NA})},
+  location = {Troy NY},
+  pages = {5--12},
+  publisher={{EUROSIS}},
+  year = 2011
+}
+ 
+@misc{Taylor2011SokobanWebsite,
+  author = {Taylor, Joshua and Parberry, Ian},
+  title = {Sokoban},
+  howpublished={\url{http:/larc.unt.edu/ian/research/sokoban/}},
+  year = {2011}
+}
+ 
+
+
+
+
+
+
+

@@ -1,0 +1,142 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <title>The 15-Puzzle</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" type="text/css" href="../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../menu.css">
+
+  <script type="text/javascript" src="../../menu.js"></script>
+
+  <script src="js/swfobject.js"></script>
+  <script>
+    var flashvars = {
+    };
+    var params = {
+      menu: "false",
+      scale: "noScale",
+      allowFullscreen: "true",
+      allowScriptAccess: "always",
+      bgcolor: "",
+      wmode: "direct" // can cause issues with FP settings & webcam
+    };
+    var attributes = {
+      id: "15Puzzle"
+    };
+    swfobject.embedSWF(
+      "15Puzzle.swf",
+      "altContent", "720", "360", "10.0.0",
+      "expressInstall.swf",
+      flashvars, params, attributes);
+  </script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <h1>The 15-Puzzle</h1>
+
+  <div class=content>
+    <img class="centered" src="images/15puzzlestrip.png" alt="Thumbnails.">
+
+    <p>
+      <a href="/">Ian Parberry</a>,
+      "A Memory-Efficient Method for Fast Computation of Short 15-Puzzle Solutions",
+      <em>IEEE Transactions on Computational Intelligence and AI in Games</em>,
+      Vol. 7, No. 2, pp. 200-203, 2015.
+      [<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6883190">pdf from IEEEXplore</a>]
+    </p>
+
+
+    <h2>Abstract</h2>
+
+    <p>
+      While the 15-puzzle has a long and interesting history dating back to the 1870s,
+      it still continues to appear as
+      apps on mobile devices and as minigames inside larger video games.
+      We demonstrate a method for solving the 15-puzzle
+      using only 4.7MB of tables
+      that on a million random instances was able to
+      find solutions of 65 moves on average and
+      95 moves in the worst case in under a tenth of a millisecond per solution
+      on current desktop computing hardware.
+      These numbers compare favorably to the worst-case upper bound of 80 moves
+      and to the greedy algorithm published in 1995, which required
+      118 moves on average and
+      195 moves in the worst case.
+    </p>
+  </div>
+
+  <h1>Try It Out</h1>
+
+  <div class=content>
+    <p>
+      My PhD student Josh Taylor translated my C++ into ActionScript and produced the Flash
+      animation below.
+      If you are on one of those devices that don't allow Flash, you'll have to content yourself
+      with the animated gifs in the next section.
+    </p>
+
+    <div class=centered>
+      <div id="altContent">
+        <a href="http://www.adobe.com/go/getflashplayer">Get Adobe Flash player</a>
+      </div>
+    </div>
+
+    <p>
+      Hit the space bar to scramble the tiles, and hit the Enter key to
+      start solving. You can hit space or Enter at any time to stop the animation.
+    </p>
+  </div>
+
+    <h1>Examples</h1>
+
+    <div class=content>
+      <p>
+        In the following animations, the left-hand board
+        shows the solution found by the greedy algorithm from
+        my 1995 paper,
+        while the right-hand board shows the much shorter solution found by the new algorithm.
+      </p>
+
+      <h3>Greedy Algorithm 95 Moves, New Algorithm 65 Moves</h3>
+
+        <img class=centered alt="image" src="images/pair.65.95-512.gif">
+
+      <h3>Greedy Algorithm 115 Moves, New Algorithm 67 Moves</h3>
+
+        <img class=centered alt="image" src="images/pair.67.115-512.gif">
+
+      <h3>Greedy Algorithm 131 Moves, New Algorithm 75 Moves</h3>
+
+        <img class=centered alt="image" src="images/pair.75.131-512.gif">
+        <p></p>
+    </div>
+
+    <h2>More Information</h2>
+
+    <div class=content>
+      <p>
+        A preliminary version of this paper
+        was published as
+        Technical Report LARC-2014-02,
+        Laboratory for Recreational Computing,
+        Department of Computer Science and Engineering, University of North Texas, April 2014.
+        [<a href="/techreports/LARC-2014-02.txt">BibTeX</a>,
+        <a href="/techreports/LARC-2014-02.pdf">pdf</a>]
+      </p>
+    </div>
+
+    <div class=updateinfo>
+      <p>
+        Created April 24, 2014.
+        Last updated August 2, 20195.
+      </p>
+    </div>
+</body>
+</html>

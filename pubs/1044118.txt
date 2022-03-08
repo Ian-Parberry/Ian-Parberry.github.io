@@ -1,0 +1,14 @@
+@article{1044118,
+ author = {Jan, Gene Eu and Chang, Ki-Yin and Gao, Su and Parberry, Ian},
+ title = {A 4-geometry maze router and its application on multiterminal nets},
+ journal = {ACM Trans. Des. Autom. Electron. Syst.},
+ volume = {10},
+ number = {1},
+ year = {2005},
+ issn = {1084-4309},
+ pages = {116--135},
+ doi = {http://doi.acm.org/10.1145/1044111.1044118},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+

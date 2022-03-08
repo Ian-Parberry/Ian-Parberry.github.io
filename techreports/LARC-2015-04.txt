@@ -1,0 +1,10 @@
+@techreport{ParsonsMcMahanParberry2015Neurogaming,
+  author = {Thomas D. Parsons and Timothy McMahan and Ian Parberry},
+  title = {Neurogaming-based Classification of Player Experience Using Consumer-Grade Electroencephalography},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2015--04},
+  year = {2015},
+  month={April},
+ }
+

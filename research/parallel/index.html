@@ -1,0 +1,483 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <title>Parallel Computing</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" type="text/css" href="../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../menu.css">
+
+  <script type="text/javascript" src="../../menu.js"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    "HTML-CSS": {scale: 90}
+    });
+  </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript">
+  </script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <h1>Parallel Computing</h1>
+
+  <div class=content>
+    I got interested in parallel computing in 1980 in Australia
+    by working with Les Goldschlager. I carried that interest into my PhD thesis
+    and on into the 1990s.
+  </div>
+
+  <h2>Parallel Prefix (2006)</h2>
+
+  <div class=content>
+    <img class=centered alt="Parallel prefix circuit thumbnails." src="images/ppct.png">
+
+    <p>
+      <a href="http://www.cse.chalmers.se/~ms/">M. Sheeran</a> and
+      <a href="/">I. Parberry</a>,
+      "A new approach to the design of optimal parallel prefix circuits".
+      Technical Report No. 2006:1,
+      Department of Computer Science and Engineering,
+      Chalmers University of Technology,
+      G&ouml;teborg, Sweden, 2006.
+      [<a href="http://www.cse.chalmers.se/~ms/TR2006.1.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      Parallel prefix is one of the fundamental algorithms in computer science. Parallel prefix
+      networks are used to compute carries in fast addition circuits, and have a number of other
+      applications, including the computation of linear recurrences and loop parallelization. A new
+      construction, called Slices, for fan-out-constrained depth size optimal (DSO) parallel prefix
+      circuits is presented. The construction encompasses the largest possible number of inputs for
+      given depth and fan-out. The construction improves on previous approaches that produce
+      DSO networks with constrained fan-out by encompassing more inputs for a given depth.
+      Even when compared with parallel prefix circuits with unbounded fan-out, the construction
+      provides a new family of circuits that are both small and reasonably shallow. We present the
+      construction, which is composed of recursively designed blocks, and derive a recurrence for the
+      maximum number of inputs that can be processed for a given fan-out and depth. We also
+      show how a DSO network built according to our construction can be cropped, to produce a
+      new DSO network with the same depth and fan-out, but fewer inputs. Thus, we can produce
+      a DSO network for given depth, fan-out and number of inputs, provided such a network exists.
+      We believe that we are the first to be able to do this. The resulting networks are compared
+      to others with both bounded and unbounded fan-out.
+    </p>
+
+    <h3>Author's Comments</h3>
+
+    <p>
+      Mary visited me in Texas in 2005, during which time she managed to reinfect me with an interest in parallel prefix circuits.
+      This never got beyond the Tech Report version, but it surprised us by garnering a
+      <a href="http://scholar.google.com/citations?view_op=view_citation&amp;hl=en&amp;user=8ZpdXNcAAAAJ&amp;cstart=20&amp;citation_for_view=8ZpdXNcAAAAJ:mVmsd5A6BfQC">
+        significant
+        number of citations
+      </a>.
+    </p>
+  </div>
+
+  <h2>Load Sharing (1995)</h2>
+
+  <div class=content>
+    <img class=centered alt="Parallel priority queue thumbnails." src="images/prioqstrip.jpg">
+
+    <p>
+      <a href="/">I. Parberry</a>,
+      "Load Sharing with Parallel Priority Queues".
+      <I>Journal of Computer and System Sciences</I>,
+      Vol. 50, No. 1, pp. 64-73, 1995.
+      [<a href="../../pubs/prioq.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      For maximum efficiency in a multiprocessor system the load should be shared evenly over all
+      processors, that is, there should be no idle processors when tasks are available. The delay in a
+      load sharing algorithm is the larger of the maximum time that any processor can be idle before
+      a task is assigned to it, and the maximum time that it must wait to be relieved of an excess task.
+      A simple parallel priority queue architecture for load sharing in a $p$-processor multiprocessor
+      system is proposed. This architecture uses $O(p \log(n/p))$ special-purpose processors (where $n$
+      is the maximal size of the priority queue), an interconnection pattern of bounded degree, and
+      achieves delay $O(\log p)$, which is optimal for any bounded degree system.
+    </p>
+
+    <h3>Author's Comments</h3>
+
+    <p>
+      I still think ragged heaps are incredibly cool.
+    </p>
+  </div>
+
+  <h2>PRAM Lower Bounds (1991)</h2>
+
+  <div class=content>
+    <p>
+      P. Y. Yan and
+      <a href="http://larc.unt.edu/ian">I. Parberry</a>,
+      "Improved Upper and Lower Time Bounds for Parallel Random Access Machines
+      Without Simultaneous Writes",
+      <I>SIAM Journal on Computing</I>, Vol. 20, No. 1, pp. 88-99, 1991.
+      [<a href="../../pubs/cook-dwork.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      The time required by a variant of the PRAM (a parallel machine
+      model which consists of sequential processors which communicate by
+      reading and writing into a common shared memory) to compute a certain class
+      of functions called <em>critical</em> functions (which include the
+      Boolean OR of $n$ bits) is studied. Simultaneous reads from individual
+      cells of the shared-memory are permitted, but simultaneous writes are
+      not. It is shown that any PRAM which computes a critical function
+      must take at least $0.5 \log n - O(1)$ steps, and that there exists a critical
+      function which can be computed in $0.57 \log n + O(1)$ steps. These
+      bounds represent an improvement in the constant factor over those previously
+      known.
+    </p>
+
+    <h3>Author's Comments</h3>
+
+    <p>
+      My PhD student P. Y. Yan proved the lower bounds and I proved the upper bounds. He was doing a math PhD at the
+      time, and I was his adviser.
+    </p>
+  </div>
+
+  <h2>Oblivious Routing (1990)</h2>
+
+  <div class=content>
+    <p>
+      <a href="/">I. Parberry</a>,
+      "An Optimal Time Bound for Oblivious Routing".
+      <I>Algorithmica</I>, Vol. 5, No. 2, pp. 243-251, 1990.
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      We consider the problem of routing data packets in a constant-degree
+      network of synchronous processors.  A routing scheme is called
+      <em>oblivious</em>
+      if the route taken by each packet is uniquely determined by its
+      source and destination.  The time required for the oblivious
+      routing of n packets on $n$ processors is known to be $\Theta(\sqrt{n})$.
+      We extend this result to show that the time required for the oblivious
+      routing of n packets on P(n) processors is $\Theta(n/\sqrt{P(n)} + \log n)$.
+    </p>
+
+    <h3>Author's Comments</h3>
+
+    <p>
+      The adjective <em>oblivious</em> is one of Mike Paterson's terms. I still like it.
+    </p>
+  </div>
+
+  <h2>Nondeterministic Parallel Computation (1989)</h2>
+
+  <div class=content>
+    <p>
+      <a href="/">I. Parberry</a>,
+      "A Note on Nondeterminism in Small, Fast Parallel Computers".
+      <I>IEEE Transactions on Computers</I>, Vol. 38, No. 5, pp. 766-767, 1989.
+      [<a href="/ian/pubs/nondeterminism.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      Nondeterministic analogues of the well-known language classes NC and SC called
+      NNC and NSC, respectively, are investigated. NC is the class of languages
+      that can be accepted by small, fast parallel computers; SC is the class of
+      languages that can be recognized by a deterministic Turing machine in polynomial
+      time and polylog tape-head reversals. Adding nondeterminism to SC leaves it in
+      the domain of parallel computation since NSC contained in POLYLOGSPACE. That is,
+      NSC is a subset of the class of languages computable by fast parallel computers.
+      Adding nondeterminism to NC appears to make it much more powerful since NNC=NP.
+      It is clear that NSC contained in NNC, and probable that NSC contained in/implied
+      by NNC. Further evidence for this conjecture is provided by showing that NSC
+      is precisely the class of languages recognizable in simultaneous polynomial
+      time and polylog reversals by a nondeterministic Turing machine with a read-only
+      input tape and a single read-write work tape; it is known that NNC is similar,
+      but is recognizable by a Turing machine with two read-write tapes.
+    </p>
+  </div>
+
+  <h2>Parallel Sorting (1989, 1990)</h2>
+
+  <div class=content>
+    <p>
+      <a href="/">I. Parberry</a>,
+      Scholarly Review of Parallel Sorting. <em>ACM Computing Reviews</em>, Vol. 30, No. 11, pp.
+      578-580, 1989 (Review Number 8909-0816).
+      Reprinted in Michael Loui's "Reprints from Computing Reviews", <em>SIGACT News</em>, Vol. 21, No. 1, pp. 14-17, 1990.
+      [<a href="/ian/pubs/p14-loui.pdf">pdf</a>]
+    </p>
+
+    <h3>From the Preamble</h3>
+
+    <p>
+      Early research into sorting focused on <em>in situ</em> comparison-based sorting algorithms . Such an
+      algorithm is said to be <em>oblivious</em> (a term which can be traced, in a different context, to Paterson)
+      if the sequence of cells accessed is dependent on the number of cells but not on their
+      contents . An oblivious algorithm has a particularly elegant hardware implementation called a
+      <em>sorting network</em>, which consists of a circuit constructed without fan-out from building blocks
+      called <em>comparators</em>. Comparators have two inputs and two outputs, and swap the values on
+      the inputs if they are out of order, passing them through unchanged otherwise . The <em>depth</em>
+      (number of layers) of the circuit is equal to the number of phases of nonoverlapping comparisons,
+      and the <em>size</em> (number of comparators) of the circuit is equal to the number of comparisons
+      used in the oblivious sorting algorithm . Note that size is bounded above by $n/2$
+      times the depth.
+    </p>
+  </div>
+
+  <h2>Simulation by Turing Machine (1987)</h2>
+
+  <div class=content>
+    <p>
+      <a href="http://larc.unt.edu/ian">I. Parberry</a>,
+      "An Improved Simulation of Space and Reversal Bounded
+      Deterministic Turing Machines by Width and Depth Bounded Uniform Circuits".
+      <I>Information Processing Letters</I>, Vol. 24, No. 6, pp. 363-367, 1987.
+      [<a href="/ian/pubs/reversals.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      We present an improved simulation of space and reversal bounded
+      Turing machines by width
+      and depth bounded uniform circuits.
+      (All resource bounds hold simultaneously).
+      An $S(n)$ space, $R(n)$ reversal bounded deterministic $k$-tape Turing machine
+      can be simulated by a uniform circuit of depth $O(R(n) \log^2 S(n))$
+      and width $O(S(n)^k)$.
+      Our proof is cleaner, and has slightly better resource bounds than
+      the original proof due to Pippenger.
+      The improvement in resource bounds comes primarily from the use of a
+      shared-memory machine instead of an oblivious Turing machine, and
+      the concept of a <em>special situation</em>.
+    </p>
+
+    <h3>Author's Comments</h3>
+
+    <p>
+      My PhD thesis adviser Mike Paterson had a hand in this, polishing my proofs and getting
+      some extra improvements in the bounds. He refused coauthorship, although I believed at the time and
+      still believe that he was
+      entitled to it.
+    </p>
+  </div>
+
+  <h2>Parallel Complexity Theory (1987)</h2>
+
+  <div class=content>
+    <img class=centered alt="Cover image." src="images/pctstrip.jpg">
+
+    <p>
+      <a href="/">I. Parberry</a>,
+      <em>Parallel Complexity Theory</em>, in series Research Notes in Theoretical Computer Science, (R. V. Book, Ed.),
+      Pitman Press, London, 1987.
+    </p>
+
+    <h3>From the Preface</h3>
+
+    <p>
+      Parallel complexity theory, the study of resource-bounded
+      parallel computation, is surely one of the fastest-growing
+      areas of theoretical Computer Science.
+      In the light of this, it would be foolish to attempt
+      an encyclopedic coverage of the field.  However,
+      it is the belief of the author that its foundations
+      are becoming increasingly clear and well-defined.  This Monograph
+      is an attempt to present these foundations in a unified and
+      coherent manner.
+    </p>
+
+    <p>
+      The material contained herein
+      is aimed at advanced Graduate students or researchers
+      in theoretical Computer Science who wish to gain an insight into parallel
+      complexity theory.  It is assumed that the reader has (in addition to
+      a certain level of mathematical maturity)
+      a general knowledge of Computer Science,
+      and familiarity with automata theory, formal languages,
+      complexity theory and analysis of algorithms.
+    </p>
+
+    <h3>Author's Comments</h3>
+
+    <p>
+      This is the book version of my thesis with a few additions,
+      including an integer version
+      of Mike Paterson's treatment of the AKS sorting network.
+    </p>
+  </div>
+  
+  <h2>Simulation of Parallel Computers (1985, 1987)</h2>
+
+  <div class=content>
+    <p>
+      <a href="/">I. Parberry</a>,
+      "Some Practical Simulations of Impractical Parallel Computers".
+      <I>Parallel Computing</I>, Vol. 4, No. 1, pp. 93-101, 1987.
+      A preliminary version of this paper appeared in
+      Proceedings of the International Workshop on Parallel Computing and VLSI,
+      Amalfi, Italy, May 1984, pp. 27-37, (North Holland, 1985).
+    <p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      Many popular theoretical models of parallel computers suffer the drawback
+      of being highly impractical.  The aim of this paper is to
+      examine simulations of two impractical parallel machine models (global memory
+      machines and networks of sequential processors) by two more practical models
+      (uniform circuits and feasible networks).  We give a single basic simulation
+      theorem
+      which epitomizes a number of related results in this
+      area.  In particular, one corollary to this theorem
+      is an improved simulation of space and reversal bounded Turing machines by width
+      and depth bounded uniform circuits.  We are thus able to unify Pippenger's
+      characterization of NC with current work on universal parallel machines.
+    </p>
+  </div>
+
+  <h2>Interconnection Patterns (1986)</h2>
+
+  <div class=content>
+    <img class=centered alt="Interconnection graphs." src="images/intpattern.jpg">
+
+    <p>
+      <a href="http://larc.unt.edu/ian">I. Parberry</a>,
+      "On Recurrent and Recursive Interconnection Patterns".
+      <I>Information Processing Letters</I>, Vol. 22, No. 6, pp. 285-289, 1986.
+      [<a href="/ian/pubs/recurrent.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      A number of graphs, in particular variants of the cube-connected cycles
+      and shuffle-exchange, have become popular as interconnection patterns
+      for synchronous parallel computers.  A useful property is to have a
+      large machine built from isomorphic copies of a smaller one,
+      plus a few extra processors.  If only a small number of extra processors
+      have to be added, we call the interconnection pattern
+      <em>recurrent</em>.
+      If no extra processors are added, we call it
+      <em>recursive</em>.
+      We show that a recursive interconnection pattern is, in a sense, not
+      as versatile as the cube-connected cycles or shuffle-exchange.  However,
+      we present a recurrent interconnection pattern which is.
+    </p>
+  </div>
+
+  <h2>The Parallel Computation Thesis (1986)</h2>
+
+  <div class=content>
+    <p>
+      <a href="/">I. Parberry</a>,
+      "Parallel Speedup of Sequential Machines:
+      A Defense of the Parallel Computation Thesis",
+      <cite>SIGACT News</cite>,
+      Vol. 18, No. 1, pp. 54-67, 1986.
+      [<a href="/pubs/defenseofpct.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      It is reasonable to expect parallel machines to be faster than sequential ones.
+      But exactly how much faster do we expect
+      them to be?  Various authors have observed that an
+      exponential speedup is possible if sufficiently many processors are available.
+      One such author has claimed (erroneously) that this is
+      a counterexample to the parallel computation thesis.  We show that even
+      more startling speedups are possible, in fact if enough processors are
+      used, any recursive function can be computed in constant time.  Far from
+      contradicting the parallel computation thesis, this result actually
+      provides further evidence in favour of it.  Also, we show that an
+      arbitrary polynomial speedup of sequential machines is possible on
+      a model which satisfies the parallel computation thesis.  If,
+      as widely
+      conjectured, P is not contained in POLYLOGSPACE, then there can be no exponential speedup
+      on such a model.
+    </p>
+
+    <h3>Author's Comments</h3>
+
+    <p>
+      I wrote this paper because I was annoyed by the temerity of another author
+      saying that the parallel computation thesis was dead because exponential speedups
+      are possible with exponentially many processors. That's quite consistent with
+      the parallel computation thesis.
+    </p>
+  </div>
+
+  <h2>Parallel Prime Number Sieves (1981, 1994)</h2>
+  
+  <div class=content>
+    <p>
+      J. Sorenson and
+      <a href="/">I. Parberry</a>,
+      "Two Fast Parallel Prime Number Sieves",
+      <cite>Information and Computation</cite>,
+      Vol. 114, No. 1, pp. 115-130, 1994.
+      [<a href="../../pubs/sieve.pdf">pdf</a>]
+    </p>
+
+    <p>
+      Part of this paper was published in
+      <a href="/">I. Parberry</a>,
+      "Parallel Speedup of Sequential Prime Number Sieves",
+      Technical Report No. 30, Department of Computer Science, University of
+      Queensland, 1981.
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      A prime number sieve is an algorithm that lists all prime numbers up to a given bound $n$.
+      Two parallel prime number sieves for an algebraic EREW PRAM model of computation are presented and analyzed.
+      The first sieve runs in $O(\log n)$ time using $O(n/(\log n \log \log n))$ processors,
+      and the second sieve runs in $O(\sqrt{n})$ time using $O(\sqrt{n})$ processors.
+      The first sieve is optimal in the sense that it performs work $O(n/\log \log n)$, which is within
+      a constant factor of the number of arithmetic operations used by the fastest known sequential prime
+      number sieves. However, when both sieves are analyzed on the Block PRAM model as defined by
+      Aggarwal, Chandra, and Snir, it is found that the second sieve is
+      more work-efficient when communication latency is significant
+    </p>
+
+    <h3>Author's Comments</h3>
+
+    <p>
+      I was a TA for Paul Pritchard in 1981 when he came into class very excitedly
+      and describer his wheel sieve, the first significant improvement to the Sieve of Eratosthenes.
+      Add that idea to Les Goldschlager's preoccupation with parallel computers, and you get me parallelizing
+      Paul's wheel sieve.
+      It became a technical report at the University of Queencsland, but I never did
+      quite trust my ability to do number theory proofs enough to submit it to a journal. In the 1990s Jon Sorenson
+      emailed me with a new parallel sieve technique of his own, and verified that my proofs were indeed correct.
+      We pooled our ideas and came up with a joint paper.
+    </p>
+  </div>
+
+  <div class=updateinfo>
+    <p>
+      Created April 22, 2010.
+      Last updated October 17, 2014.
+    </p>
+  </div>
+</body>
+</html>
+
+
+

@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Biq</title>
+  
+    <link rel="stylesheet" type="text/css" href="css/global.css"/>
+    
+    <script src="js/helpers.js"></script>
+    <script src="js/makeurl.js"></script>
+    <script src="js/controls.js"></script>
+    <script src="js/biq.js"></script>
+  </head>
+  
+  <body onload="initialize();">
+    <div id="header">		
+      <div class="logo2">
+        <img src="images/logo.png" alt="Logo">
+      </div>
+      <div class="logo">
+        <a href="http://larc.unt.edu/ian/research/texturegen">Biq: <span>A Procedural Texture Generator</span></a>
+      </div>
+    </div>
+  
+    <div id="container">
+      <div class="sidebar">
+        <table  style=" padding-bottom: 0px">
+          <tr><td>Variant: 
+            <td><input type="number" name="p"  id="p" value="13" min="1" max="999999" maxlength="4">
+          <tr><td>Repeat:
+            <td><input type="number" name="q" id="q" value = "131"min="1" max="999999" maxlength="8">
+          <tr><td>Tile size: &nbsp;
+            <td><input type="number"   id="tile" value = "131"min="1" max="999999" readonly disabled maxlength="8">
+        </table>
+    
+        <div style="text-align:left; padding-top: 10px;  padding-bottom: 10px;">
+          <input type="radio" name="style" id="ornamentation" value="ornamentation" checked> Ornamentation<br>
+          <input type="radio" name="style" id="feathers" value="feathers"> Scales and feathers<br>
+          <input type="radio" name="style" id="textiles" value="textiles"> Textiles<br>
+          <input type="radio" name="style" id="advanced" value="advanced"> Advanced<br>
+        </div>
+
+        <table>
+          <tr><td>a:&nbsp;
+            <td><input type="number"  id="a0" value="1" min="0" max="99999" disabled>
+            <td>&nbsp;<input type="number"  id="a1" value="1" min="0" max="99999" disabled>
+          <tr><td>b:
+            <td><input type="number"  id="b0" value="1" min="0" max="99999" disabled>
+            <td>&nbsp;<input type="number"   id="b1" value="1" min="0" max="99999" disabled>
+          <tr><td>c:
+            <td><input type="number"   id="c0" value="0" min="0" max="99999" disabled>
+            <td>&nbsp;<input type="number"   id="c1" value="0" min="0" max="99999" disabled>
+          <tr><td>d:
+            <td><input type="number"   id="d0" value="0" min="0" max="99999" disabled>
+            <td>&nbsp;<input type="number"   id="d1" value="0" min="0" max="99999" disabled>
+          <tr><td>e:
+            <td><input type="number"   id="e0" value="0" min="0" max="99999" disabled>
+            <td>&nbsp;<input type="number"   id="e1" value="0" min="0" max="99999" disabled>
+          <tr><td>f:
+            <td><input type="number"  id="f0" value="0" min="0" max="99999" disabled>
+            <td>&nbsp;<input type="number"   id="f1" value="0" min="0" max="99999" disabled>
+        </table>
+
+        <div style="text-align:left; padding-top: 5px;">
+          <input type="radio" name="diagonalvslinear" id="diagonal" value="diagonal" checked disabled> Diagonal&nbsp;
+          <input type="radio" name="diagonalvslinear" id="linear" value="linear" disabled> Linear
+        </div>
+    
+        <div style="text-align: left; padding-bottom: 5px; padding-top: 15px">
+          Colors: <input style="width: 40px;" type="number" name="bands"  id="bands" value="1" min="1" max="4">	&nbsp;  
+          <input type="checkbox" id="invertcheckbox">
+             Invert 
+        </div>
+  
+        <div style="text-align:left;  padding-top: 3px;">
+          <input type="color" id="color0" value="#FFFFFF" onchange="draw()" disabled>
+          <input type="color" id="color1" value="#FFFFFF" onchange="draw()" disabled>
+          <input type="color" id="color2" value="#FFFFFF" onchange="draw()" disabled>
+          <input type="color" id="color3" value="#FFFFFF" onchange="draw()" disabled>
+        </div>
+  
+        <div style="text-align: left;padding-top: 3px">
+          Brightness: <input style="width: 40px;" type="number" step="0.1" name="brightness"  id="brightness" value="0.0" min="0.0" max="1.0">
+        </div>
+  
+        <table style="padding-bottom: 10px; padding-top: 5px;">
+          <tr><td><input type="radio" name="palette"  id="grayscale" value="grayscale" checked> Grayscale&nbsp;&nbsp;
+            <td><input type="radio" name="palette" id="toucan" value="toucan"> Toucan
+          <tr><td><input type="radio" name="palette"  id="pastel" value="pastel"> Pastel
+            <td><input type="radio" name="palette" id="finch" value="toucan"> Finch
+          <tr><td><input type="radio" name="palette"  id="primary" value="primary"> Primary
+            <td><input type="radio" name="palette" id="fish" value="fish"> Fish
+          <tr><td><input type="radio" name="palette"  id="autumn" value="autumn"> Autumn
+            <td><input type="radio" name="palette" id="lorikeet" value="lorikeet"> Lorikeet
+          <tr><td><input type="radio" name="palette"  id="ocean" value="ocean"> Ocean
+            <td><input type="radio" name="palette" id="custom" value="custom"> Custom
+        </table>
+    
+        <div style=" text-align:left; padding-right: 10px;">
+          <input type="checkbox" id="showtilecheckbox">
+            Tile 
+			<a href="help.html"><img src="images/help.png"></a>
+          
+            <br class="clear" />
+        </div>
+      </div>
+  
+      <div class="content">
+        <canvas id="target" width="800" height="600" ></canvas>
+      </div>
+   </div>
+   
+  <div id="container" style="background-color: #E0E0E0; border: 0px; text-align: center; padding: 0px;">
+     <div class="content" id="displayurl"  style="width: 100% ; padding: 5px; text-align: center;">
+     </div>
+  </div>
+  
+    <div class="footer">		
+    </div>
+  
+    <div class="updateinfo">
+      Created June 25, 2015 by Ian Parberry.
+      Written in HTML 5, Javascript and CSS 3.
+      Last updated April 2, 2018.
+   </div>
+  </body>
+</html>

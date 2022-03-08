@@ -1,0 +1,30 @@
+@inproceedings{DoranParberry2011PCGQuestGen,
+  author = {Doran, Jonathan and Parberry, Ian}, 
+  title = {A Prototype Quest Generator Based on a
+Structural Analysis of Quests from Four MMORPGs},
+  booktitle = {Proceedings of the Second International Workshop on Procedural Content
+Generation in Games},
+  pages = {1--8},
+  city = {Bordeaux, France},
+  year = 2011,
+  month={July}
+}
+
+
+@techreport{DoranParberry2011TRQuestGen,
+  author = {Doran, Jonathan and Parberry, Ian},
+  title = {A Prototype Quest Generator Based on a Structural
+Analysis of Quests from Four {MMORPG}s},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2011--02},
+  year = {2011},
+  month={March}
+ }
+
+ 
+@misc{Doran2011QuestWebsite,
+  author = {Doran, Jonathan and Parberry, Ian},
+  title = {\texttt{http://larc.unt.edu/ian/research/quest2/}},
+  year = {2011}
+}

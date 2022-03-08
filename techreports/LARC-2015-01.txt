@@ -1,0 +1,10 @@
+@techreport{DoranParberry2015QuestServer,
+  author = {Jonathon Doran and Ian Parberry},
+  title = {A Server-Side Framework for the Execution of Procedurally Generated Quests in an MMORPG},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2015--01},
+  year = {2015},
+  month={February},
+ }
+

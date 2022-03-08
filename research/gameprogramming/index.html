@@ -1,0 +1,166 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <title>Game Programming</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" type="text/css" href="../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../menu.css">
+
+  <script type="text/javascript" src="../../menu.js"></script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    "HTML-CSS": {scale: 90}
+    });
+  </script>
+
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"
+          type="text/javascript">
+  </script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <h1>Game Programming</h1>
+
+  <div class=content>
+    <p>
+      The following research includes anything related to game programming that doesn't involve
+      <a href="../content">Procedural Content Generation</a>.
+    </p>
+  </div>
+
+  <h2>Audio Games (2005, 2007)</h2>
+
+  <div class=content>
+    <img class=centered alt="Audio images." height=150 src="images/audiostrip.jpg">
+
+    <p>
+      <a href="http://www.cs.angelo.edu/~troden/">Timothy Roden</a>,
+      <a href="/">Ian Parberry</a>,
+      and David Ducrest,
+      "Toward Mobile Entertainment: A
+      Paradigm for Narrative-Based Audio Only Games", <em>
+        Science of
+        Computer Programming
+      </em>,
+      Volume 67, Issue 1, pp. 76-90, June 2007.
+      A preliminary version of this paper appeared in
+      Proceedings of the 2005 ACM SIGCHI
+      International Conference on Advances in Computer Entertainment Technology,
+      Valencia, Spain, pp. 274-277, June 15-17, 2005.
+      [<a href="http://dx.doi.org/10.1016/j.scico.2006.07.004">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      The widespread use of sophisticated mobile computing devices has set the
+      stage for a renaissance in audio only entertainment. Traditional 
+      visual games are already used widely in cellular phones and similar devices.
+      A significant limitation is the small display size. In contrast, audio only
+      games on suitable mobile hardware need not degrade due to the smaller form
+      factor. This makes audio only games an attractive alternative to visual games.
+      We describe a framework for authoring interactive narrative-based audio only
+      games set in 3D virtual environments. Despite the novelty in audio only gaming,
+      our approach builds on a foundation of several years of research into audio
+      only applications for sight impaired users, augmented reality systems and
+      human-computer interaction studies. In comparison to attempts to provide a
+      realistic user interface, we argue a simple interface enhances both immersion
+      and entertainment value, serendipitously making audio only games practical
+      for mobile computing. Novel features of our system include real-time gameplay
+      and multiplayer support. We also describe our software architecture, the 
+      current implementation of which uses low-cost existing PC-based hardware
+      and software. In addition, we describe our first game, Dragon's Roar.
+    </p>
+
+    <h3>Author's Comments</h3>
+
+    <p>
+      I was asked to give an invited talk on this in 2010.
+      You can see a <a href="/Games4Health2010/">video of this talk</a>
+      that includes some audio clips from our proof-of-concept games.
+    </p>
+  </div>
+
+  <h2>Portals and Portholes (2004, 2005)</h2>
+
+  <div class=content>
+    <img class=centered alt="PVS images" height=150 src="images/pvsstrip.jpg">
+
+    <p>
+      <a href="http://www.cs.angelo.edu/~troden/">Timothy Roden</a> and
+      <a href="/">Ian Parberry</a>,
+      "Portholes and Planes: Faster Dynamic Evaluation of
+      Potentially Visible Sets",
+      <em>ACM Computers in Entertainment</em>, Vol. 3, No. 2,  April/June 2005.
+      A preliminary version of this paper appeared in
+      the Proceedings of the International Workshop in Game Design and Technology,
+      Liverpool, England, Nov. 15-16, 2004.
+      [<a href="../../pubs/PortholesAndPlanes.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+    <p>
+      We describe a simple and efficient dynamic occlusion culling algorithm
+      for computing potentially visible sets (PVS) in densely occluded
+      virtual environments. Our method is an optimization of a widely used
+      technique in which a 3D environment is divided into cells and portals.
+      Our algorithm computes the PVS in approximately half the time of previous
+      portal methods at the expense of producing a slightly relaxed PVS.
+      In addition, our algorithm enables fast culling of objects within cells
+      using inexpensive object space methods by using a lookup table to compute
+      the diminished object space view frustum. The algorithm takes advantage
+      of temporal coherence, is easy to implement, and is particularly well suited
+      for applications that need to compute a PVS for use in non-rendering tasks such as AI.
+    </p>
+  </div>
+
+  <h2>Subhunt (1997)</h2>
+
+  <div class=content>
+    <img class="centered" src="images/subhuntstrip.png" alt="Thumbnails.">
+
+    <p>
+      <a href="/">Ian Parberry</a>
+      and William R. Pensyl,
+      "Subhunt: A Submarine Action Game",
+      Unpublished Manuscript, 1997.
+      [<a href="../../pubs/subhunt.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      Subhunt is a 2.5D, sprite based, real-time, first-person, single-player
+      submarine action game produced by faculty and students at the University
+      of North Texas.  Players find themselves piloting a submarine with the
+      task of locating and destroying enemy shipping while managing critical
+      resources and trying not to get killed.  Visual and audio cues create the
+      illusion of action that allows the player to become completely immersed
+      in the Subhunt virtual world.
+    </p>
+
+    <h3>Author's Comment</h3>
+
+    <p>
+      We couldn't find any place to publish this in 1997. After all, it reads more like
+      a manual than an academic paper. Pity.
+    </p>
+  </div>
+
+  <div class=updateinfo>
+    <p>
+      Created April 20, 2010.
+      Last updated August 23, 2019.
+    </p>
+  </div>
+</body>
+</html>

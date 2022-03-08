@@ -1,0 +1,10 @@
+@techreport{Parberry2015Biq,
+  author = {Ian Parberry},
+  title = {A Designer Centric Procedural Texture Generator Using Modular Bivariate Quadratic Functions},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2015--05},
+  year = {2015},
+  month={July},
+ }
+

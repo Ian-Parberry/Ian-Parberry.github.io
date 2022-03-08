@@ -1,0 +1,414 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Guerilla ASCII Art</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" type="text/css" href="../../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../../menu.css">
+
+  <script type="text/javascript" src="../../../menu.js"></script>
+
+  <style type="text/css">
+
+    #imgflip {
+      display: block;
+      margin: 0 auto;
+      width: 511px;
+      height: 442px;
+      background: url("images/mouseover.png") no-repeat 0 0px;
+    }
+
+      #imgflip:hover {
+        background-position: 0 -442px;
+      }
+  </style>
+
+  <style type="text/css">
+
+    .mytable {
+      width: 25%;
+      border-collapse: collapse;
+    }
+
+      .mytable td, .mytable th {
+        font-size: 1em;
+        border: 1px solid #000000;
+        padding: 3px 7px 2px 7px;
+        text-align: center;
+      }
+
+      .mytable th {
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 4px;
+        background-color: #26bdff;
+        color: #ffffff;
+      }
+
+      .mytable tr.alt td {
+        color: #000000;
+        background-color: #eeeeee;
+        text-align: center;
+      }
+
+    #slideshow {
+      list-style: none;
+      color: #fff;
+      margin: 0;
+      background: #FFF;
+      padding: 5px;
+      font: 11px Verdana,Arial
+    }
+
+      #slideshow span {
+        display: none
+      }
+
+    #wrapper {
+      width: 506px;
+      margin: 50px auto;
+      display: none
+    }
+
+      #wrapper * {
+        margin: 0;
+        padding: 0
+      }
+
+    #fullsize {
+      position: relative;
+      width: 500px;
+      height: 300px;
+      padding: 2px;
+      border: 1px solid #ccc;
+      background: #000
+    }
+
+    #information {
+      position: absolute;
+      bottom: 0;
+      width: 500px;
+      height: 0;
+      background: #000;
+      color: #fff;
+      overflow: hidden;
+      z-index: 200;
+      opacity: .7;
+      filter: alpha(opacity=70)
+    }
+
+      #information h3 {
+        padding: 4px 8px 3px;
+        font-size: 14px
+      }
+
+      #information p {
+        padding: 0 8px 8px
+      }
+
+    #image {
+      width: 500px
+    }
+
+      #image img {
+        position: absolute;
+        z-index: 25;
+        width: auto
+      }
+
+    .imgnav {
+      position: absolute;
+      width: 25%;
+      height: 306px;
+      cursor: pointer;
+      z-index: 150
+    }
+
+    #imgprev {
+      left: 0;
+      background: url(images/left.gif) left center no-repeat
+    }
+
+    #imgnext {
+      right: 0;
+      background: url(images/right.gif) right center no-repeat
+    }
+
+    #imglink {
+      position: absolute;
+      height: 306px;
+      width: 100%;
+      z-index: 100;
+      opacity: .4;
+      filter: alpha(opacity=40)
+    }
+
+    .linkhover {
+      background: url(images/link.gif) center center no-repeat
+    }
+
+    #thumbnails {
+      margin-top: 15px
+    }
+
+    #slideleft {
+      float: left;
+      width: 20px;
+      height: 81px;
+      background: url(images/scroll-left.gif) center center no-repeat;
+      background-color: #222
+    }
+
+      #slideleft:hover {
+        background-color: #333
+      }
+
+    #slideright {
+      float: right;
+      width: 20px;
+      height: 81px;
+      background: #222 url(images/scroll-right.gif) center center no-repeat
+    }
+
+      #slideright:hover {
+        background-color: #333
+      }
+
+    #slidearea {
+      float: left;
+      position: relative;
+      width: 456px;
+      margin-left: 5px;
+      height: 81px;
+      overflow: hidden
+    }
+
+    #slider {
+      position: absolute;
+      left: 0;
+      height: 81px
+    }
+
+      #slider img {
+        cursor: pointer;
+        border: 1px solid #666;
+        padding: 2px
+      }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <h1 >Guerilla ASCII Art</h1>
+
+  <div class=content>
+    <img class="centered" src="images/guerillastrip2.png" alt="Thumbnails.">
+
+    <p>
+      I placed a 6ft by 8ft <a href="../color">24-bit color ASCII Art</a> poster of a ladybug at the end of a long corridor at UNT Discovery Park
+      on Friday October 21, 2011 late at night after all of the administrators had gone
+      home for the weekend. I also left a notebook for comments.
+      Stay tuned to see what people say.
+    </p>
+  </div>
+
+  <h2>What is Guerilla Art?</h2>
+
+  <div class=content>
+    <a href="images/gorilla art 640.png"><img border=0 class=centered src="images/gorilla art 320.png" alt="gorilla"></a>
+
+    <p>
+      The ladybug poster is an example of <em>guerilla art</em>.
+      <a href="http://guerilla-art.wikidot.com/what-is-guerilla-art">Guerilla Art</a>
+      is an installation art form in which the artist leaves an anonymous art piece in
+      an unauthorized public location.
+    </p>
+  </div>
+
+  <h2>The Installation</h2>
+
+  <div class=content>
+    <ul id="slideshow">
+      <li>
+        <h3>Ladybug</h3>
+        <span>photos/ladybugcolor1.jpg</span>
+        <p>Ladybug in Color ASCII Art.</p>
+        <a href="#"><img src="thumbnails/ladybugcolor1.jpg" alt="Image" /></a>
+      </li>
+
+      <li>
+        <h3>Closeup</h3>
+        <span>photos/ladybugcolor2.jpg</span>
+        <p>Closeup showing text.</p>
+        <a href="#"><img src="thumbnails/ladybugcolor2.jpg" alt="Image" /></a>
+      </li>
+      <li>
+        <h3>Big Pixels</h3>
+        <span>photos/P1020031.JPG</span>
+        <p>The pixels are large when printed.</p>
+        <a href="#"><img src="thumbnails/P1020031.JPG" alt="Image" /></a>
+      </li>
+      <li>
+        <h3>Big Letters</h3>
+        <span>photos/P1020028.JPG</span>
+        <p>Each letter is about half an inch wide.</p>
+        <a href="#"><img src="thumbnails/P1020028.JPG" alt="Image" /></a>
+      </li>
+      <li>
+        <h3>Setting Up</h3>
+        <span>photos/image1.jpg</span>
+        <p>The poster goes up in four pieces.</p>
+        <a href="#"><img src="thumbnails/image1.jpg" alt="Image" /></a>
+      </li>
+      <li>
+        <h3>Corridor</h3>
+        <span>photos/P1020025.JPG</span>
+        <p>Our building has very long corridors.</p>
+        <a href="#"><img src="thumbnails/P1020025.JPG" alt="Image" /></a>
+      </li>
+      <li>
+        <h3>Corridor</h3>
+        <span>photos/P1020022.JPG</span>
+        <p>Let's start walking.</p>
+        <a href="#"><img src="thumbnails/P1020022.JPG" alt="Image" /></a>
+      </li>
+      <li>
+        <h3>Corridor</h3>
+        <span>photos/P1020019.JPG</span>
+        <p>There's the door to the Department of Computer Science and Engineering on the right.</p>
+        <a href="#"><img src="thumbnails/P1020019.JPG" alt="Image" /></a>
+      </li>
+      <li>
+        <h3>Corridor</h3>
+        <span>photos/P1020016.JPG</span>
+        <p>Now we're level with the door to the Department of Computer Science and Engineering.</p>
+        <a href="#"><img src="thumbnails/P1020016.JPG" alt="Image" /></a>
+      </li>
+      <li>
+        <h3>Corridor</h3>
+        <span>photos/P1020013.JPG</span>
+        <p>What's that I see in the distance?</p>
+        <a href="#"><img src="thumbnails/P1020013.JPG" alt="Image" /></a>
+      </li>
+      <li>
+        <h3>Corridor</h3>
+        <span>photos/P1020010.JPG</span>
+        <p>That's the Chairman's office on the right.</p>
+        <a href="#"><img src="thumbnails/P1020010.JPG" alt="Image" /></a>
+      </li>
+      <li>
+        <h3>Corridor</h3>
+        <span>photos/P1020007.JPG</span>
+        <p>LARC coming up on the right.</p>
+        <a href="#"><img src="thumbnails/P1020007.JPG" alt="Image" /></a>
+      </li>
+      <li>
+        <h3>Corridor</h3>
+        <span>photos/P1020004.JPG</span>
+        <p>LARC on the right.</p>
+        <a href="#"><img src="thumbnails/P1020004.JPG" alt="Image" /></a>
+      </li>
+      <li>
+        <h3>Corridor</h3>
+        <span>photos/P1020001.JPG</span>
+        <p>Help lab on the right.</p>
+        <a href="#"><img src="thumbnails/P1020001.JPG" alt="Image" /></a>
+      </li>
+      <li>
+        <h3>Corridor</h3>
+        <span>photos/P1010997.JPG</span>
+        <p>It's a giant ladybug!</p>
+        <a href="#"><img src="thumbnails/P1010997.JPG" alt="Image" /></a>
+      </li>
+      <li>
+        <h3>Corridor</h3>
+        <span>photos/P1010994.JPG</span>
+        <p>Now I see it clearly.</p>
+        <a href="#"><img src="thumbnails/P1010994.JPG" alt="Image" /></a>
+      </li>
+      <li>
+        <h3>Corridor</h3>
+        <span>photos/P1010991.JPG</span>
+        <p>Yes, it's a giant ladybug.</p>
+        <a href="#"><img src="thumbnails/P1010991.JPG" alt="Image" /></a>
+      </li>
+    </ul>
+
+    <div id="wrapper">
+      <div id="fullsize">
+        <div id="imgprev" class="imgnav" title="Previous Image"></div>
+        <div id="imglink"></div>
+        <div id="imgnext" class="imgnav" title="Next Image"></div>
+        <div id="image"></div>
+        <div id="information">
+          <h3></h3>
+          <p></p>
+        </div>
+      </div>
+      <div id="thumbnails">
+        <div id="slideleft" title="Slide Left"></div>
+        <div id="slidearea">
+          <div id="slider"></div>
+        </div>
+        <div id="slideright" title="Slide Right"></div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="compressed.js"></script>
+
+    <script type="text/javascript">
+      $('slideshow').style.display = 'none';
+      $('wrapper').style.display = 'block';
+      var slideshow = new TINY.slideshow("slideshow");
+      window.onload = function () {
+        slideshow.auto = true;
+        slideshow.speed = 5;
+        slideshow.link = "linkhover";
+        slideshow.info = "information";
+        slideshow.thumbs = "slider";
+        slideshow.left = "slideleft";
+        slideshow.right = "slideright";
+        slideshow.scrollSpeed = 4;
+        slideshow.spacing = 5;
+        slideshow.active = "#fff";
+        slideshow.init("slideshow", "image", "imgprev", "imgnext", "imglink");
+      }
+    </script>
+    <p>
+      &nbsp;
+    </p>
+    <p>
+      &nbsp;
+    </p>
+  </div>
+
+  <h2>Comments</h2>
+
+  <div class=content>
+    <img class=centered src="images/comments.jpg" alt="Image">
+  <p>
+
+    <img class=centered src="images/comment1.jpeg" alt="Image">
+  <p>
+    <img class=centered src="images/comment2.jpeg" alt="Image">
+  <p>
+
+    <img class=centered src="images/comment3.jpeg" alt="Image">
+  <p>
+    <img class=centered src="images/comment4.jpeg" alt="Image">
+  <p>
+    The comments were closed on Friday, November 18 after some fool stole my pen.
+  </div>
+
+  <div class=updateinfo>
+    <p>
+      Created October 22, 2011.
+      Last updated August 7, 2019.
+    </p>
+  </div>
+</body>
+</html>

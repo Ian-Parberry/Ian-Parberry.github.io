@@ -1,0 +1,25 @@
+@techreport{AmarasingheParberry2010TRFire,
+  author = {Amarasinghe, Dhanyu and Parberry, Ian},
+  title = {Towards Fast, Believable Real-time Rendering of Burning Objects in Video Games},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2010--04},
+  year = {2010},
+  month={October},
+ }
+ 
+ @misc{AmarasingheParberry2010FireWebsite,
+    author = {Amarasinghe, Dhanyu and Parberry, Ian},
+    title = {\texttt{http://larc.unt.edu/ian/research/fire/}},
+    year = {2010}
+  }
+
+@inproceedings{AmarasingheParberry2011Fire,
+  author = {Amarasinghe, Dhanyu and Parberry, Ian},
+  title = {Towards Fast, Believable Real-time Rendering of Burning Objects in Video Games},
+  booktitle = {Proceedings of the 6th Annual International Conference on the Foundations of Digital Games},
+  pages = {256-258},
+  location = {Bordeaux, France},
+  month = {July},
+  year = 2011
+}

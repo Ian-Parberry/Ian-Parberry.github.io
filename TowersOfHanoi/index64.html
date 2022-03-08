@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Tower of Brahma</title>
+
+  <script src="bignumber.js"></script>
+  <script src="ToH64.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="../menu.css">
+  <script type="text/javascript" src="../menu.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="global.css" />
+
+  <style>
+    .newspaper {
+      -webkit-columns: 180px 2; /* Chrome, Safari, Opera */
+      -moz-columns: 180px 2; /* Firefox */
+      columns: 180px 2;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body onload="init();">
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <div id="container2" style="width: 830px; margin-top: 4em" ;>
+    <div class="content">
+
+      <a href="index.html">
+        <img class="hlp" style="float: right; margin: 0px; margin-right: 10px; border: 0px;"
+             src="button1.png" onmouseover="this.src='button2.png'" onmouseout="this.src='button1.png'" alt="image.">
+      </a>
+
+      <h1>The Tower of Brahma and the End of the Universe</h1>
+
+      <img class="hlp" style="float: left; margin: 5px 15px 5px 35px; border: 1px solid black;"
+           src="lucas.jpg" alt="Lucas.">
+
+      <p>
+        The <a class="gray" href="index.html">Towers of Hanoi</a> actually have very little to do with the city of Hanoi in present day Vietnam.
+        The earliest recorded reference is from
+        &Eacute;douard Lucas (in <em>R&eacute;cr&eacute;ations Math&eacute;matiques</em>, Vol. 3, pp. 55–59, Gauthier-Villars, Paris, 1893),
+        who reports that there is in the
+        <a class="gray" href="https://www.google.com/maps/place/Shri+Kashi+Vishwanath+Temple/@25.310858,83.0084843,17z/data=!3m1!4b1!4m2!3m1!1s0x398e2e21ee940b17:0x48600e4fcdfb7b13">temple of Kashi Vishwanath</a>
+        in  Varanasi, Uttar Pradesh, India,
+        a set of 64 gold disks on 3 diamond needles called the <em>Tower of Brahma</em> which monks have
+        been trying to solve since the beginning of time.
+        Supposedly the Universe will end when they succeed in moving the 64 discs from the start needle
+        to the end needle without breaking any of the <a class="gray" href="help.html">rules</a>.
+      </p>
+      <p>
+
+        Although this story is most likely the product of the fevered imagination of a French mathematician,
+        the claim about the Universe ending isn't as far-fetched as it sounds. The Towers of Hanoi with
+        64 discs will take 2<sup>64</sup>−1 = 1.84 × 10<sup>19</sup> moves to solve.
+        At one move per second, that will take about 5.85x10<sup>11</sup> years.
+        The current age of the Universe is reputed to be, according to various sources,
+        between a few thousand and 1.38x10<sup>10</sup> years. Therefore, it will take the monks at least 42
+        times the current age of the Universe to complete their task. So perhaps 42 really is
+        the answer to Life, the Universe, and Everything and the Universe will end when the Tower of Brahma is solved.
+      </p>
+
+      <p>
+        Being nit-picky for a moment, the monks clearly couldn't have been working on the Tower of Brahma since the beginning of time
+        because at the beginning of time there weren't any monks. There weren't any people.
+        We're told that the Earth didn't form until 4.6 billion years ago,
+        modern humans only appeared 2.2 million years ago,
+        and the first human settlement in India was supposedly only about 70,000 years ago.
+      </p>
+
+      <img class="hlp" style="float: right; margin: 5px 15px 5px 15px; border: 0px;"
+           src="temple.png" alt="temple">
+
+      <p>
+        The temple of Kashi Vishwanath very probably hasn't existed since the beginning of time either.
+        The date of its construction is unclear, but
+        it is apparently mentioned in the <em>Skanda Purana</em>, which is itself difficult
+        to date but is generally though to have been written in the 6th or 7th Century.
+
+        We do know that the temple of Kashi Vishwanath was demolished in 1194,
+        rebuilt in the 1200s, demolished again in the 1400s, and rebuilt again in 1585.
+        In 1669 it was demolished yet again and replaced by a mosque.
+        In 1780 the present temple was constructed adjacent to the mosque.
+        It is difficult to imagine the monks
+        being able to concentrate on their task with all this destruction and construction going on,
+        but perhaps they persevered grimly nonetheless.
+      </p>
+
+      <p>
+        If this is some concern to you, please observe the monks' progress on the Tower of Brahma below,
+        assuming that they somehow managed to start around the time of the Big Bang, that they've made one move per second,
+        that they haven't taken any breaks whatsoever (perhaps they work in shifts),
+        and of course that they haven't made a mistake and had to start over.
+        We've made a guess at the exact time of the Big Bang and we've
+        ignored inconvenient things like leap years and time dilation due to Einstein's General Theory of Relativity, but
+        as you can see, we still appear to have a very long time to go until the end of the Universe.
+        Check back in a few months and see how much progress has been made.
+        While you are waiting for this calamitous event to occur, you
+        may as well play with <a class="gray" href="/ian">Ian Parberry</a>'s online <a class="gray" href="index.html">Towers of Hanoi</a>
+        or tackle one of the associated <a class="gray" href="activelearning.html">learning activities</a>.
+      </p>
+
+      <img class="hlp" style="float: right; margin: 5px 15px 5px 15px; border: 0px;"
+           src="ussher.png" alt="Bishop James Ussher">
+      <p>
+        If you don't subscribe to Big Bang theory, or if you are just curious,
+        you can change the start date by using the radio buttons below the puzzle.
+        One of the choices is October 23, 4004 BC, the date of Creation according to Bishop James Ussher
+        (<em>The Annals of the Old Testament</em>, 1650), pictured at right.
+      </p>
+      <p>
+        The black arrow on the left of the puzzle points out the smallest disc that hasn't yet been moved.
+        It serves as a rough measure of how much progress has been made, on a logarithmic scale, because
+        each disc takes twice as long to get started as the one on top of it.
+        Unfortunately, some inconsiderate person or persons seem to have stolen the diamond needles
+        and replaced the gold discs with cheap colored plastic ones, but this shouldn't interfere with your viewing pleasure.
+      </p>
+
+      <div class="content">
+        <canvas id="canvas" width="800" height="600"></canvas>
+      </div>
+
+      <div class="content" style="margin-left: 5px; margin-top: 10px; margin-bottom: 10px; width: 800px; border: 1px solid black;">
+
+        <div class="content" style="padding-left: 20px; padding-top: 0px;">
+          Show the Tower of Brahma right now, assuming that it was started:<br />
+          <div class="newspaper">
+            <input type="radio" name="times" id="now" value="now"
+                   style="margin-left: 15px" onclick="nowRadioButtonHandler()"> Now<br />
+
+            <input type="radio" name="times" id="hour" value="hour"
+                   style="margin-left: 15px" onclick="hourRadioButtonHandler()"> An hour ago<br />
+
+            <input type="radio" name="times" id="day" value="day"
+                   style="margin-left: 15px" onclick="dayRadioButtonHandler()"> Yesterday<br />
+
+            <input type="radio" name="times" id="week" value="week"
+                   style="margin-left: 15px" onclick="weekRadioButtonHandler()"> A week ago<br />
+
+            <input type="radio" name="times" id="month" value="month"
+                   style="margin-left: 15px" onclick="monthRadioButtonHandler()"> A month ago<br />
+
+            <input type="radio" name="times" id="year" value="year"
+                   style="margin-left: 15px" onclick="yearRadioButtonHandler()"> A year ago<br />
+
+            <input type="radio" name="times" id="century21" value="century21"
+                   style="margin-left: 15px" onclick="century21RadioButtonHandler()"> 00:00 1/1/2000 (start of 21st Century) <br />
+
+            <input type="radio" name="times" id="unix" value="unix"
+                   style="margin-left: 15px" onclick="unixRadioButtonHandler()"> 00:00 1/1/1970 (Unix Epoch Zero)<br />
+
+            <input type="radio" name="times" id="temple" value="temple"
+                   style="margin-left: 15px" onclick="templeRadioButtonHandler()"> 1780 (Temple of K. V. last rebuilt)<br />
+
+            <input type="radio" name="times" id="templebuilt" value="templebuilt"
+                   style="margin-left: 15px" onclick="templebuiltRadioButtonHandler()"> 500 AD (Temple of K. V. built) <br />
+
+            <input type="radio" name="times" id="biblical" value="biblical"
+                   style="margin-left: 15px" onclick="biblicalRadioButtonHandler()"> October 23, 4004 BC (Biblical Creation) <br />
+
+            <input type="radio" name="times" id="settlement" value="settlement"
+                   style="margin-left: 15px" onclick="settlementRadioButtonHandler()"> 70,000 years ago (first humans in India) <br />
+
+            <input type="radio" name="times" id="humans" value="humans"
+                   style="margin-left: 15px" onclick="humansRadioButtonHandler()"> 2.2 million years ago (first hominids)<br />
+
+            <input type="radio" name="times" id="dino" value="dino"
+                   style="margin-left: 15px" onclick="dinoRadioButtonHandler()"> 230 million years ago (first dinosaurs) <br />
+
+            <input type="radio" name="times" id="life" value="life"
+                   style="margin-left: 15px" onclick="lifeRadioButtonHandler()"> 3.5 billion years ago (first life on Earth) <br />
+
+            <input type="radio" name="times" id="earth" value="earth"
+                   style="margin-left: 15px" onclick="earthRadioButtonHandler()"> 4.6 billion years ago (Earth formed) <br />
+
+            <input type="radio" name="times" id="bigbang" value="bigbang"
+                   checked style="margin-left: 15px" onclick="bigbangRadioButtonHandler()"> 13.8 billion years ago (The Big Bang) <br />
+
+            <input type="radio" name="times" id="end" value="end"
+                   style="margin-left: 15px" onclick="endRadioButtonHandler()"> Whatever, just travel in time to the end<br />
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <h1>About This Animation</h1>
+
+        <p>
+          The  animation of the Tower of Brahma is written in HTML5 and JavaScript. The JavaScript
+          includes implementation of the algorithms from
+          <a class="gray" href="activelearning.html#ada4">Algorithm Design Activity 4</a>
+          and
+          <a class="gray" href="activelearning.html#toaa3">Theory of Algorithms Activity 3</a>
+          in
+          <a class="gray" href="activelearning.html">Active Learning with Ian Parberry's Towers of Hanoi</a>.
+        </p>
+
+        <h1>Acknowledgement</h1>
+        <p>
+          This app uses <a class="gray" href="http://jsfromhell.com/classes/bignumber">bignumber.js</a>
+          by Jonas Raoni Soares Silva because JavaScript can't handle 64-bit integers and I'd rather not
+          write my own long integer code right now.
+        </p>
+      </div>
+    </div>
+
+    <a href="index.html">
+      <img class="hlp" style="float: right; margin: 0px; margin-right: 10px; margin-bottom: 10px; border: 0px;"
+           src="button1.png" onmouseover="this.src='button2.png'" onmouseout="this.src='button1.png'" alt="image.">
+    </a>
+  </div>
+
+  <div class="updateinfo">
+    <p>
+      Created February 5, 2016.
+      Last updated August 7, 2019.
+    </p>
+  </div>
+</body>
+</html>

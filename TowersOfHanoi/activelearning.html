@@ -1,0 +1,544 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Active Learning with the Towers of Hanoi</title>
+
+  <script type="text/javascript" async
+          src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
+  <link rel="stylesheet" type="text/css" href="global.css" />
+  <link rel="stylesheet" type="text/css" href="helppage.css" />
+
+  <link rel="stylesheet" type="text/css" href="../menu.css">
+  <script type="text/javascript" src="../menu.js"></script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <div id="container2" style="width: 800px; margin-top: 4em";">
+
+    <div class="content">
+      <a href="index.html">
+        <img class="hlp" style="float: right; margin: 0px; margin-right: 10px; border: 0px;"
+             src="button1.png" onmouseover="this.src='button2.png'" onmouseout="this.src='button1.png'" alt="image.">
+      </a>
+
+      <h1>Active Learning with Ian Parberry's Towers of Hanoi</h1>
+
+
+      <h2>Introduction</h2>
+      <p>
+        The Towers of Hanoi puzzle is a fun way to get students
+        thinking logically and algorithmically, which is an important first step to becoming a programmer.
+        It is also a gateway to attaining some of the more difficult skills that separate the professional programmer
+        from the novice:
+        theoretical skills such as algorithm design, algorithm analysis, and theory of algorithms;
+        and practical skills such as programming and experimental algorithmics.
+        Specific topics touched upon include
+        divide-and-conquer, recursion, stacks, recurrence relations, and mathematical induction.
+      </p>
+
+      <p>
+        We begin with some relatively simple activities that, while they are accessible to grade school or high school students,
+        can be profitable to even the most jaded of graduate students.
+        <a class="gray" href="#competitiveactivities">Competitive Activities</a> gets students to compete against each other to
+        see who can solve the Towers of Hanoi with the largest number of discs.
+        <a class="gray" href="#lookingandthinkingactivities">Looking and Thinking Activities</a>
+        engage students in experimenting with the <a class="gray" href="index.html">Towers of Hanoi app</a>,
+        and asks them to think about and report their observations.
+        <a class="gray" href="#actingoutactivities">Acting Out Activities</a>
+        asks students to act out an algorithm in pseudocode using the
+        <a class="gray" href="index.html">Towers of Hanoi app</a>.
+      </p>
+
+      <p>
+        The remaining activities are intended for undergraduate and graduate students.
+        The main theme is enabling students to generalize from the small examples in the
+        <a class="gray" href="index.html">Towers of Hanoi app</a>.
+        <a class="gray" href="#algorithmdesignactivities">Algorithm Design Activities</a> has students compose algorithms for interesting variants
+        of the Towers of Hanoi puzzle.
+        <a class="gray" href="#algorithmanalysisactivities">Algorithm Analysis Activities</a> involve the construction of mathematical
+        formulae for the number of moves made by the standard algorithm and the
+        algorithms from the <a class="gray" href="#algorithmdesignactivities">Algorithm Design Activities</a>.
+        <a class="gray" href="#theoryofalgorithmsactivities">Theory of Algorithms Activities</a> has students investigate some of the properties of their algorithms.
+        <a class="gray" href="#programmingactivities">Programming Activities</a> invites students to code up their algorithms.
+        <a class="gray" href="#experimentalalgorithmicsactivities">Experimental Algorithmics Activities</a> engages students in measuring the run-time of their
+        programs in order to identify which algorithmic techniques are faster in practice.
+      </p>
+
+      <h2>Dependencies</h2>
+
+      <p>
+        The following diagram shows the dependencies between the activities.
+        Click for a larger image.
+      </p>
+
+      <a href="blocky0.png">
+        <img style="display: block; margin-top: 10px; margin-bottom: 10px; border: 1px solid black; padding-top: 0px; margin-right: auto; margin-left: auto;"
+             src="blocky3.png" alt="image.">
+      </a>
+
+      <a name="competitiveactivities">
+        <h2>Competitive Activities</h2>
+      </a>
+
+      <img class="hlp" style="float: right; margin: 10px; border: 1px solid black;"
+           src="acolyte.png" alt="acolyte.">
+
+      <p>
+        Competitive activities help engage student interest.
+        They can be used first thing to get students motivated,
+        as breaks from the more rigorous activities, or after they
+        have done some of the activities so that they can apply what they have learned, if anything.
+        Have students try to
+        <a class="gray" href="index.html">solve the Towers of Hanoi</a>
+        with as many discs as they can and report the result to the class.
+        They will get a humorous rank for each puzzle solved.
+        The ability to follow instructions and to drag and drop with the mouse are all that is necessary to participate in
+        this activity. Graduate students may get as much out of it as 6 year-olds.
+      </p>
+
+
+      <a name="lookingandthinkingactivities">
+        <h2>Looking and Thinking Activities</h2>
+      </a>
+
+      <p>
+        The activities in this section are best done in groups, although it can also be profitable for students to do them individually.
+        They are accessible even to young students who have not yet learned to program.
+        The ability to follow instructions, drag and drop with the mouse, and some logical, observational, and reporting
+        skills are all that is really necessary.
+      </p>
+
+      <ol style="margin-bottom:0px;  padding-bottom: 0px;">
+
+        <li>
+          <a name="lata1"></a>
+          Watch the solution for the <a class="gray" href="index.html">Towers of Hanoi</a> with 4 discs.
+          Reset it, and press the Step button 7 times.
+          What do you think the algorithm was doing up to this point?
+          What do you think it will do next?
+          Watch the solution for the Towers of Hanoi with 5 discs.
+          Reset it, and press the Step button 15 times.
+          Can you see anything interesting?
+          How many steps do you think it will take to get to this point with 6 discs?
+          Try it out and see if you are right.
+        </li>
+
+        <li>
+          <a name="lata2"></a>
+          Watch the solutions for the <a class="gray" href="index.html">Towers of Hanoi</a> with 3, 4, 5, and 6 discs with the Count checkbox checked. Write down the number
+          of moves that it takes each time. Can you see a pattern to these numbers? Why do you think this pattern exists?
+        </li>
+
+        <li>
+          <a name="lata3"></a>
+          Watch the solution for the <a class="gray" href="index.html">Towers of Hanoi</a> with 6 discs. When does the red disc move?
+          How does it move? What about the green disc? The blue one? Is there any pattern here?
+        </li>
+      </ol>
+
+      <img class="hlp" style="float: right; margin-top: 5px; border: 1px solid black; padding-top: 0px; margin-right: 10px; margin-left: 10px;"
+           src="4-256.gif" alt="image.">
+
+      <ol start="4" style="margin-top:0px; padding-top: 0px;">
+        <li>
+          <a name="lata4"></a>
+          Uncheck the Colors checkbox and watch the solution for the <a class="gray" href="index.html">Towers of Hanoi</a> with 6 discs. Do
+          you notice anything special about the stacked discs?
+        </li>
+
+        <li>
+          <a name="lata5"></a>
+          Watch the solution for the <a class="gray" href="index.html">Towers of Hanoi</a> for 3 or 4 discs with each of the 5
+          <a class="gray" href="help.html#restrictions">Restrictions on Motion</a>.
+          what is similar about them? what is different about them? watch the smallest disc in particular.
+        </li>
+
+
+        <li>
+          <a name="lata6"></a>
+          Construct a table that shows, for \(1 \leq n \leq 8\), the number of moves used by autosolve to
+          solve the <a class="gray" href="index.html">Towers of Hanoi</a> for \(n\) discs with each of the 5 <a class="gray" href="help.html#restrictions">Restrictions on Motion</a>.
+          Your table should look something like the following.
+          Examine the entries for the "move through a peg" restrictions. Can you see any patterns?
+          Similarly, can you see any patterns for the "rotate" restrictions?
+        </li>
+      </ol>
+
+      <img style="display: block; margin-top: 0px; margin-bottom: 10px; border: 1px solid black; padding-top: 0px; margin-right: auto; margin-left: auto;"
+           src="movecounttable.png" alt="image.">
+
+      <p>
+        From here on, the activities require knowledge of things that are normally
+        taught in an advanced high school or introductory undergraduate programming class.
+      </p>
+
+      <a name="actingoutactivities"><h2>Acting Out Activities</h2></a>
+
+      <p>
+        The standard algorithm (that is, the recursive one that's always taught in intro programming classes)
+        for the Towers of Hanoi puzzle with \(n\) discs looks like the following. Number the
+        pegs 0, 1, and 2 from left to right. Our aim is to move \(n\) discs from peg 0 to peg 2.
+        However, we need to come up with a general method for moving \(n\) discs from peg \(i\) to peg \(j\)
+        that works for all \(i\) and \(j\) between 0 and 2.
+      </p>
+
+      <img style="display: block; margin-top: 10px; margin-bottom: 10px; border: 1px solid black; padding-top: 0px; margin-right: auto; margin-left: auto;"
+           src="pseudocode.png" alt="image.">
+
+
+      <ol>
+        <li>
+          <a name="aoa1"></a>
+          Does the above algorithm work correctly for \(n=1\)? For \(n=2\)? How many recursive calls are made?
+        </li>
+        <li>
+          <a name="aoa2"></a>
+          <a class="gray" href="index.html">Act out</a> the above algorithm for \(n=3,\) and \(n=4\).  How many recursive calls are made?
+        </li>
+      </ol>
+
+
+      <a name="algorithmdesignactivities">
+        <h2>Algorithm Design Activities</h2>
+      </a>
+
+      <p>
+        The activities in this section require knowledge of algorithm design (preferably using pseudocode),
+        particularly recursive algorithms.
+      </p>
+
+      <ol>
+        <li>
+          <a name="ada1"></a>
+          Design a non-recursive algorithm for the Towers of Hanoi using a stack data structure.
+          You can probably find one online, but you will learn more if you design it yourself.
+        </li>
+
+
+        <li>
+          <a name="ada2"></a>
+          Design a non-recursive algorithm for the Towers of Hanoi that doesn't use a stack.
+          (Hint: See <a class="gray" href="#toaa3">Theory of Algorithms Activity 3</a>).
+        </li>
+
+        <li>
+          <a name="ada3"></a>
+          The  <a class="gray" href="#actingoutactivities">standard algorithm</a>
+          only solves the Towers of Hanoi
+          when all discs start on the leftmost peg.
+          Design a simple recursive algorithm that will solve it from any legal start configuration
+          (that is, the discs may be on any pegs but they must be in ascending order of size
+          from bottom to top on each peg).
+          If you have trouble getting started, try observing <a class="gray" href="index.html">autosolve</a> in action.
+        </li>
+
+
+        <li>
+          <a name="ada4"></a>
+          Following up on <a class="gray" href="#lata1">Looking and Thinking Activity 1</a>, devise an algebraic formula
+          that gives you the peg that disc \(i\) will be on after \(m\)
+          moves on \(n\) discs. (hint the answer will depend mostly on \(i\) and \(m\).
+          the direction will also depend on whether \(n\) is odd or even.)
+          this formula lets you can jump very quickly to any point in the solution
+          without having to go through all of the intervening steps,
+          which is how we are able to show
+          progress on the towers of hanoi with 64 discs since the big bang in <a class="gray" href="index64">The Tower of Brahma and the End of the Universe</a>.
+        </li>
+
+        <li>
+          <a name="ada5"></a>
+          Devise recursive algorithms for the Towers of Hanoi with each of the 5 <a class="gray" href="help.html#restrictions">Restrictions on Motion</a>.
+          Surprisingly, you should find that the 5 algorithms all fit the following template:
+        </li>
+      </ol>
+
+      <img style="display: block; margin-top: 0px; margin-bottom: 10px; border: 1px solid black; padding-top: 0px; margin-right: auto; margin-left: auto;"
+           src="pseudocode2.png" alt="image.">
+
+
+
+      <a name="algorithmanalysisactivities">
+        <h2>Algorithm Analysis Activities</h2>
+      </a>
+
+      <p>
+        The activities in this section require knowledge of algorithm analysis techniques,
+        particularly the construction and solution of recurrence relations.
+      </p>
+
+      <ol>
+        <li>
+          <a name="aaa1"></a>
+          Following up on <a class="gray" href="#lata2">Looking and Thinking Activity 2</a>, show that the
+          <a class="gray" href="#actingoutactivities">standard algorithm</a> for the Towers of Hanoi puzzle with \(n\) discs uses \(2^n-1\) moves.
+          Hint: Devise a recurrence relation for the number of moves, then
+          solve it either by induction or by repeated substitution.
+        </li>
+        <li>
+          <a name="aaa2"></a>
+          Show that any solution to the Towers of Hanoi puzzle with \(n\) discs must make at least \(2^n-1\) moves.
+          This shows that <a class="gray" href="index.html">autosolve</a> uses the minimal number of moves.
+        </li>
+
+      </ol>
+
+      <p>
+        The next set of activities are about the analysis of the number of moves
+        made by the Towers of Hanoi algorithms with <a class="gray" href="help.html#restrictions">Restrictions on Motion</a>.
+        They follow up on <a class="gray" href="#lata6">Looking and Thinking Activity 6</a> and
+        <a class="gray" href="#ada5">Algorithm Design Activity 5</a>, which should be attempted first.
+      </p>
+
+      <ol start="3" style="margin-top:0px; padding-top: 5px;">
+
+        <li>
+          <a name="aaa3"></a>
+          Let \(T_0(n)\) be the number of moves used by the Towers of Hanoi algorithm with \(n\) discs
+          when all moves must be through peg 0.
+          Show that \(T_0(1)=1\) and for all \(n \geq 2\), $$T_0(n) = 3T_0(n-1)+1.$$
+          Prove that for all \(n \geq 1\), \(T_0(n) = (3^n - 1)/2\).
+        </li>
+
+        <li>
+          <a name="aaa4"></a>
+          Let \(T_1(n)\) be the number of moves used by the Towers of Hanoi algorithm with \(n\) discs
+          when all moves must be through peg 1.
+          Show that \(T_1(1)=2\) and for all \(n \geq 2\), $$T_1(n) = 3T_1(n-1)+2.$$
+          Prove that for all \(n \geq 1\), \(T_1(n) = 3^n - 1\).
+        </li>
+
+        <li>
+          <a name="aaa5"></a>
+          Let \(T_2(n)\) be the number of moves used by the Towers of Hanoi algorithm with \(n\) discs
+          when all moves must be through peg 2.
+          Show that \(T_2(1)=1\)  and for all \(n \geq 2\), $$T_2(n) = 3T_2(n-1)+1.$$
+          Prove that for all \(n \geq 1\), \(T_2(n) = (3^n - 1)/2\).
+        </li>
+
+        <li>
+          <a name="aaa6"></a>
+          Let \(T_R(n)\) be the number of moves used by the Towers of Hanoi algorithm with \(n\) discs
+          when all moves must rotate to the right.
+          Show that \(T_R(1)=2\)  and for all \(n \geq 2\), $$T_R(n) \leq 3T_R(n-1)+2.$$
+          Prove that for all \(n \geq 1\), \(T_R(n) \leq 3^n - 1\).
+        </li>
+
+        <li>
+          <a name="aaa7"></a>
+          Let \(T_L(n)\) be the number of moves used by the Towers of Hanoi algorithm with \(n\) discs
+          when all moves must rotate to the left.
+          Show that \(T_L(1)=1\)  and for all \(n \geq 2\), $$T_L(n) \leq 3T_L(n-1)+1.$$
+          Prove that for all \(n \geq 1\), \(T_L(n) \leq (3^n - 1)/2\).
+        </li>
+      </ol>
+
+      <p>
+        The following two activities are advanced, perhaps at the difficulty level of a graduate student in computer science
+        who is specializing in the mathematics of computing.
+      </p>
+
+      <ol start="8" style="margin-top:0px; padding-top: 5px;">
+        <li>
+          <a name="aaa8"></a>
+          Let \(T_R(n)\) be the number of moves used by the Towers of Hanoi algorithm with \(n\) discs
+          when all moves must rotate right.
+          Show that \(T_R(1)=2\), \(T_R(2)=7\) and for all \(n \geq 3\),
+          $$T_R(n) = 2(T_R(n-1)+T_R(n-2)) + 3.$$
+          Prove that for all \(n \geq 1\),
+          $$T_R(n) = \frac{(1-\sqrt{3})^{n+1} + (3\sqrt{3}+5)(1+\sqrt{3})^n}{2\sqrt{3}(1+\sqrt{3})} - 1.$$
+        </li>
+
+        <li>
+          <a name="aaa9"></a>
+          Let \(T_L(n)\) be the number of moves used by the Towers of Hanoi algorithm with \(n\) discs
+          when all moves must rotate left.
+          Show that \(T_L(1)=1\), \(T_L(2)=5\) and for all \(n \geq 3\),
+          $$T_L(n) = 2(T_L(n-1)+T_L(n-2)) + 3.$$
+          Prove that for all \(n \geq 1\),
+          $$T_L(n) = \frac{(1-\sqrt{3})^n + (\sqrt{3}+2)(1+\sqrt{3})^n}{\sqrt{3}(1+\sqrt{3})} - 1.$$
+        </li>
+      </ol>
+
+
+
+      <a name="theoryofalgorithmsactivities">
+        <h2>Theory of Algorithms Activities</h2>
+      </a>
+
+      <p>
+        The activities in this section require knowledge of techniques used in the theory of algorithms,
+        particularly mathematical induction.
+      </p>
+
+
+      <img class="hlp" style="float: right; margin: 15px; border: 1px solid black;"
+           src="2color.png" alt="2 colors.">
+
+      <ol>
+        <li>
+          <a name="toaa1"></a>
+          Following up on <a class="gray" href="#aoa1">Acting Out Activity 1</a>
+          and <a class="gray" href="#aoa2">Acting Out Activity 2</a>,
+          prove that the standard algorithm for the Towers of Hanoi is correct,
+          that is, it moves \(n\) discs from peg \(i\) to peg \(j\) without placing
+          a disc on a smaller one.
+
+        <li>
+          <a name="toaa2"></a>
+          Following up on <a class="gray" href="#lata4">Looking and Thinking Activity 4</a>,
+          prove by induction on the number of discs that
+          when the discs are colored alternately using two colors,
+          the <a class="gray" href="#actingoutactivities">standard algorithm</a>
+          never places two discs of the same color on
+          top of each other.
+
+        </li>
+
+        <li>
+          <a name="toaa3"></a>
+          Following up on <a class="gray" href="#lata3">Looking and Thinking Activity 3</a>,
+          Prove the following by induction on the number of discs, \(n\).
+          If	\(n\) is even,
+          the solution alternates between moving the smallest disc one peg to the right  (wrapping
+          around to the leftmost peg) and making the only other legal move.
+          If	\(n\) is odd,
+          the solution alternates between moving the smallest disc one peg to the left  (wrapping
+          around to the rightmost peg) and making the only other legal move.
+          Verify this claim experimentally by <a class="gray" href="index.html">observing the animation</a> carefully.  It might help to set the
+          animation speed set on Slow.
+          This gives you a nonrecursive algorithm for the Towers of Hanoi that doesn't use a stack.
+        </li>
+
+        <li>
+          <a name="toaa4"></a>
+          Following up on <a class="gray" href="#lata3">Looking and Thinking Activity 3</a>,
+          show that in the <a class="gray" href="#actingoutactivities">standard algorithm</a>
+          for the Towers of Hanoi puzzle with \(n\) discs,
+          the \(i^{th}\) smallest disc makes \(2^{n-i-1}\) moves for all \(0 \leq i \leq n\).
+        </li>
+
+        <li>
+          <a name="toaa5"></a>
+          Following up on <a class="gray" href="#lata5">Looking and Thinking Activity 5</a>,
+          modify the technique from <a class="gray" href="#toaa3">Theory of Algorithms Activity 3</a>
+          for each of the 5 <a class="gray" href="help.html#restrictions">Restrictions on Motion</a>.
+        </li>
+      </ol>
+
+
+      <a name="programmingactivities">
+        <h2>Programming Activities</h2>
+      </a>
+
+      <p>
+        The activities in this section require programming skills, a computer, and
+        a compiler. However, they do require at least the solutions to the
+        more theoretically oriented activities above.
+        Students can probably find code online, but they will learn more if they program it themselves.
+      </p>
+
+      <ol>
+        <li>
+          <a name="pa1"></a>
+          Write programs that implement the algorithms from
+          <a class="gray" href="#ada1">Algorithm Design Activities 1, 2, 3, 5, and 6</a>.
+          The input to your program should be the number of discs \(n\),
+          and the output should be the moves that solve it, one per line, as follows:<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;0->1<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;0->2<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;1->2<br />
+          &nbsp;&nbsp;&nbsp;&nbsp;etc.<br />
+          where, for example, 0->1 means a move of a single disc from peg 0 to peg 1 when the pegs are numbered 0, 1, and 2 from left to right.
+        </li>
+
+        <li>
+          <a name="pa2"></a>
+          Write a program that implements the algorithm from
+          <a class="gray" href="#ada4">Algorithm Design Activities 4</a>.
+          The input should also include a file containing the
+          initial configuration of the puzzle. The design of this file format is left up to you.
+        </li>
+
+        <li>
+          <a name="pa3"></a>
+          Write programs that implement the algorithms from
+          <a class="gray" href="#ada5">Algorithm Design Activities 5</a>.
+        </li>
+
+        <li>
+          <a name="pa4"></a>
+          Modify and use your programs from
+          Programming Activities 3 to extend the table from <a class="gray" href="#lata6">Looking and Thinking Activities 6</a>
+          to \(n=9, 10\) and (if you have the patience) beyond.
+          Do your results match the expectations of <a class="gray" href="#aaa3">Algorithm Analysis Activities 3-9</a>?
+        </li>
+      </ol>
+
+
+      <a name="experimentalalgorithmicsactivities">
+        <h2>Experimental Algorithmics Activities</h2>
+      </a>
+
+      <p>
+        The activities in this section require solid theoretical, programming, and analytic skills.
+        They depend on code from the Programming Activities.
+      </p>
+
+      <ol>
+        <li>
+          <a name="eaa1"></a>
+          Which algorithm is faster in practice, the recursive one or the nonrecursive one?
+          Begin with the programs for these algorithms that you wrote in the <a class="gray" href="#programmingactivities">Programming Activities</a>.
+          disable all of the output code, and
+          add code to measure the amount of cpu time used when solving the puzzle.
+          this code will vary from one programming language to another, and from one operating system to another.
+          the amount of cpu time used will typically be very, very, very small, so you will probably need to solve the puzzle
+          from scratch somewhere from 1,000 to 10,000 times to get cpu times that register at all.
+
+
+
+          <img class="hlp" style="float: right; margin: 10px; border: 1px solid black;"
+               src="runtime.png" alt="runtime.">
+
+          Have your program measure this for \(10 \leq n \leq 20\) discs and output the resulting times.
+          Compare the recursive algorithm from the <a class="gray" href="#actingoutactivities">Acting Out Activities</a> to the nonrecursive one
+          that uses a stack from <a class="gray" href="#ada1">Algorithm Design Activity 1</a>.
+          Plot the ratio of the nonrecursive time over the recursive time against the value of \(n\).
+          Your graph should look similar to the one shown here, but the exact
+          numbers will vary with programming language, compiler, operating system, computing hardware, and
+          your competence as an algorithm designer and a programmer.
+          Which is faster? Why do you think this is so? Explain the shape of your graph.
+        </li>
+
+
+        <li>
+          <a name="eaa2"></a>
+          Repeat the above with the nonrecursive algorithm
+          from <a class="gray" href="#ada3">Algorithm Design Activities 3</a>.
+          Which is faster? Why do you think this is so?  Explain the shape of your graph.
+        </li>
+      </ol>
+
+
+      <a href="index.html">
+        <img class="hlp" style="float: right; margin: 0px; margin-right: 10px; border: 0px;"
+             src="button1.png" onmouseover="this.src='button2.png'" onmouseout="this.src='button1.png'" alt="image.">
+      </a>
+    </div>
+  </div>
+
+  <div class="updateinfo">
+    <p>
+      Created March 23, 2016.
+      Last updated August 7, 2019.
+    </p>
+  </div>
+</body>
+</html>

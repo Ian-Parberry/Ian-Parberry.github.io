@@ -1,0 +1,16 @@
+@techreport{Parberry2011TRDharma,
+  author = {Parberry, Ian},
+  title = {A Dharma of Video Game Science},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2011--03},
+  year = {2011},
+  month=April
+ }
+ 
+
+@misc{Parberry2011Dharmaweb,
+  author = {Parberry, Ian},
+  title = {{A Dharma of Video Game Science}, \texttt{http://larc.unt.edu/ian/research/dharma/}},
+  year = {2011}
+}

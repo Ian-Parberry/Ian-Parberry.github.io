@@ -1,0 +1,509 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Color ASCII Art</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" type="text/css" href="../../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../../menu.css">
+
+  <script type="text/javascript" src="../../../menu.js"></script>
+
+  <style type="text/css">
+    #imgflip {
+      display: block;
+      margin: 0 auto;
+      width: 511px;
+      height: 442px;
+      background: url("images/mouseover.png") no-repeat 0 0px;
+    }
+
+    #imgflip:hover {
+      background-position: 0 -442px;
+    }
+  </style>
+
+  <style type="text/css">
+    .red {
+      color: red;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .cyan {
+      color: cyan;
+    }
+
+    .magenta {
+      color: magenta;
+    }
+
+    .yellow {
+      color: yellow;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .black {
+      color: black;
+      font-family: "Courier New", Courier, monospace;
+    }
+  </style>
+
+  <style type="text/css">
+    .asciiart {
+      margin-left: 1em;
+      margin-right: 1em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-top: 3em;
+      padding-bottom: 3em;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 8px;
+      border: 1px solid black;
+      text-align: center;
+    }
+
+    .mytable {
+      width: 25%;
+      border-collapse: collapse;
+    }
+
+    .mytable td, .mytable th {
+      font-size: 1em;
+      border: 1px solid #000000;
+      padding: 3px 7px 2px 7px;
+      text-align: center;
+    }
+
+    .mytable th {
+      text-align: center;
+      padding-top: 5px;
+      padding-bottom: 4px;
+      background-color: #26bdff;
+      color: #ffffff;
+    }
+
+    .mytable tr.alt td {
+      color: #000000;
+      background-color: #eeeeee;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+  
+  <h1>Color ASCII Art</h1>
+
+  <div class=content>
+    <img class="centered" src="images/asciiartstrip2.png" alt="Thumbnails.">
+
+    <p>
+      I've been intrigued for a while by the idea of making a color version of <a href="/ian/art/ascii">ASCII art</a>.
+      The only color ASCII art I could find online
+      used 24-bit color characters,
+      but that's really cheating. Given enough colors we could draw the whole picture using different colored copies of the letter <span class=black>M</span>,
+      but where's the challenge in that?
+    </p>
+  </div>
+
+  <h2>24-bit Color ASCII Art (2011)</h2>
+
+  <div class=content>
+    <p>
+      What is color ASCII art anyway?
+      An internet search will find quite a few examples
+      of 24-bit color ASCII art, meaning that each character can
+      be drawn in any of the 16,777,216 available 24-bit colors.
+      For example, on the left we have some 24-bit ASCII art.
+      On the right we have something more like what I have in mind,
+      but we're getting ahead of ourselves.
+    </p>
+
+    <img class=centered alt="Image" src="images/cheatexample.png">
+
+    <p>
+      Here are some more examples of 24-bit color ASCII art. Click for a larger image.
+    </p>
+
+    <div class=centered>
+      <a href="24bitimages/ASCII-ladybug-color.png"><img border=0 src="24bitimages/ASCII-ladybug-color200.png" alt="Image"></a>
+      &nbsp;
+      <a href="24bitimages/ASCII-hibiscus1-color.png"><img border=0 src="24bitimages/ASCII-hibiscus1-color200.png" alt="Image"></a>
+      &nbsp;
+      <a href="24bitimages/ASCII-admiral-color.png"><img border=0 src="24bitimages/ASCII-admiral-color200.png" alt="Image"></a>
+    </div>
+
+    <p>
+      But if we allow 24-bit color characters, we could just
+      use the letter <span class=black>M</span> drawn in different colors,
+      which strikes me as being lame.
+      Here's an example that you can click on for a larger image,
+      which you can zoom in on using your browser to see
+      all the <span class=black>M</span>s.
+    </p>
+
+    <a href="24bitimages/ASCII-ferny-colorM.png"><img border=0 class=centered alt="Image" src="24bitimages/ASCII-ferny-colorM640zoom.png"></a>
+
+    <p>
+      In greyscale ASCII art we choose the character whose average darkness matches the darkness of the pixel that it represents.
+      In color ASCII art we should use high-intensity colors and choose the character whose average darkness matches the intensity of the color of the pixel
+      that it represents.
+      Ideally each character should be drawn
+      using only a small set of saturated colors so that the images could in principle be created on an old-school
+      typewriter with only a few colored ribbons.
+      It turns out that we can get away with three or four ribbons.
+      We'll start with four-color ASCII art because it looks better on the screen,
+      and finish with three-color ASCII art which often looks better when printed.
+      The principle is still the same in both cases: color separation.
+    </p>
+  </div>
+
+  <h2>Color Separation (2011)</h2>
+
+  <div class=content>
+    <p>
+      We start by separating the image pixel sampled by our shader into its red, green, and blue components.
+      Imagine them arranged in a two by two quad like the one below at left, with the fourth entry filled by the pixels's grayscale value.
+      We could get by without the grayscale pixel in a pinch, but the ASCII images would look much paler, and we have an empty
+      slot in the quad so we might as well use it.
+    </p>
+    
+    <img class=centered alt="Image" src="images/colorseppixelsrgb.png">
+
+    <p>
+      For example, here's the ladybug image separated into RGB quads. It looks very much like what you'd see on a TV if you look close enough.
+    </p>
+
+    <img class=centered alt="Image" src="images/ASCII-ladybug-color3.png">
+
+    <p>
+      Here's some pixel shader code for building the quads:
+    </p>
+
+    <div class=code>
+      float4 ColorSeparate (in float2 Tex: TEXCOORD0): COLOR0{<br>
+      &nbsp;&nbsp;const int CHARSIZE = 8; //pixels in character block<br>
+      &nbsp;&nbsp;const int TEXTURESIZE = 2048; //size of texture<br>
+      &nbsp;&nbsp;const int TEXTURESIZE2 = 512; //size of texture for characters<br>
+      &nbsp;&nbsp;const int BLOCKSCALE = TEXTURESIZE/CHARSIZE;<br>
+      &nbsp;&nbsp;const int BLOCKSCALE2 = BLOCKSCALE/2;<br>
+      <br>
+      &nbsp;&nbsp;float2 blocky = floor(BLOCKSCALE*Tex)/BLOCKSCALE;<br>
+      &nbsp;&nbsp;float2 blocky2 = floor(BLOCKSCALE2*Tex)/BLOCKSCALE2;<br>
+      &nbsp;&nbsp;float4 pix = tex2D(Sampler0, blocky2); //grab  pixel<br>
+      <br>
+      &nbsp;&nbsp;[flatten]if(blocky.x == blocky2.x){<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;[flatten]if(blocky.y == blocky2.y)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pix.g = pix.b = 0.0f;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;else pix.r = pix.b = 0.0f;<br>
+      &nbsp;&nbsp;}<br>
+      &nbsp;&nbsp;else if(blocky.y == blocky2.y)<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;pix.g = pix.r = 0.0f;<br>
+      &nbsp;&nbsp;else pix.rgb = (pix.r + pix.g + pix.b)/3.0f;<br>
+      <br>
+      &nbsp;&nbsp;return pix; <br>
+      }
+    </div>
+  </div>
+
+  <h2>Color Theory Strikes Back (2011)</h2>
+
+  <div class=content>
+    <p>
+      Since color theory and I are only passing acquaintances,
+      my first attempt was to replace each of the four color blocks in a quad with a colored character that represents its intensity,
+      for example, strong red would be a red <span class=red>M</span> and midtone red would be a red <span class=red>*</span>.
+      Unfortunately the results were not what I was expecting. Click on the following
+      picture and zoom in using your browser to see the red, green, and blue ASCII characters:
+    </p>
+
+    <a href="images/ASCII-ladybug-colorsep-rgb.png"><img class=centered border=0 src="images/ASCII-ladybug-colorsep-rgb400.png" alt="Image"></a>
+
+    <p>
+      All is not lost, however.
+      It looks like the red on the ladybug is <span class=cyan>cyan</span> and the green on the grass is <span class=magenta>magenta</span>.
+      This is a pretty good clue that the perceived colors are inverted from the actual colors.
+      This is easily fixed by inverting the characters' colors from RGB to CMY.
+      So in fact we'd need
+      cyan, magenta, and yellow ribbons for our old-school mechanical typewriter in addition to our standard black:
+    </p>
+
+    <img class=centered alt="Image" src="images/coloredchars.png">
+
+    <p>
+      Here's some pixel shader code for turning quads into colored characters:
+    </p>
+
+    <div class=code>
+      float4 SeparatedToText(in float2 Tex: TEXCOORD0): COLOR0{<br>
+      &nbsp;&nbsp;const int CHARSIZE = 8; <br>
+      &nbsp;&nbsp;const int GRAYLEVELS = 9; <br>
+      &nbsp;&nbsp;const int TEXTURESIZE = 2048; <br>
+      &nbsp;&nbsp;const int TEXTURESIZE2 = 512; <br>
+      &nbsp;&nbsp;const int BLOCKSCALE = TEXTURESIZE/CHARSIZE;<br>
+      &nbsp;&nbsp;<br>
+      &nbsp;&nbsp;float4 pix = tex2D(Sampler0,<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;(floor(TEXTURESIZE*Tex)/CHARSIZE)*CHARSIZE/TEXTURESIZE); <br>
+      &nbsp;&nbsp;int gray =  max(max(pix.r, pix.g), pix.b)*GRAYLEVELS;<br>
+      &nbsp;&nbsp;pix.rgb = 1.0f - ceil(pix.rgb);<br>
+      &nbsp;&nbsp;<br>
+      &nbsp;&nbsp;int2 inttex, block;<br>
+      &nbsp;&nbsp;inttex = floor(Tex * (TEXTURESIZE-1));<br>
+      &nbsp;&nbsp;block = (inttex/CHARSIZE)*CHARSIZE; <br>
+      &nbsp;&nbsp;float2 offset = inttex - block + 1; <br>
+      &nbsp;&nbsp;offset.x += gray*CHARSIZE; <br>
+      &nbsp;&nbsp;offset /= TEXTURESIZE2 - 1; <br>
+      &nbsp;&nbsp;<br>
+      &nbsp;&nbsp;float4 color = tex2D(Sampler1, offset); <br>
+      &nbsp;&nbsp;color = clamp(color+4.0*pix,0,1);<br>
+      &nbsp;&nbsp;return color;<br>
+      }<br>
+    </div>
+
+    <p>
+      Notice that following line of code about halfway down:
+    </p>
+
+    <div class=code>
+      &nbsp;&nbsp;pix.rgb = 1.0f - ceil(pix.rgb);<br>
+    </div>
+
+    <p>
+      is where we invert the colors from RGB to CMY (the "1.0f -" part, and make them full saturation (the ceil part).
+      The result is an image made up of cyan, magenta, and yellow,
+      and black characters drawn at full saturation.
+    </p>
+  </div>
+
+  <h2>Four-Color ASCII Art (2011)</h2>
+
+  <div class=content>
+    <p>
+      Here's an example of a peacock
+      zoomed in at two levels to show the ASCII characters.
+    </p>
+
+    <img class=centered alt="Image" src="images/colorsepzoom.png">
+
+    <p>
+      Here are some more examples of
+      256 character wide,
+      colored ASCII images.
+      Click on the thumbnails to get a larger image where you can see the colored characters more clearly by zooming in using your browser.
+    </p>
+
+    <div class=centered>
+      <a href="images/ASCII-admiral-colorsep.png"><img border=0 src="images/ASCII-admiral-colorsep200.png" alt="Image"></a>
+      &nbsp;
+      <a href="images/ASCII-beach-colorsep.png"><img border=0 src="images/ASCII-beach-colorsep200.png" alt="Image"></a>
+      &nbsp;
+      <a href="images/ASCII-cornwall-colorsep.png"><img border=0 src="images/ASCII-cornwall-colorsep200.png" alt="Image"></a>
+      <p>
+        <a href="images/ASCII-ferny-colorsep.png"><img border=0 src="images/ASCII-ferny-colorsep200.png" alt="Image"></a>
+        &nbsp;
+        <a href="images/ASCII-flowerbed-colorsep.png"><img border=0 src="images/ASCII-flowerbed-colorsep200.png" alt="Image"></a>
+        &nbsp;
+        <a href="images/ASCII-ladybug-colorsep.png"><img border=0 src="images/ASCII-ladybug-colorsep200.png" alt="Image"></a>
+      <p>
+        <a href="images/ASCII-peacock-colorsep.png"><img border=0 src="images/ASCII-peacock-colorsep200.png" alt="Image"></a>
+        &nbsp;
+        <a href="images/ASCII-surf-colorsep.png"><img border=0 src="images/ASCII-surf-colorsep200.png" alt="Image"></a>
+        &nbsp;
+        <a href="images/ASCII-waterlilies-colorsep.png"><img border=0 src="images/ASCII-waterlilies-colorsep200.png" alt="Image"></a>
+      <p>
+        <a href="images/ASCII-hibiscus1-colorsep.png"><img border=0 src="images/ASCII-hibiscus1-colorsep200.png" alt="Image"></a>
+        &nbsp;
+        <a href="images/ASCII-building-colorsep.png"><img border=0 src="images/ASCII-building-colorsep200.png" alt="Image"></a>
+        &nbsp;
+        <a href="images/ASCII-abbeyroad-colorsep.png"><img border=0 src="images/ASCII-abbeyroad-colorsep200.png" alt="Image"></a>
+    </div>
+
+    <p>
+      A color ASCII image of the author:
+    </p>
+
+    <a href="images/ASCII-ian2011a-colorsep.png"><img class=centered border=0 src="images/ASCII-ian2011a-colorsep640.png" alt="Image"></a>
+
+    <p>
+      A color ASCII image of a red-winged blackbird from the <a href="http://en.wikipedia.org/wiki/Ascii_art">Wikipedia ASCII Art page</a>:
+    </p>
+    <a href="images/ASCII-bird-colorsep.png"><img class=centered border=0 src="images/ASCII-bird-colorsep640.png" alt="Image"></a>
+    <p>
+      A propaganda picture of the University of North Texas as a color ASCII image:
+    </p>
+
+    <a href="images/ASCII-unt-colorsep.png"><img class=centered border=0 src="images/ASCII-unt-colorsep640.png" alt="Image"></a>
+
+    <p>
+      The same picture at double the resolution (512 characters wide):
+    </p>
+
+    <a href="images/ASCII-unt512-colorsep.png"><img class=centered border=0 src="images/ASCII-unt512-colorsep640.png" alt="Image"></a>
+
+    <p>
+      The beach picture from above at 512 characters wide.
+      Click on this and the remainder of the images on this page to see a larger version
+      that you can zoom in on with your browser to see the color ASCII characters:
+    </p>
+
+    <a href="images/ASCII-beach512-colorsep.png"><img class=centered border=0 src="images/ASCII-beach512-colorsep640.png" alt="Image"></a>
+
+    <p>
+      A colorful garden in Cape May, NJ at 512 characters wide:
+    </p>
+
+    <a href="images/ASCII-garden512-colorsep.png"><img class=centered border=0 src="images/ASCII-garden512-colorsep640.png" alt="Image"></a>
+
+    <p>
+      The obvious downsides to this method of generating color ASCII art are that the colors are less vibrant than the original,
+      and the resolution is halved (because we need four characters per
+      pixel instead of one).
+    </p>
+  </div>
+
+  <h2>Fine Art (2011)</h2>
+
+  <div class=content>
+    <p>
+      The following are some color ASCII art images of around
+      500-ish characters wide, made from some fine art images available on the web.
+    </p>
+
+    <a href="images/ASCII-monalisa-colorsep.png"><img class=centered border=0 src="images/ASCII-monalisa-colorsep640.png" alt="Image"></a>
+    
+    <div class=centered>
+      <p>
+        "<a href="http://en.wikipedia.org/wiki/File:Mona_Lisa,_by_Leonardo_da_Vinci,_from_C2RMF_retouched.jpg">La Gioconda</a>",
+        Leonardo da Vinci, completed circa 1503-1519.
+      </p>
+    </div>
+
+    <a href="images/ASCII-starrynight512-colorsep.png"><img class=centered border=0 src="images/ASCII-starrynight512-colorsep640.png" alt="Image"></a>
+    
+    <div class=centered>
+      <p>
+        "<a href="http://en.wikipedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg">The Starry Night</a>",
+        Vincent van Gogh, 1888.
+      </p>
+    </div>
+
+    <a href="images/ASCII-bluepoles-colorsep.png"><img class=centered border=0 src="images/ASCII-bluepoles-colorsep640.png" alt="Image"></a>
+    
+    <div class=centered>
+      <p>
+        "<a href="http://en.wikipedia.org/wiki/Blue_poles">Blue Poles: Number 11, 1952</a>",
+        Jackson Pollock. (Click image for detail.)
+      </p>
+    </div>
+
+    <a href="images/ASCII-abbeyroad512-colorsep.png"><img class=centered border=0 src="images/ASCII-abbeyroad512-colorsep640.png" alt="Image"></a>
+    
+    <div class=centered>
+      <p>
+        <a href="http://en.wikipedia.org/wiki/File:Beatles_-_Abbey_Road.jpg">Album cover photograph</a>
+        for the Beatles' <em>Abbey Road</em>, Iain Macmillan, 1969.
+      </p>
+    </div>
+  </div>
+
+
+  <h2>Three-Color ASCII Art (2011)</h2>
+
+  <div class=content>
+    <p>
+      Here's what happens if we use three colors per pixel instead of four.
+      It's a fairly simple matter to modify our pixel shader for color separation so that
+      each pixel of the image is represented by a row of three characters, one cyan, one magenta, and one yellow.
+      By varying the order of the three colors based on row number, we can
+      have stripes of color vertically, diagonally, or back-diagonally as shown below. It makes little or no difference when the
+      picture is viewed from a distance, for example, you can tell that the middle butterfly below is different from the others,
+      but it is almost impossible to tell the left image from the right one.
+      Click on the butterfly images for a larger version.
+    </p>
+
+    <div class=centered>
+      <img border=0 src="images/ASCII-admiral-colorsep3backdiag200close.png" alt="Image">
+      &nbsp;
+      <img border=0 src="images/ASCII-admiral-colorsep3vstripe200close.png" alt="Image">
+      &nbsp;
+      <img border=0 src="images/ASCII-admiral-colorsep3diag200close.png" alt="Image">
+      &nbsp;
+      <a href="images/ASCII-admiral-colorsep3backdiag.png"><img border=0 src="images/ASCII-admiral-colorsep3backdiag200.png" alt="Image"></a>
+      &nbsp;
+      <a href="images/ASCII-admiral-colorsep3vstripe.png"><img border=0 src="images/ASCII-admiral-colorsep3vstripe200.png" alt="Image"></a>
+      &nbsp;
+      <a href="images/ASCII-admiral-colorsep3diag.png"><img border=0 src="images/ASCII-admiral-colorsep3diag200.png" alt="Image"></a>
+    </div>
+
+    <p>
+      Notice that they are paler but brighter than the four
+      color per pixel version we saw above. 
+      Here are some more examples in three colors on the left and four colors on the right.
+    </p>
+
+    <div class=centered>
+      <a href="images/ASCII-ladybug-colorsep3.png"><img border=0 src="images/ASCII-ladybug-colorsep3-200.png" alt="Image"></a>
+      &nbsp;
+      <a href="images/ASCII-ladybug-colorsep.png"><img border=0 src="images/ASCII-ladybug-colorsep200.png" alt="Image"></a>
+      <br>
+      <a href="images/ASCII-hibiscus1-colorsep3.png"><img border=0 src="images/ASCII-hibiscus1-colorsep3-200.png" alt="Image"></a>
+      &nbsp;
+      <a href="images/ASCII-hibiscus1-colorsep.png"><img border=0 src="images/ASCII-hibiscus1-colorsep200.png" alt="Image"></a>
+      <br>
+      <a href="images/ASCII-ian2011a-colorsep3.png"><img border=0 src="images/ASCII-ian2011a-colorsep3-200.png" alt="Image"></a>
+      &nbsp;
+      <a href="images/ASCII-ian2011a-colorsep.png"><img border=0 src="images/ASCII-ian2011a-colorsep200.png" alt="Image"></a>
+    </div>
+
+    <p>
+      It seems to me that the four color version (right) looks better on the screen but the three color version (left) looks better
+      when printed.
+    </p>
+  </div>
+
+  <h2>Three-Color ASCII Art with Embedded Texture (2012)</h2>
+
+  <div class=content>
+    <p>
+      Three-color ASCII Art gives you the option of rearranging the order of the CMY triples to give an embedded
+      texture that is only visible at middle distances. The texture disappears when viewed from long distances.
+      Once again, click on the images for a larger version.
+    </p>
+
+    <div class=centered>
+      <a href="myartimages/snail-tp.png">
+      <img border=0 class=centered src="myartimages/snail-tp640.png" alt="Image"></a>
+      <br>
+      Quilted Snail
+    </div>
+    <br>
+    <div class=centered>
+      <a href="myartimages/hibiscus word 2.png">
+      <img border=0 class=centered src="myartimages/hibiscus word 2 640.png" alt="Image"></a>
+      <br>
+      Sex Object
+    </div>
+    <br>
+    <div class=centered>
+      <a href="myartimages/ASCII-earth1536-colorsep3-spiral.png">
+      <img border=0 src="myartimages/ASCII-earth1536-colorsep3-spiral640.png" alt="Image"></a>
+      <br>
+      Spiral Earth 192
+    </div>
+
+    <p></p>
+  </div>
+
+    <div class=updateinfo>
+      <p>
+        Created October 19, 2011.
+        Last updated August 7, 2019.
+      </p>
+    </div>
+</body>
+</html>

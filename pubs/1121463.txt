@@ -1,0 +1,13 @@
+@inproceedings{1121463,
+ author = {Wolz, Ursula and Barnes, Tiffany and Parberry, Ian and Wick, Michael},
+ title = {Digital gaming as a vehicle for learning},
+ booktitle = {SIGCSE '06: Proceedings of the 37th SIGCSE Technical Symposium on Computer Science Education},
+ year = {2006},
+ isbn = {1-59593-259-3},
+ pages = {394--395},
+ location = {Houston, Texas, USA},
+ doi = {http://doi.acm.org/10.1145/1121341.1121463},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+

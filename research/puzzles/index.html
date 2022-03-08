@@ -1,0 +1,176 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <title>Math Puzzles</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../menu.css">
+
+  <script type="text/javascript" src="../../menu.js"></script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    "HTML-CSS": {scale: 90}
+    });
+  </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript">
+  </script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <h1>Mathematical Puzzles</h1>
+
+  <div class=content>
+    <p>
+     Like most geeks I have a casual interest in mathematical puzzles.
+     The ones that I've had the most interest in over the years include
+     <a href="/rubikscube">Rubik's cube</a>,
+      the knight's tour problem, and the $(n^2-1)$-puzzle.
+      Only some of those research projects bore fruit, the results of which you can see below.
+      My coauthors in some of this work include colleague Ingo Wegener and his
+      then student Oleg Kyek.
+    </p>
+  </div>
+  
+  <h2>Tourneys and Closed Knight's Tours (2020)</h2>
+
+  <div class=content>
+    <img class="centered" src="../tourneys/images/tourneystrip.png" alt="Thumbnails.">
+
+    <p>
+      <a href="/">Ian Parberry</a>,
+      "Tourneys and the Fast Generation and Obfuscation of Closed Knight's Tours".
+	  [<a href=../tourneys>more information</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      New algorithms for generating closed knight's tours 
+are obtained by generating a vertex-disjoint cycle cover of the knight's graph and joining the resulting cycles. It is shown experimentally that these algorithms are significantly faster in practice than previous methods. A fast obfuscation algorithm for closed knight's tours that obscures obvious artifacts created by their method of generation is also given, along
+with visual and statistical evidence of its efficacy. 
+  </p>
+  </div>
+
+  <h2>The 15-Puzzle (2015)</h2>
+
+  <div class=content>
+    <img class="centered" src="../gameprogramming/images/15puzzlestrip.png" alt="Thumbnails.">
+
+    <p>
+      <a href="/ian">Ian Parberry</a>,
+      "A Memory-Efficient Method for Fast Computation of Short 15-Puzzle Solutions",
+      <em>IEEE Transactions on Computational Intelligence and AI in Games</em>,
+      Vol. 7, No. 2, June 2015.
+      [<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=6883190">pdf from IEEEXplore</a>,
+      <a href=../15puzzle>more information</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      While the 15-puzzle has a long and interesting history dating back to the 1870s,
+      it still continues to appear as
+      apps on mobile devices and as minigames inside larger video games.
+      We demonstrate a method for solving the 15-puzzle
+      using only 4.7MB of tables
+      that on a million random instances was able to
+      find solutions of 65 moves on average and
+      95 moves in the worst case in under a tenth of a millisecond per solution
+      on current desktop computing hardware.
+      These numbers compare favorably to the worst-case upper bound of 80 moves
+      and to the greedy algorithm published in 1995, which required
+      118 moves on average and
+      195 moves in the worst case.
+    </p>
+  </div>
+
+  <h2>The $(n^2-1)$-Puzzle (2015)</h2>
+
+  <div class=content>
+    <img class=centered src="../gameprogramming/images/expectedmovesstrip.png" alt="Thumbnails.">
+
+    <p>
+      <a href="/">Ian Parberry</a>,
+      "Solving the $(n^2-1)$-Puzzle with $\tfrac{8}{3}n^3$ Expected Moves",
+      <em>Algorithms</em>,
+      Vol. 8, No. 3, pp. 459-465, 2015.
+      [<a href="../n2minus1puzzle/">more information</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      It is shown that the greedy algorithm for the \((n^2-1)\)-puzzle
+      makes \(\tfrac{8}{3}n^3 +O(n^2)\) expected moves.
+      This analysis is verified experimentally on 10,000 random
+      instances each of the \((n^2-1)\)-puzzle for \(4 \leq n \leq 200\).
+    </p>
+  </div>
+  <h2>Computing Knight's Tours (1997)</h2>
+  <div class=content>
+    <img class=centered alt="Thumbnails." src="images/computingstrip.jpg">
+    <p>
+      <a href="/">Ian Parberry</a>,
+      "An Efficient Algorithm for the Knight's Tour Problem",
+      <cite>Discrete Applied Mathematics</cite>, Vol. 73, pp. 251-260, 1997.
+      [<a href="../../pubs/algoknight.pdf">pdf</a>]
+    </p>
+    <h3>Author's Comment</h3>
+    <p>
+      See more knight's tour images <a href="knightstour">here</a>.
+    </p>
+  </div>
+  <h2>Counting Knight's Tours (1997)</h2>
+  <div class=content>
+    <img class=centered alt="Thumbnails." src="images/wegenerstrip.jpg">
+    <p>
+      O. Kyek,
+      <a href="/">Ian Parberry</a>,
+      and I. Wegener,
+      "Bounds on the Number of Knight's Tours",
+      <cite>Discrete Applied Mathematics</cite>, Vol. 74, pp. 171-181, 1997.
+      [<a href="../../pubs/boundsknight.pdf">pdf</a>]
+    </p>
+    <h3>Abstract</h3>
+    <p>
+      Knight's tours are a fascinating subject. New lower bounds on the number of knight's tours
+      and structured knight's tours on $n \times  n$ chessboards and even $n$ are presented. For the natural
+      special case $n = 8$ a new upper bound is proved.
+    </p>
+  </div>
+  <h2>The $(n^2-1)$-Puzzle (1995)</h2>
+  <div class=content>
+    <img class=centered alt="Thumbnails." src="images/saml.png">
+    <p>
+      <a href="/">Ian Parberry</a>,
+      "A Real-Time Algorithm for the
+      $(n^2-1)$-Puzzle",
+      <cite>Information Processing Letters</cite>, Vol. 56, pp. 23-28, 1995.
+      [<a href="../../pubs/saml.pdf">pdf</a>]
+    </p>
+    <h3>Abstract</h3>
+    <p>
+      A real-time algorithm for the $(n^2-1)$-puzzle is designed using greedy and divide-and-conquer
+      techniques. It is proved that (ignoring lower order terms) the new
+      algorithm uses at most $5n^3$ moves, and that any such algorithm must make at least
+      $n^3$ moves in the worst case, at least $2n^3/3$ moves on average, and with probability
+      one, at least $0.264n^3$ moves on random configurations.
+    </p>
+  </div>
+  <div class=updateinfo>
+    <p>
+      Created April 21, 2010.
+      Last updated January 16, 2020.
+    </p>
+  </div>
+</body>
+</html>
+

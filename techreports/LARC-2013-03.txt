@@ -1,0 +1,9 @@
+@techreport{Parberry2013TRAmortizedNoise,
+  author = {Parberry, Ian},
+  title = {Amortized Noise},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2013--03},
+  year = {2013},
+  month={September},
+ }

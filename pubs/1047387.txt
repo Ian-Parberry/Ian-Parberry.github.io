@@ -1,0 +1,13 @@
+@inproceedings{1047387,
+ author = {Parberry, Ian and Roden, Timothy and Kazemzadeh, Max B.},
+ title = {Experience with an industry-driven capstone course on game programming: extended abstract},
+ booktitle = {SIGCSE '05: Proceedings of the 36th SIGCSE Technical Symposium on Computer Science Education},
+ year = {2005},
+ isbn = {1-58113-997-7},
+ pages = {91--95},
+ location = {St. Louis, Missouri, USA},
+ doi = {http://doi.acm.org/10.1145/1047344.1047387},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+

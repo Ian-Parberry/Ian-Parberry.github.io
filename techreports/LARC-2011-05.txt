@@ -1,0 +1,18 @@
+@techreport{YingstAlfordParberry2011TRFireFoam,
+  author = {Mary Yingst and Jennifer R. Alford and Ian Parberry},
+  title = {Very Fast Real-Time Ocean Wave Foam
+Rendering Using Halftoning},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2011--05},
+  year = {2011},
+  month=June
+ }
+ 
+
+
+@ONLINE{2011FoamWebsite,
+    author = {Mary Yingst and Jennifer R. Alford and Ian Parberry},
+    title = {Sea Foam}, 
+    url = {http://larc.unt.edu/ian/research/seafoam/},
+    year = {2011}

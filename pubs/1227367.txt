@@ -1,0 +1,13 @@
+@inproceedings{1227367,
+ author = {Carson, Erik and Parberry, Ian and Jensen, Bradley},
+ title = {Algorithm explorer: visualizing algorithms in a 3D multimedia environment},
+ booktitle = {SIGCSE '07: Proceedings of the 38th SIGCSE Technical Symposium on Computer Science Education},
+ year = {2007},
+ isbn = {1-59593-361-1},
+ pages = {155--159},
+ location = {Covington, Kentucky, USA},
+ doi = {http://doi.acm.org/10.1145/1227310.1227367},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+

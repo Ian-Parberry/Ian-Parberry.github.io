@@ -1,0 +1,155 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <title>Modeling Real-World Terrain</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../menu.css">
+  <script type="text/javascript" src="../../menu.js"></script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <h1>Modeling Real-World Terrain</h1>
+
+  <div class=content>
+    <img class="centered" src="../content/images/exp-terrainstrip.jpg" alt="Thumbnail.">
+
+    <p>
+      <a href="/ian">Ian Parberry</a>,
+      "Modeling Real-World Terrain with Exponentially Distributed Noise",
+      <em>Journal of Computer Graphics Techniques</em>,
+      Vol. 4, No. 2, pp. 1-9, 2015.
+      [<a href="http://jcgt.org/published/0004/02/01/">Manuscript and BibTex at JCGT</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      A statistical analysis of elevation data from a 160,000 square kilometer region
+      finds that terrain gradients
+      appear to be exponentially distributed at all horizontal resolutions.
+      Simple modifications to the Perlin noise algorithm and
+      the amortized noise algorithm change the gradient
+      distribution in each octave to an exponential distribution,
+      resulting in varied and interesting procedurally generated terrain.
+    </p>
+  </div>
+
+    <h2>Application in the Game Industry</h2>
+ 
+    <div class=content>
+      <p>
+        This paper was mentioned by Sean Murray in his GDC 2017 talk "Building Worlds
+        Using Math(s)" as influencing the design of the procedural terrain
+        generator in the <a href="http://www.hellogames.org/">Hello Games</a> title
+        <a href="https://www.nomanssky.com/">No Man's Sky</a>.
+        The following video starts at 22:56.
+      </p>
+
+      <div style="text-align: center;">
+        <iframe width="720" height="405" src="https://www.youtube.com/embed/C9RyEiEzMiU?rel=0&amp;showinfo=0&amp;start=1376" frameborder="0"></iframe>
+      </div>
+
+      <p></p>
+    </div>
+
+  <h2>Video</h2>
+
+  <div class=content>
+    <div style="text-align: center;">
+      <iframe width="720" height="405" src="https://www.youtube.com/embed/aTKSX_I0TeY"
+        frameborder="0"></iframe>
+
+    <p></p>
+
+    <iframe width="720" height="405" src="https://www.youtube.com/embed/3zmgyl_Xd8M"
+      frameborder="0"></iframe>
+    </div>
+
+    <div style="text-align: center;">
+      <p>
+        Videos rendered with
+        <a href="http://planetside.co.uk/products/terragen3">Terragen 3</a>.
+      </p>
+    </div>
+  </div>
+
+  <h2>Source Code</h2>
+
+  <div class="content">
+    <p>
+      The source code for this paper is
+      available for free download from
+      <a href="https://github.com/Ian-Parberry/Tobler">https://github.com/Ian-Parberry/Tobler</a>.
+      It has been released under the
+      GNU All-Permissive License and contains the following notice.
+      If these conditions are unacceptable to you, then do not download them.
+    </p>
+
+    <div class=code>
+      Copyright Ian Parberry, (date).<br>
+      <br>
+      This file is made available under the GNU All-Permissive License.<br>
+      <br>
+      Copying and distribution of this file, with or without<br>
+      modification, are permitted in any medium without royalty<br>
+      provided the copyright notice and this notice are preserved.<br>
+      This file is offered as-is, without any warranty.<br>
+    </div>
+
+    <p>
+      The source code is written in C++ and includes project files for Windows Visual Studio 2012
+      and a Unix makefile using g++.
+    </p>
+
+    <h4>Documentation</h4>
+      <ul>
+        <li>
+          <a href="Doxygen/GenPerlin">Generate with Perlin Noise</a>
+          (to generate terrain using exponentially distributed Perlin noise)
+        <li>
+          <a href="Doxygen/GenAmortized">Generate with Amortized Noise</a>
+          (to generate terrain using exponentially distributed amortized noise)
+        <li>
+          <a href="Doxygen/Pack">Pack</a>
+          (to pack DEM files into a single binary file)
+        <li>
+          <a href="Doxygen/Analyze">Analyze</a>
+          (to perform a gradient analysis of a packed DEM file)
+        <li>
+          <a href="Doxygen/Exponential">Exponential Distribution</a>
+          (to experiment with exponentially distributed pseudorandom numbers)
+      </ul>
+  </div>
+
+  <h2>Preliminary Version</h2>
+
+  <div class="content">
+    <p>
+      A preliminary (and much longer) version of this paper was published
+      under the title
+      "Tobler's First Law of Geography, Self Similarity,
+      and Perlin Noise: A Large Scale Analysis of Gradient
+      Distribution in Southern Utah with
+      Application to Procedural Terrain Generation",
+      LARC Technical Report LARC-2014-04,
+      Laboratory for Recreational Computing, University of North Texas, June 2014.
+      [<a href="/techreports/LARC-2014-04.pdf">manuscript</a>,
+      <a href="/techreports/LARC-2014-04.txt">BibTeX</a>]
+    </p>
+  </div>
+
+  <div class=updateinfo>
+    <p>
+      Created June 2, 2014.
+      Last updated August 3, 2019.
+    </p> 
+  </div>
+</body>
+</html>

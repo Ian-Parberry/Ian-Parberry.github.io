@@ -1,0 +1,134 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <title>Circuit Complexity</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../menu.css">
+
+  <script type="text/javascript" src="../../menu.js"></script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <h1>Circuit Complexity</h1>
+
+  <div class=content>
+    <p>
+      I got interested in circuit complexity in 1981 in Australia
+      by working for a semester
+      as Les Goldschlager's research assistant,
+      during which we worked out the details of the first paper below.
+      I carried that interest into my PhD thesis
+      and on into the 1990s. Some of the papers in
+      <a href="../neuralnets">Neural Networks</a>
+      and <a href="../parallel">Parallel Computing</a>
+      also have some circuit complexity in them too, so in spite of the fact that there
+      are only two papers listed below, circuit complexity was clearly
+      a thread that I followed for much of the 20th Century.
+      My coauthors in
+      this work include
+      Les Goldschlager and
+      my Penn State <a href="/phd.html">PhD student</a>
+      Peiyuan Yan.
+    </p>
+  </div>
+
+  <h2>Unbounded Fan-in Circuits (1994)</h2>
+
+  <div class=content>
+    <p>
+      P. Y. Yan and
+      <a href="/">I. Parberry</a>,
+      "Exponential Size Lower Bounds for Some Depth Three Circuits",
+      <cite>Information and Computation</cite>,
+      Vol. 112, No. 1,
+      pp. 117-130, 1994.
+      [<a href="/pubs/depth3.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+    <p>
+      Exponential size lower bounds are obtained for some depth three
+      circuits computing conjunction using one layer each of
+      gates which compute Boolean functions of
+      low total degree when expressed as polynomials,
+      parity-modulo-2 gates, and parity-modulo-q gates, where q is prime.
+      One of these results implies a special case of the
+      <em>constant degree hypothesis</em> of Barrington et al.
+      The lower bounds are obtained from
+      an algebraic characterization of the functions computed by the circuits:
+      it is shown that certain integer multiples of these functions
+      can be expressed as the sum of a lattice element
+      and a function of small value.
+      It is conjectured that this characterization
+      can be used to resolve the constant degree hypothesis.
+    </p>
+
+    <h3>Author's Comment</h3>
+
+    <p>
+      Yan and I were certain we were on the threshold of something deep here, 
+      but we never were able to push these results any further than this.
+    </p>
+  </div>
+
+  <h2>Bounded Fan-in Circuits (1986)</h2>
+
+  <div class=content>
+    <img class=centered alt="Circuit images." src="cvpstrip.jpg">
+
+    <p>
+      L. M. Goldschlager and
+      <a href="/">I. Parberry</a>,
+      "On the Construction of Parallel Computers from Various Bases of Boolean Functions",
+      Theoretical Computer Science, Vol. 43, No. 1, pp. 43-58, 1986.
+      [<a href="/pubs/Parity.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      The effects of bases of two-input Boolean functions are characterized
+      in terms of their impact on some questions in parallel computation.  It
+      is found that a certain set of bases (called the P-complete set), which
+      are not necessarily complete in the classical sense, apparently makes
+      the circuit value problem difficult, and renders extended Turing machines
+      and networks of Boolean gates equal to general parallel
+      computers.  A class of problems
+      called EP arises naturally from this study, relating to the parity of the
+      number of solutions to a problem, in contrast to previously defined
+      classes concerning the count of the number of solutions (#P) or the
+      existence of solutions (NP).  Tournament isomorphism is a member of EP.
+    </p>
+
+    <h3>Author's Comment</h3>
+
+    <p>
+      I contributed to this paper while employed 
+      as Les Goldschlager's Research Assistant in 1981.
+      I believe that the Technical Report version was typed up by a human being on an actual
+      electric typewriter. Things were a lot slower in those days.
+      That probably explains why it took 5 years to get into print.
+      One of the contributions of this paper is the independent discovery of the complexity class
+      <a href="http://en.wikipedia.org/wiki/Parity_P">parity-P</a>.
+      Not that Les and I get much credit for it.
+    </p>
+  </div>
+
+  <div class=updateinfo>
+    <p>
+      Created April 22, 2010.
+      Last updated August 1, 2019.
+    </p>
+  </div>
+</body>
+</html>
+
+
+

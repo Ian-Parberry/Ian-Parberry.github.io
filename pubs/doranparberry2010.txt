@@ -1,0 +1,6 @@
+@article{doranparberry2010,
+  author = {J. Doran and I. Parberry},
+  title = {Controlled Procedural Terrain Generation Using Software Agents},
+  journal = {IEEE Transactions on Computational Intelligence and AI in Games},
+  year = {To Appear}, 
+}

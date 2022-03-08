@@ -1,0 +1,122 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>Sea Foam</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" type="text/css" href="../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../menu.css">
+
+  <script type="text/javascript" src="../../menu.js"></script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <h1>Sea Foam</h1>
+
+  <div class=content>
+    <img class=centered src="images/foamheader2.png" alt="Thumbnails.">
+
+    <p>
+      Mary Yingst, Jennifer R. Alford, and Ian Parberry,
+      "Very Fast Real-Time Ocean Wave Foam Rendering Using Halftoning",
+      Proceedings of the 6th International North American Conference on Intelligent Games and Simulation (GAMEON-NA),
+      pp. 27-34, EUROSIS, Troy, NY, 2011.
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      We introduce an efficient method for emulating sea foam dissipation suitable for use in real-time
+      interactive environments such as video games. By using a precomputed dither array with controlled spectral
+      characteristics adopted from halftone research as a control mechanism in the pixel shader, we can animate
+      the appearance of foam bubbles popping in a random manner
+      while allowing it to clump naturally.
+    </p>
+  </div>
+
+  <h2>Videos</h2>
+
+  <div class=content>
+    <h3>Closeup of Three Techniques</h3>
+
+    <p>
+      The following video shows waves rendered in three different ways: Using the foam mask created using half-toning techniques at left,
+      the traditional method using an alpha-blended foam texture in the center,
+      and our new technique at right.
+    </p>
+
+    <div style="text-align: center;">
+      <iframe width="600" height="492" src="http://www.youtube.com/embed/VlIH5U6WOmk" frameborder="0"></iframe>
+    </div>
+
+    <h3>Coastline Example</h3>
+
+    <p>
+      This video shows how the sea foam looks when put together with a rudimentary seaside scene.
+    </p>
+
+    <div style="text-align: center;">
+      <iframe width="600" height="492" src="http://www.youtube.com/embed/L7jEUhgnP38" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <h2>Images and Animations</h2>
+
+  <div class=content>
+    <img class=centered src="images/foamLOD.gif" alt="Foam fading.">
+    <div style="text-align: center; width: 400px; margin: 10px auto 40px auto;">
+      Repeating wave animation.
+    </div>
+
+    <img class=centered src="images/noise.gif" alt="Noisy image.">
+    <div style="text-align: center; margin: 10px auto 40px auto;">
+      Animation of halftone maps generated with increasing values of &gamma;.
+      At left, halftone masks created using Gaussian filters with &gamma; ranging from 1.5 to 24.
+      Notice
+      that the dots appear to cluster more in the later images than the earlier ones.
+      The corresponding
+      RAPS are shown at right.
+    </div>
+
+    <img class=centered src="images/exp-tanx.jpg" alt="Graph of exp(-tan(x)).">
+    <div style="text-align: center; width: 400px; margin: 10px auto 40px auto;">
+      A graph of the function <em>e</em><sup>-tan <em>x</em></sup>.
+    </div>
+
+    <img class=centered src="images/4mask.png" alt="Coastline.">
+    <div style="text-align: center; width: 400px; margin: 10px auto 40px auto;">
+      Coastline with waves.
+    </div>
+
+    <img class=centered src="images/bunny2.png" alt="Game screenshot.">
+    <div style="text-align: center; width: 400px; margin: 10px auto 0 auto;">
+      Screenshot of foam implemented in third-person game.
+    </div>
+  </div>
+
+  <h2>More Information</h2>
+
+  <div class=content>
+    <ul>
+      <li>
+        <a href="/pubs/GAMEON-NA_GRAPH_04.pdf">GAMEON-NA Conference Proceedings Version</a>
+      <li>
+        <a href="/techreports/LARC-2011-05.pdf">Technical Report Version</a>
+      <li>
+        <a href="seafoam.txt">BibTeX</a>
+    </ul>
+  </div>
+
+  <div class=updateinfo>
+
+    <p>
+      Created May 20, 2011.
+      Last updated August 3, 2019.
+    </p>
+  </div>
+</body>
+</html>

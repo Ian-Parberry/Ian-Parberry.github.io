@@ -1,0 +1,97 @@
+.clearfix:after {
+  display: block;
+  clear: both;
+}
+
+.menu-wrap {
+  margin-top: -1em;
+  margin-bottom: 10px;
+  width: 100%;
+  background: #000;
+}
+
+.menu {
+  margin-top: -1em;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: left;
+  background: #202020;
+}
+ 
+.menu li {
+  margin:0px;
+  list-style:none;
+  font-family:arial, sans-serif;
+  background:#202020;
+}
+
+.menu a {
+  text-decoration: none;
+  transition: all linear 0.15s;
+}
+ 
+.menu li:hover > a, .menu .current-item > a {
+  text-decoration:none;
+  color:#ffffff;
+}
+ 
+.menu .arrow {
+  font-size:small;
+  line-height:0%;
+}
+ 
+/*----- Top Level -----*/
+
+.menu > ul > li {
+  float:left;
+  display:inline-block;
+  position:relative;
+  font-size:medium;
+}
+ 
+.menu > ul > li > a {
+  padding:5px 10px;
+  display:inline-block;
+  background:#000000;
+  color:#ffffff;
+}
+ 
+.menu > ul > li:hover > a, .menu > ul > .current-item > a {
+  background:#202020;
+}
+ 
+/*----- Bottom Level -----*/
+
+.menu li:hover .sub-menu {
+  z-index:1;
+  opacity:1;
+}
+ 
+.sub-menu {
+  width: 200px;
+  padding:5px 0px;
+  position:absolute;
+  top:100%;
+  left:0px;
+  z-index:-1;
+  opacity:0;
+  transition:opacity linear 0.15s;
+  box-shadow:0px 2px 3px rgba(0,0,0,0.2);
+  background:#202020;
+}
+ 
+.sub-menu li {
+  display:block;
+  font-size:smaller;
+}
+ 
+.sub-menu li a {
+  padding:4px 20px;
+  display:block;
+  color:#ffffff;
+}
+ 
+.sub-menu li a:hover, .sub-menu .current-item a {
+  background:#404040;
+  color:#ffffff;
+}

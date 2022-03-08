@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+          "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>Max is a Pushover</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" type="text/css" href="../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../menu.css">
+
+  <script type="text/javascript" src="../../menu.js"></script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <h1>Max is a Pushover</h1>
+
+  <div class=content>
+    <p>
+      <em>Max is a Pushover</em> is a digital media art installation created and exhibited
+      in February 2008 by
+      artist Max Kazemzadeh and programmer
+      <a href=http://larc.unt.edu/ian>Ian Parberry</a>
+      at the University of North Texas Artspace in Fort Worth, Texas.
+      The UNT Artspace FW gallery was open from September 2005 through March 2008 and was host to eleven avant-garde exhibitions.
+      <em>Max is a Pushover</em> is a digital fusion
+      of real space with virtual space.
+    </p>
+  </div>
+
+  <h2>Video</h2>
+
+  <div class=content>
+    <p></p>
+    <img class="centered" src="MaxFeb6.gif">
+    <p></p>
+  </div>
+
+  <h2>Setting up the Installation</h2>
+
+  <div class=content>
+    <div class="centered">
+      <p></p>
+      <img class=centered src=DSCN5564.JPG width=640>
+      <p>Unloading the truck.</p>
+
+      <img src=DSCN5569.JPG width=640>
+      <p>The UNT artspace FW.</p>
+
+      <img src=DSCN5576.JPG width=640>
+      <p>A pile of stuff scavenged from some of Max's other shows.</p>
+
+      <img src=DSCN5578.JPG width=640>
+      <p>We have to make this into something cool.</p>
+
+      <img src=DSCN5582.JPG width=640>
+      <p>
+        Wait a second. Is it measure once and cut twice?
+        Or measure twice and cut once?
+      </p>
+
+      <img src=DSC_0210.JPG width=640>
+      <p>The programmer gets into the right frame of mind.</p>
+
+      <img src=DSCN5584.JPG>
+      <p>
+        The transformation of the software from <em>Zack Walks</em>
+        to <em>Max is a Pushover</em> begins.
+      </p>
+
+      <img src=DSCN5589.JPG>
+      <p>Hmmm.</p>
+
+      <img src=DSCN5590.JPG>
+      <p>There's an exhibit in here somewhere.</p>
+
+      <img src=DSCN5592.JPG>
+      <p>It's all a combination of hardware and software.</p>
+
+      <img src=DSCN5596.JPG>
+      <p>There are three Maxes in this picture.</p>
+
+      <img src=DSC_0213.JPG>
+      <p>All finished.</p>
+
+      <img src=DSC_0216.JPG>
+      <p>Max walks.</p>
+
+      <img src=DSC_0264.JPG>
+      <p>Max falls down.</p>
+
+      <img src=DSC_0330.JPG>
+      <p>But only when he's pushed.</p>
+
+      <img src=DSC_0456.JPG>
+      <p>Among traditional exhibits.</p>>
+
+      <img src=DSC_0471.JPG>
+      <p>This is addictive.</p>
+
+      <img src=DSC_0512.JPG>
+      <p>Take that!</p>
+
+      <img src=DSCN5612.JPG>
+      <p>Recording for posterity.</p>
+      <p></p>
+    </div>
+  </div>
+
+  <h2>The Programming</h2>
+
+  <div class="content">
+    <p>
+      The code for <em>Max is a Pushover</em> was written in C++ for Windows.
+      I was intrigued by the problem of capturing video from DirectShow, performing vision computation
+      frame by frame, then injecting the finished frames into a Direct3D animation stream. The challenge is that
+      video input comes very slowly, on the order of 15-20 frames per second for a standard el-cheapo webcam,
+      whereas the animation frame rate is typically 60 frames per second. This version also has pixel shaders,
+      although they are used in this demo. Although the software could easily have been written using one of the standard
+      vision programming APIs for artists, it would not have been able to match
+      our screen resolution and frame rate.
+    </p>
+
+    <p>
+      The following diagram shows the input from the video camera and the output to the screen as blue boxes.
+      These devices are asynchronous and operate at dfferent frame rates.
+      We maintain two pairs of buffers shown in the diagram as black boxes, one pair for video processing (top) that
+      should be in system memory for processing by the CPU but can be in video memory for processing in the GPU
+      if desired, and one
+      pair for animation (bottom) that should be in video memory. The video camera asynchronously renders to one of each pair
+      (called a <em>back buffer</em>), while the other is used for video processing (top) and animation (bottom).
+      When the video camera finishes loading a new frame into the back buffers, they are page-flipped with the
+      corresponding front buffers. Synchronization is achieved using critical sections around very
+      short pieces of code. The red boxes denote computation, the upper red boxes representing visual processing tasks
+      such as edge detection, and the lower red box representing animation tasks such as sprite rendering. Notice that the
+      lines on the left side of the diagram may process as slowly as 12 frames per second,
+      whereas the lines on the right side of the diagram may process as quickly as
+      60 frames per second.
+    </p>
+
+    <img class="centered" width="100%" src=videodiagram.jpg>
+
+    <p>
+      An obvious question is "Why do we need 4 buffers?" The video processing needs a separate buffer from
+      the animation so that the two tasks do not interfere - there is no use in performing edge-detection on
+      sprites, for example, and each of these needs two buffers to cope with anynchrony, so that be back buffer is
+      being filled while the front buffer is being processed.
+    </p>
+  </div>
+
+  <h2>The Art</h2>
+
+  <div class="content">
+    <p>
+      Max started with some frames of a video of himself walking and jumping.
+    </p>
+
+    <div class="centered">
+      <img src=DSC_0054.JPG>
+      <img src=DSC_0055.JPG>
+      <img src=DSC_0056.JPG>
+      <img src=DSC_0057.JPG>
+    </div>
+
+    <p>
+      which he then edited into a series of sprite frames like this:
+    </p>
+
+    <img class="centered" src=walk02.png>
+    <p></p>
+  </div>
+
+  <div class=updateinfo>
+    <p>
+      Created February 18, 2010.
+      Last updated August 1, 2019.
+    </p>
+  </div>
+</body>
+</html>
+

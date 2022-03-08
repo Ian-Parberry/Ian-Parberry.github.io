@@ -1,0 +1,19 @@
+@techreport{DoranParberry2010TREconomies,
+  author = {Doran, Jonathon and Parberry, Ian},
+  title = {Emergent Economies for Role Playing Games},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2010--03},
+  year = {2010},
+  month={June},
+ }
+
+@article{DoranParberry2012Economies,
+  author = {Doran, Jonathon and Parberry, Ian},
+  title = {Emergent Economies for Role Playing Games},
+  journal = {International Journal of Intelligent Games and Simulation},
+  volume = 7,
+  number = 1,
+  pages = {35--47},
+  year = 2012
+}

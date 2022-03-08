@@ -1,0 +1,10 @@
+@techreport{Parberry2014TR2,
+  author = {Parberry, Ian},
+  title = {A Memory-Efficient Method for Fast Computation of Short 15-Puzzle Solutions},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2014--02},
+  year = {2014},
+  month={April},
+ }
+

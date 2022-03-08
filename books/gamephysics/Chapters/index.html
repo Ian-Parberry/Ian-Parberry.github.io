@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+<title>Intro to Game Physics With Box2D</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="../../../parberry.css">
+
+<script type="text/javascript" src="/ian/crawler.js">
+/* Text and/or Image Crawler Script v1.5 (c)2009-2011 John Davenport Scheuer
+   as first seen in http://www.dynamicdrive.com/forums/
+   username: jscheuer1 - This Notice Must Remain for Legal Use
+   updated: 4/2011 for random order option, more (see below)
+   */
+</script>
+</head>
+
+<body>
+<div class=topmostheader>
+<a href="/ian">Author</a>
+&nbsp;
+<a href="..">Back to "Intro to Game Physics with Box2D"</a>
+</div>
+
+<div class=header>
+<a id="headerip" href="/ian" title="Home"></a>
+</div>
+
+<h1>Table of Contents</h1>
+
+<div class=contentheader>
+<table class=main width=720 cellspacing=10>
+<tr>
+<td valign=middle>
+<img class=centered src="cover120.png" alt=image>
+<td>
+<h4 class=mini>Chapter 1: Read me First</h4>
+Before we get started, let's take a look at why this book exists,
+what I expect you to know before you can start reading it, 
+what the stuff inside will be like stylistically, and what you can
+expect to get out of it if you put a reasonable amount of effort into it.
+</table>
+</div>
+<p>
+
+
+<h2>Part I: Introduction to Game Physics</h2>
+
+<div class=content><table class=main width=720 cellspacing=10>
+
+
+<tr>
+<td valign=middle>
+<img class=centered src="../images/math.gif" alt=image>
+<td>
+<h4 class=mini>Chapter 2: Mathematics for Game Physics</h4>
+We start off pedal to the metal by examining the mathematical
+foundation of game physics and how it can be applied in practice.
+We'll be doing some Geometry, Linear Algebra, and Calculus. Thanks to Ren&eacute; Descartes, 
+we learn that Geometry and Linear Algebra are really the same thing, which is really great news.
+
+<tr>
+<td valign=middle>
+<img src="../images/pool.gif" alt=image>
+<td>
+<h4 class=mini>Chapter 3: A Rigid Body Physics Game</h4>
+
+Now we put the concepts learned in Chapter 2 to the test
+by coding the end game in 8-ball pool.
+
+<tr>
+<td valign=middle>
+<img src="../images/springything4_12709.gif" alt=image>
+<td>
+<h4 class=mini>Chapter 4: A Soft Body Physics Toy</h4>
+Having been introduced to the theory of Verlet integration and Gauss-Seidel relaxation
+in Chapter 2, we now examine code for a Ball and Spring Toy, which allows you
+to play with various springy-things and a ragdoll robot named Woodie.
+</table>
+</div>
+<p>
+
+<h2>Part II: Game Physics with Box2D</h2>
+
+<div class=content><table class=main width=720 cellspacing=10>
+
+<tr>
+<td valign=middle>
+<img src="../images/gettingstarted.gif" alt=image>
+<td>
+<h4 class=mini>Chapter 5: Getting Started</h4>
+Now we get you started with Box2D by showing you how to download it and
+integrate it with your game code. After running you quickly through the
+basic concepts, it demonstrates the
+process with a quick toy that lets you drop balls and books out of the sky.
+</div>
+<p>
+
+<tr>
+<td valign=middle>
+<img class=centered src="box2DLogo100.png" alt=image>
+<td>
+<h4 class=mini>Chapter 6: A Tale of Three Modules</h4>
+Box2D is broken up into three basic modules called the
+Common Module, the Collision Module, 
+and the Dynamics Module. Let's drill down into them in enough detail
+that we can begin writing a game.
+
+<tr>
+<td valign=middle>
+<img src="../images/cannon.gif" alt=image>
+<td>
+<h4 class=mini>Chapter 7: The Cannon Game</h4>
+The Cannon Game gives the player control of a cannon in a world
+with a tempting tower of books.
+The player's job is to knock down the tower in 60 seconds or less by firing cannonballs at it.
+
+<tr>
+<td valign=middle>
+<img src="../images/stars.gif" alt=image>
+<td>
+<h4 class=mini>Chapter 8: The Collision Module</h4>
+We now drill down a little into the Collision Module, which
+starts by looking more closely at contacts and contact manifolds before introducing
+the contact listener, which is an efficient way of having Box2D notify your
+program about collisions. It finishes with some heavy geek stuff about AABBs and Dynamic Trees.
+</table>
+</div>
+<p>
+
+<h2>Part III: Appendices</h2>
+
+<div class=content><table class=main width=720 cellspacing=10>
+
+<tr>
+<td valign=middle>
+<img src="smiley3.png" alt=image>
+<td>
+<h4 class=mini>Appendix A: For Math Geeks Only</h4>
+For the math geeks among you, let's prove the identities 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;cos (&alpha; + &beta;) = cos &alpha; cos &beta; - sin &alpha; sin &beta;, and
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sin (&alpha; + &beta;) = sin &alpha; cos &beta; + cos &alpha; sin &beta;
+<br>
+from Chapter 2.
+
+<tr>
+<td valign=middle>
+<img src="bug.png" alt=image>
+<td>
+<h4 class=mini>Appendix B: The Blacke Arte of Program Debugging</h4>
+Unfortunately we spend much more time teaching programming than we do teaching debugging skills
+even though the professional programmer typically spends a large fraction of their time debugging.
+That tends to make students think that bugs are things to be ashamed of.
+
+<tr>
+<td valign=middle>
+<img src="query-bang.gif" alt=image>
+<td>
+<h4 class=mini>Appendix C: There are, In Fact, Dumb Questions</h4>
+I stop answering dumb questions about programming
+once my students reach a certain level of programming skill.
+Don't let anybody tell you that there's no such thing as a dumb question.
+My definition of a dumb question about programming
+is a question that can be answered by experimenting with code.
+
+<tr>
+<td valign=middle>
+<img src="bulletphysics.png" alt=image>
+
+<td>
+<h4 class=mini>Appendix D: Bullet Physics</h4>
+Bullet Physics is a lot more sophisticated than Box2D,
+but once you start working with it you will find that they have some concepts in common.
+For example, where Box2D has the Physics World b2World, Bullet Physics has the Dynamics World.
+</table>
+
+
+
+</div>
+<p>
+
+<div class=footer>
+</div>
+
+<div class=updateinfo>
+Created April 6, 2012.
+Written in HTML 4.01 and CSS 3 using vi.
+Last updated August 16, 2012.
+
+<p>
+<a href="http://validator.w3.org/check?uri=referer">
+<img style="border:0;width:88px;height:31px"
+src="http://www.w3.org/Icons/valid-html401"
+alt="Valid HTML 4.01 Strict" height="31" width="88"></a>
+
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+<img style="border:0;width:88px;height:31px" 
+src="http://jigsaw.w3.org/css-validator/images/vcss"
+alt="Valid CSS!">
+</a>
+</p>
+</div>
+</body>
+</html>

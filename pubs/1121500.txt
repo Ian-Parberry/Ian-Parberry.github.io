@@ -1,0 +1,13 @@
+@inproceedings{1121500,
+ author = {Parberry, Ian and Kazemzadeh, Max B. and Roden, Timothy},
+ title = {The art and science of game programming},
+ booktitle = {SIGCSE '06: Proceedings of the 37th SIGCSE Technical Symposium on Computer Science Education},
+ year = {2006},
+ isbn = {1-59593-259-3},
+ pages = {510--514},
+ location = {Houston, Texas, USA},
+ doi = {http://doi.acm.org/10.1145/1121341.1121500},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+

@@ -1,0 +1,13 @@
+@inproceedings{1178525,
+ author = {Roden, Timothy and Parberry, Ian},
+ title = {Designing a narrative-based audio only 3D game engine},
+ booktitle = {ACE '05: Proceedings of the 2005 ACM SIGCHI International Conference on Advances in Computer Entertainment Technology},
+ year = {2005},
+ isbn = {1-59593-110-4},
+ pages = {274--277},
+ location = {Valencia, Spain},
+ doi = {http://doi.acm.org/10.1145/1178477.1178525},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+

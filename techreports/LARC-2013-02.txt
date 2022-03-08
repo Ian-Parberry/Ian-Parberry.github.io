@@ -1,0 +1,9 @@
+@techreport{Parberry2013TRDesignerWorlds,
+  author = {Parberry, Ian},
+  title = {Designer Worlds: Procedural Generation of Infinite Terrain from USGS Elevation Data},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2013--02},
+  year = {2013},
+  month={August},
+ }

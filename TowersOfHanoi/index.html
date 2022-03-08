@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Towers of Hanoi</title>
+
+  <script src="ToH.js"></script>
+  <link rel="stylesheet" type="text/css" href="global.css" />
+
+  <link rel="stylesheet" type="text/css" href="../menu.css">
+  <script type="text/javascript" src="../menu.js"></script>
+</head>
+
+<body onload="init();">
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <div id="container2" style="width: 830px; margin-top: 4em";>
+    <div class="content">
+      <a href="help.html">
+        <img style="float: right; margin: 0; margin-left: 5px;  margin-right: 10px; margin-top: 0px;"
+             src="help2.png" onmouseover="this.src='help1.png'" onmouseout="this.src='help2.png'" alt="image.">
+      </a>
+      <a href="about.html">
+        <img style="float: right; margin: 0;  margin-left: 5px; margin-top: 0px;"
+             src="about1.png" onmouseover="this.src='about2.png'" onmouseout="this.src='about1.png'" alt="image.">
+      </a>
+      <a href="activelearning.html">
+        <img style="float: right; margin: 0;  margin-left: 5px; margin-top: 0px;"
+             src="mortarboard1.png" onmouseover="this.src='mortarboard2.png'" onmouseout="this.src='mortarboard1.png'" alt="image.">
+      </a>
+
+      <a href="index64.html">
+        <img style="float: right; margin: 0;  margin-left: 10px; margin-top: 0px;"
+             src="history1.png" onmouseover="this.src='history2.png'" onmouseout="this.src='history1.png'" alt="image.">
+      </a>
+      <h1>Ian Parberry's Towers of Hanoi</h1>
+      <p>
+        Move the discs to the rightmost peg by dragging and dropping them from peg to peg one
+        at a time using either the mouse or a touch screen without putting any disc on top of a smaller one.
+        Need more help? Read the <a class="gray" href="help.html">instructions</a>.
+        Want a challenge? Tackle one of the <a class="gray" href="activelearning.html">learning activities</a>.
+        Want to learn more about the history of this puzzle? Read about the legend of
+        <a class="gray" href="index64.html">The Tower of Brahma and the End of the Universe</a>.
+      </p>
+
+      <div class="content">
+        <canvas onmouseout="mouseUp();" style="cursor: pointer;" id="canvas" width="800" height="600"></canvas>
+      </div>
+    </div>
+
+    <div class="content" style="margin-left: 10px; margin-bottom: 10px; width: 800px; border: 1px solid black;">
+
+
+      <div class="content" style="width: 220px; padding-top: 10px; ">
+        <div class="content" style="width: 200px; padding-top: 10px; ">
+          <button type="button"
+                  style="width: 60px; height: 25px;" id="play" onclick="Solve()">
+            Solve
+          </button>
+          <button type="button"
+                  style="width: 60px; height: 25px;" id="step" onclick="Step()">
+            Step
+          </button>
+          <button type="button"
+                  style="width: 60px; height: 25px;" id="reset" onclick="resetbuttonHandler()">
+            Reset
+          </button>
+        </div>
+
+        <div class="content" style="padding-top: 10px; ">
+          <button type="button"
+                  style="width: 60px; height: 25px;" id="morediscs" onclick="morediscsButtonHandler()">
+            Discs++
+          </button>
+          <button type="button"
+                  style="width: 60px; height: 25px;" id="lessdiscs" onclick="lessdiscsButtonHandler()">
+            Discs&ndash;&thinsp;&ndash;
+          </button>
+        </div>
+      </div>
+
+      <div class="content" style="padding-left: 20px; padding-top: 0px;">
+        Animation speed:<br />
+        <input type="radio" name="speed" id="slow" value="slow" checked style="margin-left: 15px" onclick="slowRadioButtonHandler()"> Slow<br />
+        <input type="radio" name="speed" id="medium" value="medium" style="margin-left: 15px" onclick="mediumRadioButtonHandler()"> Medium<br />
+        <input type="radio" name="speed" id="fast" value="fast" style="margin-left: 15px" onclick="fastRadioButtonHandler()"> Fast<br />
+        <input type="radio" name="speed" id="veryfast" value="veryfast" style="margin-left: 15px" onclick="veryfastRadioButtonHandler()"> Very fast<br />
+        <input type="radio" name="speed" id="veryveryfast" value="veryveryfast" style="margin-left: 15px" onclick="veryveryfastRadioButtonHandler()"> Very very fast
+      </div>
+
+      <div class="content" style="padding-left: 20px; padding-top: 0px;">
+        Options:<br />
+        <input type="checkbox" name="colors" value="colors" checked style="margin-left: 15px" onclick="colorsCheckboxHandler()"> Colors<br>
+        <input type="checkbox" name="audio" value="audio" checked style="margin-left: 15px" onclick="audioCheckboxHandler()"> Sound<br>
+        <input type="checkbox" name="showcount" value="showcount" style="margin-left: 15px" onclick="movecountCheckboxHandler()"> Count<br>
+        <input type="checkbox" name="showrestriction" value="audio" style="margin-left: 15px" onclick="restrictionCheckboxHandler()"> Restriction
+      </div>
+
+      <div class="content" style="padding-left: 20px; padding-top: 0px;">
+        Restrictions on motion:<br />
+        <input type="radio" name="restrictions" id="vanilla" value="vanilla" checked style="margin-left: 15px" onclick="vanillaRadioButtonHandler()"> None<br />
+        <input type="radio" name="restrictions" id="left" value="left" style="margin-left: 15px" onclick="throughleftRadioButtonHandler()"> Thru left peg<br />
+        <input type="radio" name="restrictions" id="center" value="center" style="margin-left: 15px" onclick="throughcenterRadioButtonHandler()"> Thru center peg<br />
+        <input type="radio" name="restrictions" id="right" value="right" style="margin-left: 15px" onclick="throughrightRadioButtonHandler()"> Thru right peg<br />
+        <input type="radio" name="restrictions" id="leftwards" value="leftwards" style="margin-left: 15px" onclick="rotaterightRadioButtonHandler()"> Rotate right<br />
+        <input type="radio" name="restrictions" id="rightwards" value="rightwards" style="margin-left: 15px" onclick="rotateleftRadioButtonHandler()"> Rotate left
+      </div>
+    </div>
+  </div>
+
+  <div class="updateinfo">
+    <p>
+      Created January 22, 2016.
+      Last updated August 7, 2019.
+    </p>
+  </div>
+</body>
+</html>

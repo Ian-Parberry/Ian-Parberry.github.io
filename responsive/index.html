@@ -1,0 +1,92 @@
+
+
+<!DOCTYPE html>
+<html>
+<title>Ian Parberry	Responsive</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="menu.css">
+
+<body>
+
+  <div class="w3-top">
+    <div class="w3-bar w3-black">
+      <a href="#" class="w3-bar-item w3-button">Home</a>
+      <a href="#" class="w3-bar-item w3-button">Link 1</a>
+      <a href="#" class="w3-bar-item w3-button">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button">Link 3</a>
+      <div class="w3-dropdown-hover">
+        <button id="dropdown1" class="w3-button" onclick="myFunction1()">Dropdown 1</button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="#" class="w3-bar-item w3-button">Link 4</a>
+          <a href="#" class="w3-bar-item w3-button">Link 5</a>
+          <a href="#" class="w3-bar-item w3-button">Link 6</a>
+        </div>
+      </div>
+      <div class="w3-dropdown-hover">
+        <button id="dropdown2" class="w3-button" onclick="myFunction2()">Dropdown 2</button>
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="#" class="w3-bar-item w3-button">Link 4</a>
+          <a href="#" class="w3-bar-item w3-button">Link 5</a>
+          <a href="#" class="w3-bar-item w3-button">Link 6</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="w3-container">
+    <h2>Fixed Top Navigation</h2>
+    <h3>The w3-top class forces the navigation bar to stay at the top of the page, even when the user scrolls the page.</h3>
+    <h3>Scroll this page to see the effect.</h3>
+    <p>Some text to enable scrolling..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+    <p>Some text some text some text some text..</p>
+  </div>
+
+
+  <script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction1() {
+      document.getElementById("dropdown1").classList.toggle("show");
+    }
+
+    function myFunction2() {
+      document.getElementById("dropdown2").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(event) {
+     // if (!event.target.matches('w3-button')) {
+        var dropdowns = document.getElementsByClassName("w3-dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      //}
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+@inproceedings{rodenparberry2004,
+  author = {T. Roden and I. Parberry}, 
+  title = {From Artistry to Automation: {A} Structured Methodology for Procedural Content Creation},
+  booktitle = {Proceedings of the 3rd International Conference on Entertainment Computing},
+  pages = {151--156},
+  city = {Eindhoven, The Netherlands},
+  year = 2004,
+}

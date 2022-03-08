@@ -1,0 +1,10 @@
+@techreport{McMahanParberryParsons2015Engagement,
+  author = {Timothy McMahan and Ian Parberry and Thomas D. Parsons},
+  title = {Evaluating Electroencephalography Engagement Indices During Video Game Play},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2015--03},
+  year = {2015},
+  month={February},
+ }
+

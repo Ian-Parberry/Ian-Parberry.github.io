@@ -1,0 +1,180 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <title>Designer Worlds</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../menu.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="../../menu.js"></script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <h1>Designer Worlds</h1>
+
+  <div class="content">
+    <img class="centered" src="images/terrainstrip0.jpg" alt="Thumbnails.">
+    <p>
+      <a href="/">Ian Parberry</a>,
+      "Designer Worlds: Procedural Generation of
+      Infinite Terrain from Real-World Elevation Data",
+      <a href="http://jcgt.org/"><em>Journal of Computer Graphics Techniques</em></a>,
+      Vol. 3, No. 1, pp. 74-85, 2014. [<a href="http://jcgt.org/published/0003/01/04/">pdf and BibTeX at JCGT</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      The standard way to procedurally generate random terrain for video games
+      and other applications is to post-process the output of a fast noise generator
+      such as Perlin noise. Tuning the post-processing to achieve particular types
+      of terrain requires game designers to be reasonably well-trained in mathematics.
+      A well-known variant of Perlin noise called value noise is used in a process
+      accessible to designers trained in geography to generate geotypical terrain
+      based on elevation statistics drawn from widely available sources such as
+      the United States Geographical Service. A step-by-step process for downloading
+      and creating terrain from real-world USGS elevation data is described, and
+      an implementation in C++ is given.
+    </p>
+  </div>
+
+  <h2>Image Gallery</h2>
+
+  <div class="content">
+    <ul id="slideshow">
+      <li>
+      <h3>Perlin Noise</h3>
+      <span>images/perlin.jpg</span>
+      <p>Terrain generated from Perlin noise.</p>
+      <a href="#"><img src="thumbs/perlin.jpg" alt="Perlin" /></a>
+      </li>
+	
+      <li>
+      <h3>Uniform Height Table</h3>
+      <span>images/uniform.jpg</span>
+      <p>Terrain generated from value noise with a uniform height table.</p>
+      <a href="#"><img src="thumbs/uniform.jpg" alt="Uniform" /></a>
+      </li>
+	
+      <li>
+      <h3>Midpoint Displacement Height Table</h3>
+      <span>images/midpoint.jpg</span>
+      <p>Terrain generated from value noise with a midpoint displacement height table.</p>
+      <a href="#"><img src="thumbs/midpoint.jpg" alt="Midpoint" /></a>
+      </li>
+	
+      <li>
+      <h3>Cosine Height Table</h3>
+      <span>images/cosine.jpg</span>
+      <p>Terrain generated from value noise with a cosine height table.</p>
+      <a href="#"><img src="thumbs/uniform.jpg" alt="cosine" /></a>
+      </li>
+	
+      <li>
+      <h3>Linear Height Table</h3>
+      <span>images/linear.jpg</span>
+      <p>Terrain generated from value noise with a linear height table.</p>
+      <a href="#"><img src="thumbs/linear.jpg" alt="linear" /></a>
+      </li>
+	
+      <li>
+      <h3>Normal Height Table</h3>
+      <span>images/normal.jpg</span>
+      <p>Terrain generated from value noise with a normal height table.</p>
+      <a href="#"><img src="thumbs/normal.jpg" alt="normal" /></a>
+      </li>
+	
+      <li>
+      <h3>Utah Height Table</h3>
+      <span>images/utah.jpg</span>
+      <p>Terrain generated from value noise with a height table
+      drawn from a location in Utah.</p>
+      <a href="#"><img src="thumbs/utah.jpg" alt="utah" /></a>
+      </li>
+	
+      <li>
+      <h3>Utah</h3>
+      <span>images/realutah0.jpg</span>
+      <p>Terrain generated from real height data
+      drawn from a location in Utah.</p>
+      <a href="#"><img src="thumbs/realutah.jpg" alt="utah" /></a>
+      </li>
+    </ul>
+
+    <div id="wrapper">
+    <div id="fullsize">
+    <div id="imgprev" class="imgnav" title="Previous Image"></div>
+    <div id="imglink"></div>
+    <div id="imgnext" class="imgnav" title="Next Image"></div>
+    <div id="image"></div>
+    <div id="information">
+    <h3></h3>
+    <p></p>
+    </div>
+    </div>
+    <div id="thumbnails">
+    <div id="slideleft" title="Slide Left"></div>
+    <div id="slidearea">
+    <div id="slider"></div>
+    </div>
+    <div id="slideright" title="Slide Right"></div>
+    </div>
+    </div>
+    <script type="text/javascript" src="compressed.js"></script>
+    <script type="text/javascript">
+	    $('slideshow').style.display='none';
+	    $('wrapper').style.display='block';
+	    var slideshow=new TINY.slideshow("slideshow");
+	    window.onload=function(){
+		    slideshow.auto=true;
+		    slideshow.speed=5;
+		    slideshow.link="linkhover";
+		    slideshow.info="information";
+		    slideshow.thumbs="slider";
+		    slideshow.left="slideleft";
+		    slideshow.right="slideright";
+		    slideshow.scrollSpeed=4;
+		    slideshow.spacing=5;
+		    slideshow.active="#fff";
+		    slideshow.init("slideshow","image","imgprev","imgnext","imglink");
+	    }
+    </script>	
+  </div>
+
+  <h2>More Information</h2>
+
+  <div class="content">
+    <ul>
+      <li>
+      Supplementary material for this paper is available at
+      <a href="https://github.com/Ian-Parberry/DesignerWorlds">GitHub</a>.
+      This repository includes source code for the DEM file analyzer and generator and an example
+      of generated terrain.
+      <li>
+      The images on this webpage were rendered offline
+      using <a href="http://planetside.co.uk/products/terragen3">Terragen 3</a>.
+      <li>
+      A preliminary version of this paper was published under the title
+      "Designer Worlds: Procedural Generation of
+      Infinite Terrain from USGS Elevation Data",
+      <a href="/techreports/LARC-2013-02.pdf">Technical Report LARC-2013-02</a>,
+      Laboratory for Recreational Computing,
+      Dept. of Computer Science &amp; Engineering, University of North Texas,
+      August 2013. 
+    </ul>
+  </div>
+
+  <div class=updateinfo>
+    <p>
+      Created August 30, 2013.
+      Last updated August 3, 2019.
+    </p>
+  </div>
+</body>
+</html>

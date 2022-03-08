@@ -1,0 +1,25 @@
+@techreport{AmarasingheParberry2011TRFire,
+  author = {Amarasinghe, Dhanyu and Parberry, Ian},
+  title = {Fast, Believable Real-time Rendering of Burning Low-Polygon Objects in Video Games},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2011--04},
+  year = {2011},
+  month=June
+ }
+
+@inproceedings{AmarasingheParberry2011Fire,
+  author = {Amarasinghe, Dhanyu and Parberry, Ian},
+  title = {Fast, Believable Real-time Rendering of Burning Low-Polygon Objects in Video Games},
+  booktitle = {Proceedings of the 6th International North American Conference on Intelligent Games and Simulation ({GAMEON-NA})},
+  location = {Troy NY},
+  pages = {21--26},
+  publisher={{EUROSIS}},
+  year = 2011
+}
+ 
+ @misc{AmarasingheParberry2011FireWebsite,
+  author = {Amarasinghe, Dhanyu and Parberry, Ian},
+  title = {Fire Reloaded, \texttt{http://larc.unt.edu/ian/research/fire/}},
+  year = {2010}
+  }

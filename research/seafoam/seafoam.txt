@@ -1,0 +1,36 @@
+
+  
+@techreport{YingstAlfordParberry2011TRFoam,
+  author = {Mary Yingst and Jennifer R. Alford and Ian Parberry},
+  title = {Very Fast Real-Time Ocean Wave Foam Rendering Using Halftoning},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2011--05},
+  year = {2011},
+  month=June
+ }
+ 
+@inproceedings{YingstAlfordParberry2011FoamGameOn,
+  author = {Mary Yingst and Jennifer R. Alford and Ian Parberry},
+  title = {Very Fast Real-Time Ocean Wave Foam Rendering Using Halftoning},
+  booktitle = {Proceedings of the 6th International North American Conference on Intelligent Games and Simulation ({GAMEON-NA})},
+  location = {Troy NY},
+  pages = {27--34},
+  publisher={{EUROSIS}},
+  year = 2011
+}
+
+@misc{2011FoamWebsite,
+    author = {Mary Yingst and Jennifer R. Alford and Ian Parberry},
+    title = {Sea Foam}, 
+    howpublished={\url{http://larc.unt.edu/ian/research/seafoam/}},
+    year = {2011}
+}
+
+
+
+
+
+
+
+

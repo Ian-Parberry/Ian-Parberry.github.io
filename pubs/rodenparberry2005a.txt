@@ -1,0 +1,8 @@
+@inproceedings{rodenparberry2005a,
+  author = {T. Roden and I. Parberry}, 
+  title = {Procedural Level Generation}, 
+  booktitle = {Game Programming Gems 5},
+  pages = {579-588}, 
+  publisher = {Charles River Media}, 
+  year = 2005,
+} 

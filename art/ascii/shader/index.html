@@ -1,0 +1,555 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <title>ASCII Art</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" type="text/css" href="../../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../../menu.css">
+
+  <script type="text/javascript" src="../../../menu.js"></script>
+  <style type="text/css">
+
+    #imgflip {
+      display: block;
+      margin: 0 auto;
+      width: 511px;
+      height: 442px;
+      background: url("images/mouseover.png") no-repeat 0 0px;
+    }
+
+      #imgflip:hover {
+        background-position: 0 -442px;
+      }
+  </style>
+
+  <style type="text/css">
+
+    .red {
+      color: red;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .cyan {
+      color: cyan;
+    }
+
+    .magenta {
+      color: magenta;
+    }
+
+    .yellow {
+      color: yellow;
+      font-family: "Courier New", Courier, monospace;
+    }
+
+    .black {
+      color: black;
+      font-family: "Courier New", Courier, monospace;
+    }
+  </style>
+  <style type="text/css">
+
+
+    .asciiart {
+      margin-left: 1em;
+      margin-right: 1em;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-top: 3em;
+      padding-bottom: 3em;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 8px;
+      border: 1px solid black;
+      text-align: center;
+    }
+
+    .mytable {
+      width: 25%;
+      border-collapse: collapse;
+    }
+
+      .mytable td, .mytable th {
+        font-size: 1em;
+        border: 1px solid #000000;
+        padding: 3px 7px 2px 7px;
+        text-align: center;
+      }
+
+      .mytable th {
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 4px;
+        background-color: #26bdff;
+        color: #ffffff;
+      }
+
+      .mytable tr.alt td {
+        color: #000000;
+        background-color: #eeeeee;
+        text-align: center;
+      }
+  </style>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+  
+  <h1>ASCII Art on a Pixel Shader</h1>
+
+  <div class=content>
+    <img src="images/asciiartstrip2.png" alt="Thumbnails.">
+
+    <p>
+      I want to learn how to write a pixel shader that uses two textures, but I'm bored with all of
+      the examples on the internet. I want to do something that I can't easily find code for online.
+      I get the idea of writing a pixel shader for ASCII art. Here's how it went.
+    </p>
+  </div>
+
+    <h2>The Pixel Shader (2011)</h2>
+
+    <div class=content>
+      I used one texture for the image and a second texture for the 8 ASCII characters.
+      I picked the characters MNFV$I*:. from darkest to lightest to use as my greyscales.
+  <p>
+    <img class=centered src="images/letters.png" alt="Image">
+  <p>
+    How did I choose which 8 characters to use? It wasn't completely random.
+    I typed some ASCII characters into a texture and wrote a quick DirectX program
+    to read in the image and average out the grayscales in each 8 by 8 square.
+  <p>
+    <div class=code>
+      void CRenderer::InterrogateTexture(LPDIRECT3DTEXTURE9 pTexture){ <br>
+      &nbsp;&nbsp;D3DLOCKED_RECT r;<br>
+      &nbsp;&nbsp;HRESULT hr = pTexture->LockRect(0, &amp;r, NULL, 0);<br>
+      &nbsp;&nbsp;if(hr == S_OK){<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;int grey;<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;for(int k=0; k<31; k++){<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grey = 0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i=0; i<8; i++)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int j=0; j<8; j++)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grey += GetGray(r, k, i, j);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grey = grey/64;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("%d\t%d\n", k, grey);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;pTexture->UnlockRect(0);<br>
+&nbsp;&nbsp;}<br>
+}<br>
+    </div>
+  <p>
+    The above code uses this function to return a gray value for an individual
+    pixel in a given row and column of a given character.
+  <p>
+    <div class=code>
+      int GetGray(D3DLOCKED_RECT r, int chr, int row, int col){<br>
+      &nbsp;&nbsp;BYTE* offset =<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;(BYTE*)(r.pBits) + row*r.Pitch + chr*4*8 + col*4;<br>
+      &nbsp;&nbsp;return (int)(*offset) + *(offset + 1) + *(offset + 2);<br>
+      }
+    </div>
+  <p>
+    I got the results below, and picked the 8 characters indicated in grey.
+  <p>
+    <div class=centered>
+      <table class=mytable>
+        <tr>
+          <th>
+            Character
+          <th>
+            Greyscale
+
+        <tr class="alt">
+          <td>
+            .
+          <td>
+            245
+
+        <tr class="alt">
+          <td>
+            :
+          <td>
+            237
+
+        <tr class="alt">
+          <td>
+            *
+          <td>
+            218
+
+        <tr class="alt">
+          <td>
+            I
+          <td>
+            197
+
+        <tr>
+          <td>
+            $
+          <td>
+            191
+
+        <tr>
+          <td>
+            J
+          <td>
+            188
+
+        <tr>
+          <td>
+            T
+          <td>
+            187
+
+        <tr>
+          <td>
+            L
+          <td>
+            186
+
+        <tr>
+          <td>
+            C
+          <td>
+            184
+
+        <tr>
+          <td>
+            Y
+          <td>
+            183
+
+        <tr>
+          <td>
+            Z
+          <td>
+            183
+
+        <tr class="alt">
+          <td>
+            V
+          <td>
+            181
+
+        <tr>
+          <td>
+            S
+          <td>
+            175
+
+        <tr>
+          <td>
+            U
+          <td>
+            174
+
+        <tr>
+          <td>
+            G
+          <td>
+            173
+
+        <tr>
+          <td>
+            P
+          <td>
+            172
+
+        <tr>
+          <td>
+            A
+          <td>
+            169
+
+        <tr>
+          <td>
+            O
+          <td>
+            169
+
+        <tr>
+          <td>
+            X
+          <td>
+            169
+
+        <tr class="alt">
+          <td>
+            F
+          <td>
+            168
+
+        <tr>
+          <td>
+            D
+          <td>
+            166
+
+        <tr>
+          <td>
+            E
+          <td>
+            166
+
+        <tr>
+          <td>
+            #
+          <td>
+            162
+
+        <tr>
+          <td>
+            R
+          <td>
+            160
+
+        <tr>
+          <td>
+            K
+          <td>
+            159
+
+        <tr>
+          <td>
+            H
+          <td>
+            158
+
+        <tr>
+          <td>
+            B
+          <td>
+            157
+
+        <tr>
+          <td>
+            Q
+          <td>
+            157
+
+        <tr class="alt">
+          <td>
+            N
+          <td>
+            156
+
+        <tr>
+          <td>
+            W
+          <td>
+            146
+
+        <tr class="alt">
+          <td>
+            M
+          <td>
+            144
+      </table>
+    </div>
+  <p>
+    I whomped up some pixel shader code in HLSL for use in DirectX.
+    The fx file starts with some declarations:
+  <p>
+    <div class=code>
+      texture Texture0;<br>
+      texture Texture1;<br>
+      <br>
+      sampler2D Sampler0 = sampler_state{<br>
+      &nbsp;&nbsp;Texture = &lt;Texture0&gt;;<br>
+      };<br>
+      <br>
+      sampler2D Sampler1 = sampler_state{<br>
+      &nbsp;&nbsp;Texture = &lt;Texture1&gt;;<br>
+      };
+    </div>
+  <p>
+    Here is the pixel shader code.
+  <p>
+    <div class=code>
+      float4 PS (in float2 Tex: TEXCOORD0): COLOR0{<br>
+      &nbsp;&nbsp;int CHARSIZE = 8;<br>
+      &nbsp;&nbsp;int GRAYLEVELS = 8; <br>
+      &nbsp;&nbsp;int IMGTEXTURESIZE = 2048;<br>
+      &nbsp;&nbsp;int CHARTEXTURESIZE = 512;<br>
+      &nbsp;&nbsp;int BLOCKSCALE = IMGTEXTURESIZE/CHARSIZE;<br>
+      <br>
+      &nbsp;&nbsp;float4 pix = tex2D(Sampler0, floor(BLOCKSCALE*Tex)/BLOCKSCALE);<br>
+      &nbsp;&nbsp;int gray = floor((pix.r + pix.g + pix.b)*GRAYLEVELS/3.0f);<br>
+      <br>
+      &nbsp;&nbsp;int2 inttex = floor(Tex * (IMGTEXTURESIZE - 1));<br>
+      &nbsp;&nbsp;int2 block = (inttex/CHARSIZE)*CHARSIZE;<br>
+      <br>
+      &nbsp;&nbsp;float2 offset = inttex - block + 1;<br>
+      &nbsp;&nbsp;offset.x += gray*CHARSIZE;<br>
+      &nbsp;&nbsp;offset /= CHARTEXTURESIZE - 1;<br>
+      &nbsp;&nbsp;return tex2D(Sampler1, offset);<br>
+      }
+    </div>
+  <p>
+    Here is the pixel shader output for a photograph of
+    <a href="/ian">Ian Parberry</a> taken by Jon Doran, with an inset showing
+    a magnified view of the top left-hand corner.
+  <p>
+    <img class=centered src="images/mezoom.png" alt="Image">
+  <p>
+    Here are some more examples of images created by my pixel shader.
+    All original photgraphs were taken by <a href="/ian">Ian Parberry</a> except
+    for the one of himself (which obviously wasn't), the one of
+    Jon Doran, and the one of the ladybug.
+    Click on the thumbnails to get a larger image.
+    Top-to-bottom, left-to-right they are:<br>
+    <div class=blockquote>
+      Row 1:
+      Jennifer Alford;
+      Mary Yingst;
+      me;<br>
+      Row 2:
+      Joshua Taylor;
+      Jon Doran and Sasha (original photo by Jon Doran);
+      Vincent Liguori;
+      <br>
+      Row 3:
+      Market Block Building in Troy, NY;
+      Trojan Hotel in Troy, NY;
+      sign for the  Trojan Hotel;
+      <br>
+      Row 4:
+      crab in Cape May, NJ;
+      kangaroo in Australia;
+      hibiscus in Australia;
+      <br>
+      Row 5:
+      ladybug in England (original photo by Lizzie Parberry);
+      butterfly in Denton, TX;
+      columbine in Denton, TX;
+    </div>
+  <p>
+    <div class=centered>
+      <a href="images2/ASCII-ginger-gray.png"><img border=0 src="images2/ASCII-ginger-gray200.png" alt="Image"></a>
+      &nbsp;
+      <a href="images2/ASCII-mary-gray.png"><img border=0 src="images2/ASCII-mary-gray200.png" alt="Image"></a>
+      &nbsp;
+      <a href="images2/ASCII-ian2-gray.png"><img border=0 src="images2/ASCII-ian2-gray200.png" alt="Image"></a>
+  <p>
+    <a href="images2/ASCII-josh-gray.png"><img border=0 src="images2/ASCII-josh-gray200.png" alt="Image"></a>
+    &nbsp;
+    <a href="images2/ASCII-jon-gray.png"><img border=0 src="images2/ASCII-jon-gray200.png" alt="Image"></a>
+    &nbsp;
+    <a href="images2/ASCII-vincent-gray.png"><img border=0 src="images2/ASCII-vincent-gray200.png" alt="Image"></a>
+  <p>
+    <a href="images2/ASCII-buildingv2-gray.png"><img border=0 src="images2/ASCII-buildingv2-gray200.png" alt="Image"></a>
+    &nbsp;
+    <a href="images2/ASCII-hotel-gray.png"><img border=0 src="images2/ASCII-hotel-gray200.png" alt="Image"></a>
+    &nbsp;
+    <a href="images2/ASCII-sign-gray.png"><img border=0 src="images2/ASCII-sign-gray200.png" alt="Image"></a>
+  <p>
+    <a href="images2/ASCII-crab-gray.png"><img border=0 src="images2/ASCII-crab-gray200.png" alt="Image"></a>
+    &nbsp;
+    <a href="images2/ASCII-roosnooze-gray.png"><img border=0 src="images2/ASCII-roosnooze-gray200.png" alt="Image"></a>
+    &nbsp;
+    <a href="images2/ASCII-hibiscus1-gray.png"><img border=0 src="images2/ASCII-hibiscus1-gray200.png" alt="Image"></a>
+  <p>
+    <a href="images2/ASCII-columbine-gray.png"><img border=0 src="images2/ASCII-columbine-gray200.png" alt="Image"></a>
+    &nbsp;
+    <a href="images2/ASCII-ladybug-gray.png"><img border=0 src="images2/ASCII-ladybug-gray200.png" alt="Image"></a>
+    &nbsp;
+    <a href="images2/ASCII-admiral-gray.png"><img border=0 src="images2/ASCII-admiral-gray200.png" alt="Image"></a>
+    </div>
+  <p>
+    A propaganda picture of the University of North Texas:
+  <p>
+    <a href="images2/ASCII-unt-gray.png"><img class=centered border=0 src="images2/ASCII-unt-gray400.png" alt="Image"></a>
+    </div>
+  <p>
+
+    <h2>ASCII Art at 60fps (2011)</h2>
+    <div class=content>
+      Here is  my pixel shader in an old version of Ned's Turkey Farm, the 2D game
+      I use to teach my <a href="/classes/csce4210.html">Game Programming 1</a> class.
+      Click on one of the thumbnails below to get a larger screenshot.
+  <p>
+    <div class=centered>
+      <a href="images/nednotext.jpg"><img border=0 src="images/nednotext350.jpg" alt="Image"></a>
+      &nbsp;
+      <a href="images/nedtext.jpg"><img border=0 src="images/nedtext200.jpg" alt="Image"></a>
+    </div>
+  <p>
+    Here's what it looks like in real time:
+  <p>
+    <img class=centered src="images/textplane.gif" alt="Image">
+  <p>
+    Here's a video of Ned's Turkey Farm ASCII Art Version rendered at 60fps (recorded at 30fps).
+    It's best viewed fullscreen.
+  <p>
+    <div style="text-align: center;">
+      <iframe width="600" height="492" src="http://www.youtube.com/embed/utKHLHbShkk" frameborder="0"></iframe>
+    </div>
+  <p>
+    This video shows a quick close-up of the monitor using a video camera.
+    Again, it's best viewed fullscreen.
+  <p>
+    <div style="text-align: center;">
+      <iframe width="600" height="492" src="http://www.youtube.com/embed/MnmTWNl6NoI" frameborder="0"></iframe>
+    </div>
+    <p></p>
+    </div>
+
+  <h2>High Resolution Images (2011)</h2>
+
+    <div class=content>
+      We can increase the quality of our greyscale
+      images by increasing the resolution.
+      The ASCII art thus far has been about 128 characters wide, like this one.
+      The Beatles are totally unrecognizable:
+  <p>
+    <a href="hires/ASCII-abbeyroad-gray1024.png"><img border=0 class=centered alt="Image" src="hires/ASCII-abbeyroad-gray1024-640.png"></a>
+  <p>
+    It starts to look better when we double the resolution to 256 characters wide. Now George and Paul are recognizable,
+    but Ringo is still a bit vague:
+  <p>
+    <a href="hires/ASCII-abbeyroad-gray2048.png"><img border=0 class=centered alt="Image" src="hires/ASCII-abbeyroad-gray2048-640.png"></a>
+  <p>
+    It's even better if we double the resolution again to 512 characters wide.
+    There's Ringo:
+  <p>
+    <a href="hires/ASCII-abbeyroad4096-gray.png"><img border=0 class=centered alt="Image" src="hires/ASCII-abbeyroad4096-640-gray.png"></a>
+  <p>
+    That was for a photograph.
+    The following 128 character wide image doesn't capture the detail of the
+    <a href="http://en.wikipedia.org/wiki/File:Great_Wave_off_Kanagawa2.jpg">original woodblock print</a>. In
+    particular, the artful spirals at the wave edges are completely scrambled:
+  <p>
+    <a href="hires/ASCII-ukiyowaves1024-gray.png"><img border=0 class=centered alt="Image" src="hires/ASCII-ukiyowaves1024-640-gray.png"></a>
+  <p>
+    However, increasing the width to 256 characters gives a definite improvement:
+  <p>
+    <a href="hires/ASCII-ukiyowaves2048-gray.png"><img border=0 class=centered alt="Image" src="hires/ASCII-ukiyowaves2048-640-gray.png"></a>
+  <p>
+    How far do we need to take this? As the Mythbusters say, anything worth doing
+    is worth overdoing.
+    When we ramp up the resolution by almost a factor of 4 to over 1000 characters wide, we get
+    an image composed of almost 700,000 characters (click for more detail):
+  <p>
+    <a href="hires/ASCII-waves8096-gray.png"><img border=0 class=centered alt="Image" src="hires/ASCII-waves8096-640-gray.png"></a>
+  <p>
+    Zooming in on the small part outlined here in red:
+  <p>
+    <img class=centered alt="Image" src="hires/inset.png">
+  <p>
+    The following is from a photograph taken by Ian Parberry in Australia, at 512 characters wide:
+  <p>
+    <a href="hires/ASCII-waterlilies4096-gray.png"><img border=0 class=centered alt="Image" src="hires/ASCII-waterlilies4096-640-gray.png"></a>
+    </div>
+ 
+    <div class=updateinfo>
+      <p>
+        Created October 19, 2011.
+        Last updated August 7, 2019.
+      </p>
+    </div>
+</body>
+</html>

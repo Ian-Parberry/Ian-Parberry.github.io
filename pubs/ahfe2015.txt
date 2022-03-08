@@ -1,0 +1,8 @@
+@inproceedings{mcmahan2015evaluating,
+  title={Evaluating player task engagement and arousal using electroencephalography},
+  author={McMahan, Timothy and Parberry, Ian and Parsons, Thomas D.},
+  booktitle={Proceedings of the 3rd International Conference on Affective and Pleasurable Design},
+  pages = {1616--1623},
+  publisher = {Elsevier},
+  year={2015}
+}

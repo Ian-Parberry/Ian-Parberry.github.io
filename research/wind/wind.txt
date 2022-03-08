@@ -1,0 +1,8 @@
+@inproceedings{martinparberry2006,
+  author = {C. Martin and I. Parberry}, 
+  title = {Real Time Dynamic Wind Calculation for a Pressure Driven Wind System},
+  booktitle = {Proceedings of the 2006 ACM SIGGRAPH Video Game Symposium},
+  city = {Boston, MA}, 
+  pages = {151--154}, 
+  year = 2006,
+}

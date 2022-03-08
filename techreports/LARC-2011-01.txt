@@ -1,0 +1,15 @@
+@techreport{TaylorParberry2011TRSokoban,
+  author = {Taylor, Joshua and Parberry, Ian},
+  title = {Procedural Generation of {S}okoban Levels},
+  institution = {Laboratory for Recreational Computing, Dept. of Computer Science \& Engineering,
+                 Univ.\ of North Texas},
+  number = {LARC--2011--01},
+  year = {2011},
+  month={February},
+ }
+ 
+@misc{Taylor2011SokobanWebsite,
+  author = {Taylor, Joshua and Parberry, Ian},
+  title = {\texttt{http://larc.unt.edu/ian/research/sokoban/}},
+  year = {2011}
+}

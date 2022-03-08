@@ -1,0 +1,308 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Academic Employment</title>
+
+    <link rel="stylesheet" type="text/css" href="../parberry.css">
+    <link rel="stylesheet" type="text/css" href="../menu.css">
+
+    <script type="text/javascript" src="../menu.js"></script>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      MenuBar();
+    </script>
+
+    <h1>Academic Employment</h1>
+
+    <div class=content>
+      <img class=centered alt="Pictures of Ian Parberry." src="images/historystrip.jpg">
+
+      <p>
+        This page describes my academic employment, which began in 1979.
+        Before that I was employed from the age of 13
+        as a gas station attendant (back when there was no
+        such thing as self-service),
+        a pig-farmer's laborer (back when pig farmers would regularly collect the slops
+        from restaurants to feed the pigs, which was environmentally friendly but
+        highly unhealthy), and
+        an ironworker at a small engineering shop manufacturing overhead cranes.
+        Believe me, once I learned that instead of manual labor I could get an academic job
+        indoors in the air-conditioning,
+        there was no holding me back.
+      </p>
+    </div>
+
+    <h2>University of Queensland (1979-1981)</h2>
+
+    <div class=content>
+      <img class=centered alt="Picture of Ian Parberry." src="images/uq.jpg">
+
+      <p>
+        I got my first academic job in February 1979 as a Casual Tutor in the Department
+        of Computer Science at the University of Queensland in Brisbane, Australia.
+        "Casual Tutor" meant that I didn't have a contract, and "Tutor" means something
+        like a Teaching Assistant or TA in the US. I was at the start of the third year of a four-year
+        Bachelor of Science degree, but apparently they had an urgent need for instructors because
+        enrolment in Computer Science was going up exponentially (the Glory Years for CS).
+        I was dumped into teaching a lab section of Fortran for Engineers, in which I was
+        expected to lecture and set programming assignments. I'd like to think that
+        I did a good job, but I was young and callow. Fortunately nobody seemed to notice.
+        I was in this job for 2 years, from February 1979 to November 1980 (the academic year
+        in Australia is the same as the calendar year).
+      </p>
+
+      <p>
+        Somewhere in that two year period I was also
+        Tutor at St. John's College, a residential
+        college at the University of Queensland.
+        My job was
+        to tutor the Computer Science students who lived there.
+        I remember that we met in a pleasant wood-lined room that literally reeked of
+        wood polish and history.
+        There were usually only one or two students in attendance, so I was able to give
+        them individual attention. I remember a couple of Chinese girls in particular.
+        This was when communist China was first beginning to open up to the West,
+        so they were a highly novel presence on campus with their
+        drab utilitarian clothing and hairstyle, ubiquitous bicycles of ancient vintage,
+        and "I will try harder" mottos
+        scrawled in the margins of their notes like something out of a George Orwell novel.
+      </p>
+
+      <p>
+        In February 1981, after my graduation with a Bachelor of Science degree, I signed
+        up as a PhD student and I was promoted to Tutor Group 2, which means that I had a contract.
+        I remember being a lab TA for the beginning programming class in Pascal. One of the students
+        in that class was, I am pretty sure, my former 7th grade teacher and Queensland cricketer,
+        Ian Seib.
+        He didn't recognize me and I was too shy to approach him.
+      </p>
+
+      <p>
+        I remember carrying around the source code for the Pascal compiler used in that class (which was written
+        in Pascal) so that I could quickly answer even the most obscure question by looking at the code.
+        This was a large, heavy, 4-inch thick block of 15x10 inch tractor-fed paper.
+        There was one time when it was very useful. That was when I passed from
+        being just an ordinary geek to &uuml;bergeek status.
+        A student brought me the following bug. He wanted to output the character "=", which would look
+        like this on a piece of paper:
+      </p>
+
+      <div class=code>
+        =
+      </div>
+
+      <p>
+        While his code said was:
+      </p>
+
+      <div class=code>
+        writeln("=");
+      </div>
+
+      <p>
+        What it output was this:
+      </p>
+
+      <div class=code>
+        TRUE
+      </div>
+
+      <p>
+        Think about it for a second before I explain.
+      </p>
+
+      <p>
+        The first hint was that the student had obviously gotten the quote character wrong. In Pascal
+        the quote character is the single quote, which means that he should have written:
+      </p>
+
+      <div class=code>
+        writeln('=');
+      </div>
+
+      <p>
+        That much was easy to spot.
+        At this point the student was pretty happy because he knew that with two keystrokes
+        he could fix his problem and get an A for his program, although
+        he was mildly curious as to why his code
+        output TRUE instead of getting a compile-time error.
+        TRUE is one of the things you get when printing a Boolean variable, but why do we see it here?
+        My geekhood was challenged. There were girls in the audience too. I thunked the compiler code onto the table.
+      </p>
+
+      <p>
+        Looking at the lexical analyzer, I quickly learned that the double-quote
+        character was used to start a number in hexadecimal. These days we would use
+        #FFFFFFFF in html or 0xFFFFFFFF in C for the hex version of the base-10 number 2<sup>32</sup>-1, but that compiler wanted
+        was something like
+        "FFFFFFFF.
+        This was totally undocumented,
+        I wouldn't have found it out if I didn't have the source code for the compiler. Now I was
+        getting somewhere.
+        But again, it still should have given him a compile-time
+        error because there were no digits after the double-quotes.
+        There was clearly more to this than meets the eye.
+      </p>
+
+      <p>
+        Another quick dive into the code located the loop that input hexadecimal digits after
+        seeing the double-quotes character. Sure enough, it looked like this:
+      </p>
+
+      <div class=code>
+        var num: integer;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;c: char;<br>
+        begin<br>
+        &nbsp;&nbsp;read(c)<br>
+        &nbsp;&nbsp;num := 0;<br>
+        &nbsp;&nbsp;while c in ['0'..'9'] do<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;begin<br>
+        &nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;num := num*10 + c - '0';<br>
+        &nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;read(c)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;end<br>
+        end;
+      </div>
+
+      <p>
+        Got it. That while loop should have been a repeat loop. Since the character after the double-quotes
+        was not a digit, the compiler skipped the body of the while-loop and came out of it
+        with the variable num still having value zero. The compiler
+        was acting as if the code had said:
+      </p>
+
+      <div class=code>
+        writeln("0="0);
+      </div>
+
+      <p>
+        That is, it was generated code for printing the Boolean
+        expression "Does hex zero equal hex zero?" Of course it printed TRUE.
+        Problem solved.
+      </p>
+
+      <p>
+        From July 1 to August 31, 1981 I worked as Les Goldschlager's Research Assistant,
+        during which time we did the research for the paper that was eventually published as
+        <a href="http://larc.unt.edu/ian/research/circuits/">
+          "On the Construction of Parallel Computers
+          from Various Bases of Boolean Functions"
+        </a>.
+      </p>
+    </div>
+
+    <h2>University of Warwick (1981-1984)</h2>
+
+    <div class=content>
+      <img class=centered alt="Picture of Ian Parberry." src="images/warwick.jpg">
+
+      <p>
+        I was really just marking my time in the PhD program at the University of Queensland
+        because I had a Commonwealth Scholarship to England that started at the beginning of
+        the academic year in England, which was October, 1981. That meant I was 9 months out of
+        phase. The Commonwealth Scholarship was a free ride, paying airfare, tuition, and a living allowance,
+        which meant that I didn't need to work.
+        Mike Paterson, my PhD adviser, needed to somebody to take over his Algorithms class
+        while he was on sabbatical. I served as a Teaching Assistant there in 1983, more to keep
+        my hand in teaching and to help out than for the money.
+      </p>
+
+      <p>
+        I distinguished myself by being the only student who tracked Mike down to his sabbatical
+        hiding place in the Mathematics Department at a satellite campus within walking distance.
+        He had carefully made sure that there were no signs, no announcements, and that nobody knew
+        his phone number. I naturally took that as a challenge.
+      </p>
+    </div>
+
+    <h2>Penn State University (1984-1990)</h2>
+
+    <div class=content>
+      <img class=centered alt="Picture of Ian Parberry." src="images/psu.jpg">
+
+      <p>
+        After getting my PhD in May 1984 I started as a tenure-track Assistant Professor
+        at Penn State University in the US. The less said about that, the better.
+        I'm blocking those memories, but I do remember a female student named "Ariel Hacker",
+        who was blocked from class because some assistant thought that read "A Real Hacker".
+      </p>
+
+      <p>
+        I also remember teaching Graduate level Algorithms classes to 120 very smart students.
+        That was almost as challenging as the grading. The process of turning in final grades
+        was computerized, but in such a way that took more time, not less than doing it on paper.
+        Each grade had to be entered on a single mark-sense card. Every card had a box for the letter
+        grade, a place that had to be shaded in using the proper pencil (no coloring outside the lines),
+        and  had to be signed in ink.
+        We pipelined the process to save time, reduce the tedium, and catch errors.
+      </p>
+
+      <p>
+        Three of us would sit together at a table.
+        One prof had the grade sheet and would hand write the grade in
+        the correct box on the card and put it on a pile for the next prof. The second prof would
+        grab a card from that pile and shade in the corresponding circle with the correct kind of pencil. The third prof would
+        be the instructor, who would busily sign the completed cards just as fast as he could.
+        After we had done my 120 cards, we would do those of the
+        other two profs. Sometimes we had a fourth prof who would do error-checking
+        as the cards came out at the end of the pipeline.
+      </p>
+    </div>
+
+    <h2>University of North Texas (1990-?)</h2>
+
+    <div class=content>
+      <img class=centered alt="Picture of Ian Parberry." src="images/unt2011.png">
+
+      <p>
+        I've been at UNT since 1990.
+        After 10 years service they gave me this framed certificate. Well, OK, the certificate
+        is cheap and was printed in some administrative assistant's office,
+        but the frame is pretty nifty. They "Proudly appreciate me for 10 years of loyal service".
+      </p>
+
+      <img class=centered src="images/10year320.jpg" alt="Framed 10 year certificate.">
+
+      <p>
+        After 15 years of service they gave me this heavy and ornate trophy
+        made from etched glass.
+        It says it is "In appreciation for 15 years of loyal service". Hmmm. They're not proud of me any more.
+      <p>
+
+        <img class=centered src="images/15year320.jpg" alt="15 year trophy.">
+
+      <p>
+        After 20 years of service they gave me this chintzy certificate (not even fake
+        gold leaf) in a cheap and nasty plastic case.
+        OK, I get the point. You value me, but not enough to spend serious folding money. Message received.
+        It says "Certificate of Recognition... in appreciation for your 20 years of dedicated service."
+        They still appreciate me, but now I'm dedicated instead of being loyal.
+      </p>
+
+      <img class=centered src="images/20year320.jpg" alt="20 year certificate.">
+
+      <p>
+        After 25 years of service they upped their game by giving me
+        a perspex trophy. It's a far cry from the etched glass
+        of the 15 year trophy, but the base is a solid block of some exotic wood that has a strong aroma when scratched. Real wood, that's a nice touch.
+        It says "25 years of service" on it. There's no mention of me being either
+        dedicated or loyal, nor is there any indication that they might have appreciated it.
+        At least it's better than the certificate in the plastic binder that I got for
+        20 years of dedicated service.
+      </p>
+
+      <img class=centered src="images/25year.jpg" alt="20 year certificate.">
+    </div>
+
+    <div class=updateinfo>
+      <p>
+        Created June 15, 2011.
+        Last updated July 31, 2019.
+      </p>
+    </div>
+  </body>
+</html>

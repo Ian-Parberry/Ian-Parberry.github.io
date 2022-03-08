@@ -1,0 +1,13 @@
+@inproceedings{1183338,
+ author = {Martin, Criss and Parberry, Ian},
+ title = {Real time dynamic wind calculation for a pressure driven wind system},
+ booktitle = {Sandbox '06: Proceedings of the 2006 ACM SIGGRAPH Symposium on Videogames},
+ year = {2006},
+ isbn = {1-59593-386-7},
+ pages = {151--154},
+ location = {Boston, Massachusetts},
+ doi = {http://doi.acm.org/10.1145/1183316.1183338},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+

@@ -1,0 +1,14 @@
+@article{1063732,
+ author = {Roden, Timothy and Parberry, Ian},
+ title = {Portholes and planes: faster dynamic evaluation of potentially visible sets},
+ journal = {Computers in Entertainment},
+ volume = {3},
+ number = {2},
+ year = {2005},
+ issn = {1544-3574},
+ pages = {3--3},
+ doi = {http://doi.acm.org/10.1145/1063723.1063732},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ }
+

@@ -1,0 +1,41 @@
+h1{
+  font-size: x-large;
+  padding-bottom: 7px;
+  padding-left: 5px;
+ }
+ 
+ h2{
+  font-size: large;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  padding-left: 20px;
+ }
+ 
+ p{
+ padding-bottom: 5px;
+ padding-left: 35px;
+ padding-right: 35px;
+ }
+
+
+li {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+ 
+img.hlp{
+  float: right; 
+  margin: 15px;
+  border: 1px solid black; 
+ }
+ 
+ #asks {
+  width: 64px;
+  height: 64px;
+  background-image: url('button1.png');
+}
+
+#asks:hover {
+  background-image: url('button2.png');
+}
+ 

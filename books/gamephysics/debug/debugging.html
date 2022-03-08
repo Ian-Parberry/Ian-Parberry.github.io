@@ -1,0 +1,129 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+  <title>Ian Parberry's Debug Tools</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="../../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../../menu.css">
+  <script type="text/javascript" src="../../../menu.js"></script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <h1>Ian Parberry's Debug Tools</h1>
+
+  <div class=content>
+    <img src="images/debugstrip.png" alt="image" class=centered>
+
+    <p>
+      So you've downloaded the <a href="../code.html">source code</a> and
+      tried to modify it or to start writing your own game using it, and
+      you've run into bugs. What now? If you haven't done so already you
+      should of course read Appendix B and watch my YouTube video on debugging
+      at the bottom of the <a href="../videos.html">videos</a> page. Once you've
+      done that, read about the debug tools that I've provided in the code.
+      They go a couple of steps beyond the OutputDebugString function
+      that Visual Studio provides.
+    </p>
+  </div>
+
+  <h2>Using the Debug Tools</h2>
+
+  <div class=content>
+    <p>
+      First make sure that you've #included debug.h in the source files that you
+      intend to debug.
+    </p>
+
+    <img src="images\include.png" alt="image" class=centered>
+
+    <p>
+      Then, use the DEBUGPRINTF macro for your debug output. The parameters
+      are exactly like the C stdio printf statement, that is, it has
+      a variable length parameter list, the first of which is a format string.
+    </p>
+
+    <img src="images\debugprintf.png" alt="image" class=centered>
+
+    <p>
+      Make sure you compile in Debug mode. DEBUGPRINTFs are disabled in
+      Release mode.
+    </p>
+
+    <img src="images\debugmode.png" alt="image" class=centered>
+    
+    <p>
+      When you run your program with the debugger, your debug output will
+      appear in the Visual Studion Output pane along with all of the usual
+      obscure and annoying messages from the debugger. Notice that in
+      addition to a "Starting debugger" and "Ending debugger" message,
+      your debug output appears complete with the source code name
+      and the line number on which the DEBUGPRINTF appears. That will
+      help you match the debug output to the code.
+    </p>
+
+    <img src="images\output-debugger.png" alt="image" class=centered>
+    
+    <p>
+      Debug output will also get saved to a text file.
+    </p>
+
+    <img src="images\output-notepad.png" alt="image" class=centered>
+
+    <p>
+      Finally, debug output gets send via UDP-IP to a custom debug client
+      that will catch it and display it in a window. This debug client can
+      even be running on another computer. You can download the
+      debug client <a href="debugclient.zip">here</a>. Simply copy client.exe
+      to a convenient folder.
+    </p>
+
+    <img src="images\output-client.png" alt="image" class=centered>
+
+    <p>
+      Debugger settings for your program are in gamesettings.xml.
+      Take a look at the XML tags and then I will explain what
+      they mean.
+    </p>
+
+    <img src="images\xml.png" alt="image" class=centered>
+
+    <ol>
+      <li>
+        In the &lt;debug&gt; tag, change the linenumber attribute to "0"
+        if you don't want line numbers to be displayed, and
+        set the header attribute to "0" if you don't want the
+        "Starting debugger" and "Ending debugger" messages.
+      <li>
+        In the &lt;file&gt; tag, set the select attribute to "0" if you don't
+        want debug output to go to a text file. Set the name attribute to
+        your favorite text file name if "debug.txt" isn't good enough for you.
+      <li>
+        In the &lt;debugger&gt; tag, set
+        the select attribute to "0" if you don't
+        want debug output to go to the Visual Studio debugger.
+      <li>
+        In the &lt;ip&gt; tag, set
+        the select attribute to "0" if you don't
+        want debug output to go to the UDP client.
+        Set the address attribute to the IP address of the machine that is
+        going to run the client. It is currently set to localhost. If you
+        are not sure of the IP address of the target machine, run the client
+        there and read the IP address from the second line of output.
+        Don't change the number in the port attribute because it is hardwired
+        into the client.
+    </ol>
+  </div>
+
+    <div class=updateinfo>
+    <p>
+      Created November 21, 2012.
+      Last updated August 3, 2019.
+    </p>
+  </div>
+</body>
+</html>

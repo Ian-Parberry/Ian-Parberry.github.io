@@ -1,0 +1,64 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <title>The Cayley PRNG</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" type="text/css" href="../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../menu.css">
+
+  <script type="text/javascript" src="../../menu.js"></script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript">
+  </script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <h1>Pseudo-Random Bits from Finite Groups</h1>
+
+  <div class=content>
+    <img class="centered" src="images/cayleystrip.png" alt="Thumbnails.">
+	    <p>
+      <a href="/ian">Ian Parberry</a>,
+      "Pseudo-Random Bits from Finite Groups", 2020.
+    </p>
+
+
+    <h3>Abstract</h3>
+
+    <p>
+A sequence of pseudo-random permutations is computed using a pair of generators that with high probability generate either the symmetric group or the alternating group. A pseudo-random bit stream computed from this sequence appears to perform well on the Dieharder test battery. 
+  </p>
+  </div>
+  
+  <h2>Supplementary Material</h2>
+  
+  <div class=content>
+  <p>
+    Cross-platform C++ code is for the Cayley pseudo-random number generator is available from 
+      <a href="https://github.com/Ian-Parberry/cayley.git">https://github.com/Ian-Parberry/cayley.git</a>.
+      For instructions on how to compile, run, and grok the code, 
+      read the Doxygen-generated <a href="https://ian-parberry.github.io/cayley/">documentation</a>.
+	  The Dieharder output files used in the paper are available as a 
+	  <a href="CayleyData.zip">400KB zip file</a>. 
+	</p>
+  </div>
+
+  <div class=updateinfo>
+    <p>
+      Created February 10, 2020.
+      Last updated February 11, 2020.
+    </p>
+  </div>
+</body>
+</html>

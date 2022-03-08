@@ -1,0 +1,214 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+  <head>
+    <title>Programming Experience</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" type="text/css" href="../parberry.css">
+    <link rel="stylesheet" type="text/css" href="../menu.css">
+
+    <script type="text/javascript" src="../menu.js"></script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+
+    <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"
+            type="text/javascript">
+    </script>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      MenuBar();
+    </script>
+
+    <h1>Programming Experience</h1>
+
+    <div class=content>
+      <p>
+        I write code
+        pretty much every day, mostly
+        for my academic research, for use in the 
+		<a href="https://larc.unt.edu/classes.html">classroom</a>,
+		or for the occasional 
+		<a href=http://ianparberry.com/consultcontract/>contracting or consulting</a> gig.
+        You can see some of my code on my
+        <a href="https://github.com/Ian-Parberry">GitHub</a> repository.
+        The programming language that I use the most these days is C++
+		using Visual Studio under Windows and g++ under Linux.
+        I've also written programs in
+        Ada,
+        Algol 68,
+        Basic,
+        BCPL,
+        C,
+        Cobol,
+        Fortran IV and Fortran 10,
+        Lisp,
+        Java,
+        JavaScript,
+        Modula-2,
+        Pascal,
+        PL/I,
+        Python,
+        Ratfor,
+        Ruby,
+        Simula,
+        Snobol,
+        and assembly languages for various architectures including
+        Intel, Motorola, and the
+        CompuCorp 325 that features below.
+      </p>
+	</div>
+	
+    <h2>Programming Language Timeline</h1>
+	
+	<div class=content>
+	  <p>
+	    I wrote my first programs as a high school student in 1975-1976
+        in assembly code and Fortran IV, both of which
+		are described in more detail below.	
+	    As an undergraduate in 1977-1980 the instruction was
+		mostly in Pascal, and we were also taught
+		Ada,
+        Algol 68,
+        BCPL,
+        C,
+        Cobol,
+        Fortran 10,
+        Lisp,
+        Modula-2,
+        Ratfor,
+        Simula,
+        Snobol,
+        and Intel and Motorola assembly languages.
+		The only one of these that I use today is of course C.
+		I also learned Basic to write some timetable code for
+		the math teacher back at my high school which had since purchased
+		a PDP 11. 
+	  </p>
+	  
+	  <p>
+	    While a graduate student I programmed exclusively in C,
+		but when I started Assistant Professoring at Penn State
+		I found that the instructional language was PL/I,
+		which I therefore had to learn. I learned C++ in the
+		early 1990s at the University of North Texas
+		so that I could teach game programming.
+		Somewhere along the way I learned 
+        Logo so that I could experiment with L-systems,
+        Java because everybody was talking about it (I wasn't impressed),
+        JavaScript for my web pages,
+        Python for various reasons,
+        and Ruby because Mary Sheeran, an expert in functional programming,
+		recommended it to me.
+	  </p>
+	  
+	  <p>
+	  Somehow C++ remains my language of choice. I've probably written over 50,000 lines of code in it by now.
+	  </p>
+	</div>
+
+    <h2>My First Programs</h1>
+	
+	<div class=content>
+      <img class=centered alt="image" width="50%" src="images/compucorp.png">
+
+      <p>
+        I wrote my first program at the age of 16 in 1975 in
+        Grade 11 at
+        <a href="https://beenleighshs.eq.edu.au/">Beenleigh State High School</a>
+        in Queensland, Australia on a CompuCorp 325.
+        Output was in the form of an 18-character red LED and
+        a narrow 18-character drum printer
+        that could noisily and slowly print in black and red ink.
+        It wasn't intended for use by students, but I managed to get permission to
+        teach myself how to program it.
+      </p>
+
+      <p>
+        My first programs were, of course, games.
+      </p>
+
+      <img class=centered width="42%" alt="image" src="images/parabola.png">
+
+      <p>
+        One of my first programs
+        was a projectile game in which the player is given a random target distance $s$ and has to enter the
+        barrel angle $\theta$ for a cannon with fixed muzzle speed $v$ (see the diagram above),
+        and must hit the target with three shots. Since the player is not told the muzzle speed,
+        which changes randomly with each target, they must experiment and estimate
+        the correct angle based on the distance that they missed by.
+      </p>
+
+      <img style="float:left;  margin-right:20px;" alt="image" src="images/components.png">
+      <img style="float:right; margin-left:20px;" alt="image" src="images/vertical.png">
+
+      <p>
+        Coding up this game requires simple quadratic equations that even an 11th grader should know.
+        Let $v_y = v \sin \theta$ be the magnitude of the vertical component of the muzzle velocity
+        (see the diagram at left).
+        If the projectile is fired upwards with muzzle velocity $v_y$,
+        it reaches its highest point (see the diagram at right) when
+        $v_y - gt = 0$ where $g = 9.8 \mbox{m/sec/sec}$, that is, when $t = v_y/g = v \sin \theta/g$.
+        Therefore, the projectile's time in flight is $2t = 2 v \sin \theta/g$ seconds.
+        The projectile travels a horizontal distance of $h = 2v_x t = 2 v^2 \cos \theta \sin \theta/9.8$ meters.
+        If $h$ is close enough to $s$, then it's a hit. Otherwise, tell the player that they've missed
+        by $h - s$ meters.
+      </p>
+
+      <p>
+        Another of my first programs was a variant of the game of Nim.
+        There are many variants of this game (see, for example, <a href="https://en.wikipedia.org/wiki/Nim#Dividing_natural_number">Wikipedia</a>),
+        but I can't remember exactly which one it was. I remember learning the winning
+        strategy from a book that was in the Beenleigh public library in 1975, but again
+        I can't remember exactly which book that was either.
+      </p>
+    </div>
+
+    <h2>FORTRAN IV</h2>
+
+    <div class=content>
+      <p>
+        At the end of 11th grade I attended a summer programming camp at the
+        <a href="http://www.uq.edu.au/">University of Queensland</a>.
+        This was some time between December 1975 and February 1976 (southern hemisphere, remember).
+        There I learned to program in FORTRAN IV using flowcharts. I didn't actually come anywhere
+        near a computer. Instead, we programmed on coding forms that looked something like these:
+      </p>
+
+      <img class=centered alt="image" src="images/FortranCodingForm.png">
+
+      <p>
+        Our program forms were typed up on punch cards overnight
+        by "professional" data entry personnel whose primary purpose seemed to be
+        the adding of random compile time errors to each card deck.
+        The card decks were submitted to the university's DEC PDP KA-10 overnight and
+        the output was delivered to us the next morning.
+        This didn't work very well because it meant
+        that we could only compile once per day, and the data entry staff were apparently
+        a group of chimpanzees wearing boxing gloves.
+      </p>
+
+      <p>
+        The hardest thing we had to program was computing binomial coefficients.
+        FORTRAN IV doesn't have recursion, so it wasn't a trivial problem for a 16 year old.
+        I didn't know about Pascal's triangle at the time, either.
+        Remember, the internet didn't exist then, so we couldn't just look things up.
+        I remember that my solution was hopelessly Byzantine but I never got to see whether it worked
+        or not because of the chimpanzees in boxing gloves thing.
+        I'm pretty safe in guessing that it failed miserably.
+      </p>
+    </div>
+
+    <div class=updateinfo>
+      <p>
+        Created August 3, 2015.
+        Last updated September 7, 2019.
+      </p>
+    </div>
+  </body>
+</html>
