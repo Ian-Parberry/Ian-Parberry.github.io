@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="624" height="378" viewBox="-4 -4 624 378" xmlns="http://www.w3.org/2000/svg">
+<style>
+circle{fill:black;r:4.0}line{stroke:black;stroke-width:2.0}
+</style>
+<line x1="0" y1="4" x2="616" y2="4"/>
+<line x1="0" y1="28" x2="616" y2="28"/>
+<line x1="0" y1="52" x2="616" y2="52"/>
+<line x1="0" y1="76" x2="616" y2="76"/>
+<line x1="0" y1="100" x2="616" y2="100"/>
+<line x1="0" y1="124" x2="616" y2="124"/>
+<line x1="0" y1="148" x2="616" y2="148"/>
+<line x1="0" y1="172" x2="616" y2="172"/>
+<line x1="0" y1="196" x2="616" y2="196"/>
+<line x1="0" y1="220" x2="616" y2="220"/>
+<line x1="0" y1="244" x2="616" y2="244"/>
+<line x1="0" y1="268" x2="616" y2="268"/>
+<line x1="0" y1="292" x2="616" y2="292"/>
+<line x1="0" y1="316" x2="616" y2="316"/>
+<line x1="0" y1="340" x2="616" y2="340"/>
+<line x1="0" y1="364" x2="616" y2="364"/>
+<circle cx="24" cy="364"/><circle cx="24" cy="340"/><line x1="24" y1="364" x2="24" y2="340"/>
+<circle cx="24" cy="316"/><circle cx="24" cy="292"/><line x1="24" y1="316" x2="24" y2="292"/>
+<circle cx="24" cy="268"/><circle cx="24" cy="244"/><line x1="24" y1="268" x2="24" y2="244"/>
+<circle cx="24" cy="220"/><circle cx="24" cy="196"/><line x1="24" y1="220" x2="24" y2="196"/>
+<circle cx="24" cy="172"/><circle cx="24" cy="148"/><line x1="24" y1="172" x2="24" y2="148"/>
+<circle cx="24" cy="124"/><circle cx="24" cy="100"/><line x1="24" y1="124" x2="24" y2="100"/>
+<circle cx="24" cy="76"/><circle cx="24" cy="52"/><line x1="24" y1="76" x2="24" y2="52"/>
+<circle cx="24" cy="28"/><circle cx="24" cy="4"/><line x1="24" y1="28" x2="24" y2="4"/>
+<circle cx="48" cy="364"/><circle cx="48" cy="316"/><line x1="48" y1="364" x2="48" y2="316"/>
+<circle cx="48" cy="268"/><circle cx="48" cy="220"/><line x1="48" y1="268" x2="48" y2="220"/>
+<circle cx="48" cy="172"/><circle cx="48" cy="124"/><line x1="48" y1="172" x2="48" y2="124"/>
+<circle cx="48" cy="76"/><circle cx="48" cy="28"/><line x1="48" y1="76" x2="48" y2="28"/>
+<circle cx="64" cy="340"/><circle cx="64" cy="292"/><line x1="64" y1="340" x2="64" y2="292"/>
+<circle cx="64" cy="244"/><circle cx="64" cy="196"/><line x1="64" y1="244" x2="64" y2="196"/>
+<circle cx="64" cy="148"/><circle cx="64" cy="100"/><line x1="64" y1="148" x2="64" y2="100"/>
+<circle cx="64" cy="52"/><circle cx="64" cy="4"/><line x1="64" y1="52" x2="64" y2="4"/>
+<circle cx="88" cy="364"/><circle cx="88" cy="268"/><line x1="88" y1="364" x2="88" y2="268"/>
+<circle cx="88" cy="172"/><circle cx="88" cy="76"/><line x1="88" y1="172" x2="88" y2="76"/>
+<circle cx="104" cy="340"/><circle cx="104" cy="244"/><line x1="104" y1="340" x2="104" y2="244"/>
+<circle cx="104" cy="148"/><circle cx="104" cy="52"/><line x1="104" y1="148" x2="104" y2="52"/>
+<circle cx="120" cy="316"/><circle cx="120" cy="220"/><line x1="120" y1="316" x2="120" y2="220"/>
+<circle cx="120" cy="124"/><circle cx="120" cy="28"/><line x1="120" y1="124" x2="120" y2="28"/>
+<circle cx="136" cy="292"/><circle cx="136" cy="196"/><line x1="136" y1="292" x2="136" y2="196"/>
+<circle cx="136" cy="100"/><circle cx="136" cy="4"/><line x1="136" y1="100" x2="136" y2="4"/>
+<circle cx="160" cy="364"/><circle cx="160" cy="172"/><line x1="160" y1="364" x2="160" y2="172"/>
+<circle cx="176" cy="340"/><circle cx="176" cy="148"/><line x1="176" y1="340" x2="176" y2="148"/>
+<circle cx="192" cy="316"/><circle cx="192" cy="124"/><line x1="192" y1="316" x2="192" y2="124"/>
+<circle cx="208" cy="292"/><circle cx="208" cy="100"/><line x1="208" y1="292" x2="208" y2="100"/>
+<circle cx="224" cy="268"/><circle cx="224" cy="76"/><line x1="224" y1="268" x2="224" y2="76"/>
+<circle cx="240" cy="244"/><circle cx="240" cy="52"/><line x1="240" y1="244" x2="240" y2="52"/>
+<circle cx="256" cy="220"/><circle cx="256" cy="28"/><line x1="256" y1="220" x2="256" y2="28"/>
+<circle cx="272" cy="196"/><circle cx="272" cy="4"/><line x1="272" y1="196" x2="272" y2="4"/>
+<circle cx="296" cy="268"/><circle cx="296" cy="172"/><line x1="296" y1="268" x2="296" y2="172"/>
+<circle cx="312" cy="244"/><circle cx="312" cy="148"/><line x1="312" y1="244" x2="312" y2="148"/>
+<circle cx="328" cy="220"/><circle cx="328" cy="124"/><line x1="328" y1="220" x2="328" y2="124"/>
+<circle cx="344" cy="196"/><circle cx="344" cy="100"/><line x1="344" y1="196" x2="344" y2="100"/>
+<circle cx="368" cy="316"/><circle cx="368" cy="172"/><line x1="368" y1="316" x2="368" y2="172"/>
+<circle cx="384" cy="292"/><circle cx="384" cy="148"/><line x1="384" y1="292" x2="384" y2="148"/>
+<circle cx="400" cy="220"/><circle cx="400" cy="76"/><line x1="400" y1="220" x2="400" y2="76"/>
+<circle cx="416" cy="196"/><circle cx="416" cy="52"/><line x1="416" y1="196" x2="416" y2="52"/>
+<circle cx="440" cy="316"/><circle cx="440" cy="268"/><line x1="440" y1="316" x2="440" y2="268"/>
+<circle cx="440" cy="220"/><circle cx="440" cy="172"/><line x1="440" y1="220" x2="440" y2="172"/>
+<circle cx="440" cy="124"/><circle cx="440" cy="76"/><line x1="440" y1="124" x2="440" y2="76"/>
+<circle cx="456" cy="292"/><circle cx="456" cy="244"/><line x1="456" y1="292" x2="456" y2="244"/>
+<circle cx="456" cy="196"/><circle cx="456" cy="148"/><line x1="456" y1="196" x2="456" y2="148"/>
+<circle cx="456" cy="100"/><circle cx="456" cy="52"/><line x1="456" y1="100" x2="456" y2="52"/>
+<circle cx="480" cy="340"/><circle cx="480" cy="172"/><line x1="480" y1="340" x2="480" y2="172"/>
+<circle cx="496" cy="292"/><circle cx="496" cy="124"/><line x1="496" y1="292" x2="496" y2="124"/>
+<circle cx="512" cy="244"/><circle cx="512" cy="76"/><line x1="512" y1="244" x2="512" y2="76"/>
+<circle cx="528" cy="196"/><circle cx="528" cy="28"/><line x1="528" y1="196" x2="528" y2="28"/>
+<circle cx="552" cy="340"/><circle cx="552" cy="268"/><line x1="552" y1="340" x2="552" y2="268"/>
+<circle cx="552" cy="244"/><circle cx="552" cy="172"/><line x1="552" y1="244" x2="552" y2="172"/>
+<circle cx="552" cy="148"/><circle cx="552" cy="76"/><line x1="552" y1="148" x2="552" y2="76"/>
+<circle cx="568" cy="292"/><circle cx="568" cy="220"/><line x1="568" y1="292" x2="568" y2="220"/>
+<circle cx="568" cy="196"/><circle cx="568" cy="124"/><line x1="568" y1="196" x2="568" y2="124"/>
+<circle cx="568" cy="100"/><circle cx="568" cy="28"/><line x1="568" y1="100" x2="568" y2="28"/>
+<circle cx="592" cy="340"/><circle cx="592" cy="316"/><line x1="592" y1="340" x2="592" y2="316"/>
+<circle cx="592" cy="292"/><circle cx="592" cy="268"/><line x1="592" y1="292" x2="592" y2="268"/>
+<circle cx="592" cy="244"/><circle cx="592" cy="220"/><line x1="592" y1="244" x2="592" y2="220"/>
+<circle cx="592" cy="196"/><circle cx="592" cy="172"/><line x1="592" y1="196" x2="592" y2="172"/>
+<circle cx="592" cy="148"/><circle cx="592" cy="124"/><line x1="592" y1="148" x2="592" y2="124"/>
+<circle cx="592" cy="100"/><circle cx="592" cy="76"/><line x1="592" y1="100" x2="592" y2="76"/>
+<circle cx="592" cy="52"/><circle cx="592" cy="28"/><line x1="592" y1="52" x2="592" y2="28"/>
+</svg>

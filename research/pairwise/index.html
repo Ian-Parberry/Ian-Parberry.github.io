@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+  <title>The Pairwise Sorting Networks</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <link rel="stylesheet" type="text/css" href="../../parberry.css">
+  <link rel="stylesheet" type="text/css" href="../../menu.css">
+  
+  <script type="text/javascript" src="../../menu.js"></script>
+
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+    "HTML-CSS": {scale: 90}
+    });
+  </script>
+
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript">
+  </script>
+</head>
+
+<body>
+  <script type="text/javascript">
+    MenuBar();
+  </script>
+
+  <h1>The Pairwise Sorting Network</h1>
+
+  <div class=content>
+    <p>
+      <a href="/">Ian Parberry</a>,
+      "The Pairwise Sorting Network".
+      <I>Parallel Processing Letters</I>, Vol. 2, No. 2,3, pp. 205-211, 1992.
+      [<a href="../../pubs/pairwise.pdf">pdf</a>]
+    </p>
+
+    <h3>Abstract</h3>
+
+    <p>
+      A new sorting network with exactly the same size and depth as the odd-even sorting
+      network is presented. This sorting network is designed using the zero-one principle,
+      and proceeds by first sorting pairs of bits and sorting the pairs
+      into lexicographic order.
+    </p>
+  </div>
+
+  <h2>Further Work</h2>
+
+  <div class=content>
+    <p>
+      A <a href="http://www.cs.bgu.ac.il/~mcodish/Papers/Pages/lpar16.html">2010
+      paper by Michael Codish and Moshe Zazon-Ivry</a>
+      quotes my paper as saying:
+      "It is the first sorting network to be competitive with the odd-even sort
+      for all values of n. The value of the pairwise sorting network is not that
+      it is superior to the odd-even sorting network in any sense, but that it
+      is the first serious rival to appear in over 20 years",
+      and they go on to say:
+      "In this paper, almost 20 years after the introduction of pairwise sorting networks, we are in the position to state that pairwise
+      sorting networks are significantly superior to odd-even sorting networks, at least for encoding cardinality
+      constraints."
+    </p>
+  </div>
+
+  <h2>Supplementary Images</h2>
+
+  <div class=content>
+  <p>
+  The following supplementary images have the channels drawn horizontally and comparators
+  drawn vertically.
+  The comparators route the smaller of the values on its channels to the upper of the
+  two channels that it is connected to, and the larger of the two values to the lower channel.
+  When the inputs are placed on the channels at thr left of each diagram, 
+  the outputs appear in non-decreasing order from top to bottom at the right.
+  These images were produced with the
+   <a href=https://github.com/Ian-Parberry/sortingnetworkviewer>open-source sorting network viewer</a>.
+  </p>
+
+    <img class=centered width="25%" alt="Sorting network image." src="images/pairwise8.svg">
+    <div class="centered">The 8-input pairwise sorting network.</div>
+  
+    <img class=centered width="50%" alt="Sorting network image." src="images/pairwise16.svg">
+    <div class="centered">The 16-input pairwise sorting network.</div>
+  
+    <img class=centered width="100%" alt="Sorting network image." src="images/pairwise32.svg">
+    <div class="centered">The 32-input pairwise sorting network.</div>
+
+  </div>
+
+  <div class=updateinfo>
+    <p>
+      Created November 9, 2022.
+      Last updated November 9, 2022.
+    </p>
+  </div>
+</body>
+</html>
+
