@@ -75,6 +75,10 @@ div.centered table{
   border: 1px solid black;
 }
 
+.inlinecode{
+  font-family: "Courier New", Courier, monospace;
+}
+
 A:link {text-decoration: none; color: black; border-bottom: 1px dotted black;}
 A:visited {text-decoration: none; color: black; border-bottom: 1px dotted black;}
 A:active {text-decoration: none; color: black; border-bottom: 1px dotted black;}

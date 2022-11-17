@@ -10,7 +10,7 @@
 /// notice and this notice are preserved.  This file is offered as-is,
 /// without any warranty.
 ///
-/// Created by <a href="http://larc.unt.edu/ian">Ian Parberry</a>, June 2015.
+/// Created by <a href="https://ianparberry.com">Ian Parberry</a>, June 2015.
 /// Last updated August 5, 2015.
 
 var p, q;
@@ -148,7 +148,7 @@ function draw(){
     dropShadow(ctx, "\"The Beauty of Modular Bivariate Quadratic Functions\"", 12, window.innerWidth-8, window.innerHeight - 44);
     dropShadow(ctx, "A digital art installation by Ian Parberry", 12, window.innerWidth-8, window.innerHeight - 32);
     dropShadow(ctx, "Copyright \u00A9 Ian Parberry, " + y, 12, window.innerWidth-8, window.innerHeight - 20);
-    dropShadow(ctx, "http://larc.unt.edu/ian", 12, window.innerWidth-8, window.innerHeight - 8);
+    dropShadow(ctx, "https://ianparberry.com", 12, window.innerWidth-8, window.innerHeight - 8);
   } //else
 } //draw
 
@@ -203,7 +203,7 @@ function mouseDown(e){
       draw();
     } //if
     else { //bottom right
-      window.open("http://larc.unt.edu/ian/research/texturegen/designtool/index.html?p=" + 
+      window.open("https://ianparberry.com/research/texturegen/designtool/index.html?p=" + 
         //p + "&q=" + q +"&style=advanced&a0=1&b0=1&f0=" + f + "&colors=4&palette=" + (curPalette? "autumn": "toucan") + "&brightness=0",
         p + "&q=" + q +"&style=ornamentation&colors=4&palette=" + (curPalette? "autumn": "toucan") + "&brightness=0",
         "_self");
