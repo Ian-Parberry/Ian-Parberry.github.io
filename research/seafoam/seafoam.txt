@@ -23,7 +23,7 @@
 @misc{2011FoamWebsite,
     author = {Mary Yingst and Jennifer R. Alford and Ian Parberry},
     title = {Sea Foam}, 
-    howpublished={\url{http://larc.unt.edu/ian/research/seafoam/}},
+    howpublished={\url{https://ianparberry.com/research/seafoam/}},
     year = {2011}
 }
 

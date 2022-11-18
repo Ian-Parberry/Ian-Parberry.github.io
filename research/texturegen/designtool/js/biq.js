@@ -10,8 +10,8 @@
 /// <em>Quadratic</em> means that we square things. Of course, if you're math phobic,
 /// then you'll just want to mash on the buttons and look at the pretty pictures.
 /// There's no shame in that.
-/// See http:///larc.unt.edu/ian/research/texturegen/designtool to see it in action,
-/// and http:///larc.unt.edu/ian/research/texturegen/ for more information about what
+/// See https://ianparberry.com/research/texturegen/designtool to see it in action,
+/// and https://ianparberry.com/research/texturegen/ for more information about what
 /// it does.
 ///
 /// \<rant\>
@@ -42,8 +42,8 @@
 /// notice and this notice are preserved.  This file is offered as-is,
 /// without any warranty.
 ///
-/// Created by <a href="http://larc.unt.edu/ian">Ian Parberry</a>, June 2015.
-/// Last updated August 5, 2015.
+/// Created by <a href="/">Ian Parberry</a>, June 2015.
+/// Last updated November 18, 2022.
 
 /// \brief Display instructions.
 ///

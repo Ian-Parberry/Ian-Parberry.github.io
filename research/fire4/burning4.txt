@@ -20,6 +20,6 @@
  @misc{AmarasingheParberry2013FireWebsite,
     author = {Amarasinghe, Dhanyu and Parberry, Ian},
     title = {Fire 4},
-    url = {http://larc.unt.edu/ian/research/fire4/},
+    url = {https://ianparberry.com/research/fire4/},
     year = {2013}
   }

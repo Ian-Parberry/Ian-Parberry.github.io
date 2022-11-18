@@ -21,7 +21,7 @@
 @misc{Taylor2011SokobanWebsite,
   author = {Taylor, Joshua and Parberry, Ian},
   title = {Sokoban},
-  howpublished={\url{http:/larc.unt.edu/ian/research/sokoban/}},
+  howpublished={\url{https://ianparberry.com/research/sokoban/}},
   year = {2011}
 }
  

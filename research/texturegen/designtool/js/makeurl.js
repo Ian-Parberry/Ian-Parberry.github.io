@@ -40,7 +40,7 @@ function AppendIfNonzero(id){
 /// \return The URL string.
 
 function AssembleURL(){
-  var s = "http://larc.unt.edu/ian/research/texturegen/designtool/index.html?";
+  var s = "https://ianparberry.com/research/texturegen/designtool/index.html?";
 
   //variant and repeat
   s += "p=" + document.getElementById('p').value;

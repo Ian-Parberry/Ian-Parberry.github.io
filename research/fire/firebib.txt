@@ -10,7 +10,7 @@
  
  @misc{AmarasingheParberry2010FireWebsite,
     author = {Amarasinghe, Dhanyu and Parberry, Ian},
-    title = {\texttt{http://larc.unt.edu/ian/research/fire/}},
+    title = {\texttt{https://ianparberry.com/research/fire/}},
     year = {2010}
   }
 
