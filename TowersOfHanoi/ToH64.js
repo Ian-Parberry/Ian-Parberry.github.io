@@ -10,7 +10,7 @@
 /// notice and this notice are preserved.  This file is offered as-is,
 /// without any warranty.
 ///
-/// Created by <a href="http://larc.unt.edu/ian">Ian Parberry</a>, February 2016.
+/// Created by <a href="https://ianparberry.com">Ian Parberry</a>, February 2016.
 /// Last updated February 26, 2016.
 
 var bluescreen = new Image();

@@ -11,6 +11,6 @@ Burning Low-Polygon Objects in Video Games},
  
  @misc{AmarasingheParberry2011FireWebsite,
   author = {Amarasinghe, Dhanyu and Parberry, Ian},
-  title = {Fire Reloaded, \texttt{http://larc.unt.edu/ian/research/fire/}},
+  title = {Fire Reloaded, \texttt{https://ianparberry.com/research/fire/}},
   year = {2010}
   }

@@ -14,5 +14,5 @@ Rendering Using Halftoning},
 @ONLINE{2011FoamWebsite,
     author = {Mary Yingst and Jennifer R. Alford and Ian Parberry},
     title = {Sea Foam}, 
-    url = {http://larc.unt.edu/ian/research/seafoam/},
+    url = {https://ianparberry.com/research/seafoam/},
     year = {2011}

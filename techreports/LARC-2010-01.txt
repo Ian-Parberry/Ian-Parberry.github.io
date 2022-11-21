@@ -10,6 +10,6 @@
  
  @misc{TaylorParberry2010ClutterWebsite,
   author = {Taylor, Joshua and Parberry, Ian},
-  title = {\texttt{http://larc.unt.edu/ian/research/clutter/}},
+  title = {\texttt{https://ianparberry.com/research/clutter/}},
   year = {2010}
   }

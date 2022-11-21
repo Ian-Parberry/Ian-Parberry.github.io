@@ -10,6 +10,6 @@
  
 @misc{Taylor2011SokobanWebsite,
   author = {Taylor, Joshua and Parberry, Ian},
-  title = {\texttt{http://larc.unt.edu/ian/research/sokoban/}},
+  title = {\texttt{https://ianparberry.com/research/sokoban/}},
   year = {2011}
 }

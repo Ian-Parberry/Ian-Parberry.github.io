@@ -11,6 +11,6 @@ Analysis of Quests from Four {MMORPG}s},
  
 @misc{Doran2011QuestWebsite,
   author = {Doran, Jonathan and Parberry, Ian},
-  title = {\texttt{http://larc.unt.edu/ian/research/quest2/}},
+  title = {\texttt{https://ianparberry.com/research/quest2/}},
   year = {2011}
 }
