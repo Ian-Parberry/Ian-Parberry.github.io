@@ -55,7 +55,6 @@ document.write("          <a href=\"\/CompuCorp\">Programming experience<\/a>");
 document.write("          <a href=\"\/history\">Academic employment<\/a>");
 document.write("          <a href=\"\/consultcontract\">Contracting and consulting<\/a>");
 document.write("          <a href=\"\/awards.html\">Honors and awards<\/a>");
-document.write("          <a href=\"\/activity.html\">Professional activity<\/a>");
 document.write("          <a href=\"\/speaker.html\">Speaking engagements<\/a>");
 document.write("          <a href=\"\/interimchair\">Department Chair experience<\/a>");
 document.write("          <a href=\"\/numbers.html\">By the numbers<\/a>");
