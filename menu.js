@@ -57,6 +57,7 @@ document.write("          <a href=\"\/consultcontract\">Contracting and consulti
 document.write("          <a href=\"\/awards.html\">Honors and awards<\/a>");
 document.write("          <a href=\"\/speaker.html\">Speaking engagements<\/a>");
 document.write("          <a href=\"\/interimchair\">Department Chair experience<\/a>");
+document.write("          <a href=\"\/cites\">Citation analysis<\/a>");
 document.write("          <a href=\"\/numbers.html\">By the numbers<\/a>");
 document.write("        <\/div>");
 document.write("      <\/div>");
