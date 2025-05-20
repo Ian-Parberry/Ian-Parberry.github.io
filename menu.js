@@ -57,8 +57,6 @@ document.write("          <a href=\"\/consultcontract\">Contracting and consulti
 document.write("          <a href=\"\/awards.html\">Honors and awards<\/a>");
 document.write("          <a href=\"\/speaker.html\">Speaking engagements<\/a>");
 document.write("          <a href=\"\/interimchair\">Department Chair experience<\/a>");
-document.write("          <a href=\"\/cites\">Citation analysis<\/a>");
-document.write("          <a href=\"\/numbers.html\">By the numbers<\/a>");
 document.write("        <\/div>");
 document.write("      <\/div>");
 document.write("");
@@ -72,6 +70,8 @@ document.write("          <a href=\"\/books\">Books<\/a>");
 document.write("          <a href=\"http:\/\/dl.acm.org\/author_page.cfm?id=81100325817\">ACM Digital Library<\/a>");
 document.write("          <a href=\"https:\/\/scholar.google.com\/citations?user=8ZpdXNcAAAAJ\">Citation list<\/a>");
 document.write("          <a href=\"\/numbers.html\">Citation indices<\/a>");
+document.write("          <a href=\"\/cites\">Citation analysis<\/a>");
+document.write("          <a href=\"\/careercites\">Career citation rank<\/a>");
 document.write("        <\/div>");
 document.write("      <\/div>");
 document.write("");

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+  <head>
+    <title>Citation Analysis</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="stylesheet" type="text/css" href="../parberry.css">
+    <link rel="stylesheet" type="text/css" href="../menu.css">
+    <script type="text/javascript" src="../menu.js"></script>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      MenuBar();
+    </script>
+
+    <h1>Career Cites</h1>
+    
+    <div class=content>
+      <p>
+I was a little surprised to see
+<a href="https://research.unt.edu/news/unt_faculty_among_2024_list_of_worlds_most_cited_researchers.html#:~:text=In%20the%20latest%20lists%2C%2041,made%20the%202024%20annual%20list.">this 2025 article</a>
+from UNT's Research and Innovation journalists which lists me as being in the top 2&percnt; of researchers
+in my field over the course of my career to 2024
+"based on standardized citation metrics developed by a group
+of scientists led by John P.A. Ioannidis, a statistician at Stanford University."
+I was immediately curious about what that meant exactly
+and although confident in all research done by Ioannidis and his coauthors (based
+on past experience), I am not so confident in the ability of journalists
+not to mislead readers, either intentionally or unintentionally
+(also based on past experience).
+Fortunately, the data from Ioannidis <em>et al.</em> is available from the Elsevier Data Repository
+<a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7">here</a>.
+
+According to the <a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7">title page</a>,
+<blockquote cite="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/7">
+"Career-long data are updated to end-of-2023 and single recent year data pertain to citations received
+during calendar year 2023. The selection is based on the top 100,000 scientists by c-score (with and
+without self-citations) or a percentile rank of 2% or above in the sub-field. This version (7) is based
+on the August 1, 2024 snapshot from Scopus, updated to end of citation year 2023. This work uses Scopus data.
+Calculations were performed using all Scopus author profiles as of August 1, 2024."
+</blockquote>
+
+After downloading this repository and opening the file 
+
+<div class="blockquote">
+<span style='font-family: monospace, Consolar, DejaVu Sans Mono, Lucida Console, Courier, "Courier New";'>Table_1_Authors_career_2023_pubs_since_1788_wopp_extracted_202408.xlsx</span>
+</div>
+
+with Microsoft&#174; Excel&#174;,
+we find my entry on line 202,443 out of 217,098,
+It lists
+my field of research as <em>Information &amp; Communication Technologies</em> (column AR)
+based on the
+classification table that you can
+<a href="https://science-metrix.com/classification/">download from Science Metrix</a>.
+</p>
+
+  <a name="fig1"></a>
+  <img class=centered src="sciencemetrix.png" width="500">
+  <div class=centered>
+	<p>
+	  <b>Fig. 1:</b> My Science Metrix field (pink) with the two subfields listed by Ioannidis <em>et al.</em>.
+	</p>
+  </div>
+
+<p>
+The <a href="https://science-metrix.com/classification/">Science Metrix table</a>
+lists eight subfields of <em>Information and Communication Technologies</em> (see Fig.1),
+including <em>Artificial Intelligence &amp; Image Processing</em>
+and <em>Computation Theory &amp; Mathematics</em>,
+which Ioannidis <em>et al.</em> list 
+in the Microsoft&#174; Excel&#174; file mentioned above
+as my first and second subfields, respectively (columns AN and AP).
+The six subfields from the <a href="https://science-metrix.com/classification/">Science Metrix table</a>
+not listed in Fig. 1 are
+<em>Computer Hardware &amp; Architecture</em>,
+<em>Distributed Computing</em>,
+<em>Information Systems</em>,
+<em>Medical Informatics</em>,
+<em>Networking &amp; Telecommunications</em>, and
+<em>Software Engineering</em>.
+Admittedly, this is a poor way of describing Computer Science research areas
+compared to, say, the
+<a href="https://dl.acm.org/ccs">ACM Computing Classification System</a>.
+</p>
+
+<p>
+My rank in the sub-field <em>Artificial Intelligence &amp; Image Processing</em> (not counting self-citations)
+is 7,350 (column AU) out of 399,065 (column AV). Since 7,350 divided by 399,065 is slightly more than 0.018,
+this puts me in the top 1.8&percnt;. This explains why I am in the table at all: 
+it is because (as quoted above) I have
+"a percentile rank of 2&percnt; or above in the sub-field".
+If you are curious about how <em>rank</em> is determined by Ioannidis <em>et al.</em>, see 
+<a href="https://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.3000918">Updated science-wide
+author databases of standardized citation indicators</a>, <em>PLOS Biology</em>, 2020.
+</p>
+</div>
+
+<div class=updateinfo>
+  <p>
+	Created May 5, 2025.
+	Last updated May 20, 2025.
+  </p>
+</div>
+
+ </body>
+</html>
